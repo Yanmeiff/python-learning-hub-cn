@@ -10,10 +10,10 @@ async function run() {
   page.on("pageerror", error => errors.push(error.message));
   try {
     await page.goto(SITE, {waitUntil:"domcontentloaded"});
-    await page.waitForFunction(() => document.getElementById("progress-total")?.textContent === "1900", {timeout:15000});
-    await page.waitForFunction(() => document.getElementById("hub-total")?.textContent === "1900", {timeout:15000});
+    await page.waitForFunction(() => document.getElementById("progress-total")?.textContent === "3460", {timeout:15000});
+    await page.waitForFunction(() => document.getElementById("hub-total")?.textContent === "3460", {timeout:15000});
     await page.waitForFunction(() => document.querySelectorAll("#heatmap-grid .heat-cell").length >= 365, {timeout:15000});
-    await page.waitForFunction(() => document.querySelectorAll("#mastery-list .mastery-item").length === 7, {timeout:15000});
+    await page.waitForFunction(() => document.querySelectorAll("#mastery-list .mastery-item").length === 12, {timeout:15000});
 
     const style = await page.evaluate(() => {
       const grid = document.querySelector(".hub-stats");
@@ -121,9 +121,38 @@ async function run() {
     });
     await submit("CH16-E-001", newCase.solution, true, newCase.expected_output);
     await page.locator("#btn-dashboard").click();
-    assert.equal(await page.locator("#hub-total").textContent(), "1900");
+    assert.equal(await page.locator("#hub-total").textContent(), "3460");
+
+    // Inspect the newly added 13 chapters in the real Pyodide browser engine.
+    // Each chapter gets one easy and one expert question, not mocked stdout.
+    const newer = [
+      ["CH17","CH17_Classes_Objects"],["CH18","CH18_Inheritance_Polymorphism"],
+      ["CH19","CH19_Modules_Imports"],["CH20","CH20_Magic_Methods"],
+      ["CH21","CH21_Closures_Decorators"],["CH22","CH22_Exceptions_Context"],
+      ["CH23","CH23_Regex"],["CH24","CH24_Enums_Metaclasses"],
+      ["CH25","CH25_Pathlib_Files"],["CH26","CH26_Typing_Dataclasses"],
+      ["CH27","CH27_Async_Concurrency"],["CH28","CH28_Testing_Logging_Quality"],
+      ["CH29","CH29_CLI_Projects"]
+    ];
+    for (const [chapter, directory] of newer) {
+      for (const [suffix, filename] of [["E","easy_30.json"],["X","expert_30.json"]]) {
+        const item = await page.evaluate(async ({dir,file}) => {
+          const response = await fetch("data/questions/" + dir + "/" + file);
+          if (!response.ok) throw new Error("Missing question bank: " + response.status);
+          const data = await response.json();
+          const q = data.questions[0];
+          if (typeof window.openQuestion !== "function") throw new Error("No openQuestion API");
+          await window.openQuestion(q.id);
+          return q;
+        }, {dir: directory, file:filename});
+        await page.waitForFunction(qid => document.getElementById("q-id").textContent === qid, item.id);
+        await submit(item.id, item.solution, true, item.expected_output);
+      }
+    }
+    await page.locator("#btn-dashboard").click();
+    assert.equal(await page.locator("#hub-total").textContent(), "3460");
     assert.deepEqual(errors, [], "page should not contain uncaught JavaScript errors");
-    console.log("Browser smoke checks passed: CSS, dashboard, 1780 questions, real Pyodide, exact stdout, judging, mistakes, mobile layout");
+    console.log("Browser smoke checks passed: CSS, dashboard, 3460 questions, real Pyodide, exact stdout, judging, mistakes, mobile layout");
   } finally {
     await browser.close();
   }

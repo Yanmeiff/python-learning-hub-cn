@@ -41,3 +41,12 @@
 - [PyQuest](https://github.com/pystay/python-pyquest) — 原始题库架构，MIT License。
 - [小白学 Python](https://github.com/walter201230/Python) — 对齐的公开教程，CC BY 4.0。
 - 新增题目的题干、答案及程序由本项目编写，未复制教程站点的交互代码。
+
+## 2026-11-23 扩展实施记录
+
+- CH17–CH29 已按上述**项目拟定主题**生成：13 × 120 = 1560 道；连同先前 CH16 共新增 1680 道。
+- 题库总量 29 章、3460 道（CH02 仅 100 道），与一律每章 120 道的理想规划不同。
+- 题目配方：每章四档，每档五个知识目标，每个目标六组输入参数。每道附带标准答案、提示和输出断言；并通过 Python 逐题执行校验。
+- CH27 避免浏览器环境不适合的多进程和长时间事件循环，集中训练协程声明、await 依赖、执行状态与生成器模拟调度；完整异步程序需要另外在 Python 本地环境练习。
+- CH28/29 涉及 pytest、Pydantic、uv、ruff、typer 的知识点属于工程学习建议；本批实际可执行题目使用标准库 unittest、mock、logging、dataclasses、argparse 等，避免要求加载未安装的外部库。
+- 通过 CI、网页题目索引与 Pyodide 抽样验收后，作为 Draft PR 提交审查；正式站点仍然保持 master 版本，未发布此批新增题库。
