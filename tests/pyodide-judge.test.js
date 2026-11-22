@@ -16,6 +16,8 @@ function fakePyodide({ output = "", chunkSize = 1024, testRunner = null, runErro
       stdout = handler || null;
     },
     runPython(code) {
+      // The default fake writes immediately; an explicit flush must not replay it.
+      if (code === "import sys; sys.stdout.flush()") return;
       if (code.startsWith("assert ") || code.startsWith("test:")) {
         if (testRunner) return testRunner(code, values);
         return;
