@@ -1,0 +1,427 @@
+{
+  "chapter": "CH16",
+  "title": "迭代、推导式与生成器",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH16-M-001",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "将二维 rows 按行展开为一维列表，保持所有元素顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1500\nrows = [[5, 7, 7], [6, 5]]\nresult = ___\nprint(base, result)",
+      "expected_output": "1500 [5, 7, 7, 6, 5]\n",
+      "hints": "推导式中外层 for 写在前面，内层 for 紧随其后。",
+      "test_cases": [
+        "assert captured_output == \"1500 [5, 7, 7, 6, 5]\\n\""
+      ],
+      "solution": "base = 1500\nrows = [[5, 7, 7], [6, 5]]\nresult = [value for row in rows for value in row]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-002",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "将二维 rows 按行展开为一维列表，保持所有元素顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1501\nrows = [[6, 8, 8], [7, 6]]\nresult = ___\nprint(base, result)",
+      "expected_output": "1501 [6, 8, 8, 7, 6]\n",
+      "hints": "推导式中外层 for 写在前面，内层 for 紧随其后。",
+      "test_cases": [
+        "assert captured_output == \"1501 [6, 8, 8, 7, 6]\\n\""
+      ],
+      "solution": "base = 1501\nrows = [[6, 8, 8], [7, 6]]\nresult = [value for row in rows for value in row]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-003",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "将二维 rows 按行展开为一维列表，保持所有元素顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1502\nrows = [[7, 9, 9], [8, 7]]\nresult = ___\nprint(base, result)",
+      "expected_output": "1502 [7, 9, 9, 8, 7]\n",
+      "hints": "推导式中外层 for 写在前面，内层 for 紧随其后。",
+      "test_cases": [
+        "assert captured_output == \"1502 [7, 9, 9, 8, 7]\\n\""
+      ],
+      "solution": "base = 1502\nrows = [[7, 9, 9], [8, 7]]\nresult = [value for row in rows for value in row]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-004",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "找出 nums 中所有奇数的索引，索引从 0 开始。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1505\nnums = [10, 12, 12, 4, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1505 [4]\n",
+      "hints": "enumerate 同时提供索引与数值。",
+      "test_cases": [
+        "assert captured_output == \"1505 [4]\\n\""
+      ],
+      "solution": "base = 1505\nnums = [10, 12, 12, 4, 5]\nresult = [index for index, value in enumerate(nums) if value % 2 == 1]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-005",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "找出 nums 中所有奇数的索引，索引从 0 开始。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1506\nnums = [11, 13, 13, 5, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1506 [0, 1, 2, 3]\n",
+      "hints": "enumerate 同时提供索引与数值。",
+      "test_cases": [
+        "assert captured_output == \"1506 [0, 1, 2, 3]\\n\""
+      ],
+      "solution": "base = 1506\nnums = [11, 13, 13, 5, 6]\nresult = [index for index, value in enumerate(nums) if value % 2 == 1]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-006",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "找出 nums 中所有奇数的索引，索引从 0 开始。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1507\nnums = [12, 14, 3, 6, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1507 [2, 4]\n",
+      "hints": "enumerate 同时提供索引与数值。",
+      "test_cases": [
+        "assert captured_output == \"1507 [2, 4]\\n\""
+      ],
+      "solution": "base = 1507\nnums = [12, 14, 3, 6, 7]\nresult = [index for index, value in enumerate(nums) if value % 2 == 1]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-007",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 zip 对齐两个向量，计算对应元素乘积之和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1510\nleft = [15, 4, 6]\nright = [6, 9, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1510 156\n",
+      "hints": "可以把生成器表达式交给 sum。",
+      "test_cases": [
+        "assert captured_output == \"1510 156\\n\""
+      ],
+      "solution": "base = 1510\nleft = [15, 4, 6]\nright = [6, 9, 5]\nresult = sum(x * y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-008",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 zip 对齐两个向量，计算对应元素乘积之和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1511\nleft = [16, 5, 7]\nright = [7, 10, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1511 204\n",
+      "hints": "可以把生成器表达式交给 sum。",
+      "test_cases": [
+        "assert captured_output == \"1511 204\\n\""
+      ],
+      "solution": "base = 1511\nleft = [16, 5, 7]\nright = [7, 10, 6]\nresult = sum(x * y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-009",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 zip 对齐两个向量，计算对应元素乘积之和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1512\nleft = [17, 6, 8]\nright = [8, 4, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1512 216\n",
+      "hints": "可以把生成器表达式交给 sum。",
+      "test_cases": [
+        "assert captured_output == \"1512 216\\n\""
+      ],
+      "solution": "base = 1512\nleft = [17, 6, 8]\nright = [8, 4, 7]\nresult = sum(x * y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-010",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 map 和 lambda 将 nums 中每项减 1，转成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1515\nnums = [3, 9, 11, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1515 [2, 8, 10, 6, 4]\n",
+      "hints": "map() 的结果是惰性迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1515 [2, 8, 10, 6, 4]\\n\""
+      ],
+      "solution": "base = 1515\nnums = [3, 9, 11, 7, 5]\nresult = list(map(lambda x: x - 1, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-011",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 map 和 lambda 将 nums 中每项减 1，转成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1516\nnums = [4, 10, 12, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1516 [3, 9, 11, 7, 5]\n",
+      "hints": "map() 的结果是惰性迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1516 [3, 9, 11, 7, 5]\\n\""
+      ],
+      "solution": "base = 1516\nnums = [4, 10, 12, 8, 6]\nresult = list(map(lambda x: x - 1, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-012",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "用 map 和 lambda 将 nums 中每项减 1，转成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1517\nnums = [5, 11, 13, 9, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1517 [4, 10, 12, 8, 6]\n",
+      "hints": "map() 的结果是惰性迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1517 [4, 10, 12, 8, 6]\\n\""
+      ],
+      "solution": "base = 1517\nnums = [5, 11, 13, 9, 7]\nresult = list(map(lambda x: x - 1, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-013",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 filter 保留 nums 中可被 3 整除的数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1520\nnums = [8, 14, 5, 5, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1520 []\n",
+      "hints": "filter 只保留谓词函数返回真值的元素。",
+      "test_cases": [
+        "assert captured_output == \"1520 []\\n\""
+      ],
+      "solution": "base = 1520\nnums = [8, 14, 5, 5, 5]\nresult = list(filter(lambda x: x % 3 == 0, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-014",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 filter 保留 nums 中可被 3 整除的数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1521\nnums = [9, 2, 6, 6, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1521 [9, 6, 6, 6]\n",
+      "hints": "filter 只保留谓词函数返回真值的元素。",
+      "test_cases": [
+        "assert captured_output == \"1521 [9, 6, 6, 6]\\n\""
+      ],
+      "solution": "base = 1521\nnums = [9, 2, 6, 6, 6]\nresult = list(filter(lambda x: x % 3 == 0, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-015",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 filter 保留 nums 中可被 3 整除的数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1522\nnums = [10, 3, 7, 7, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1522 [3]\n",
+      "hints": "filter 只保留谓词函数返回真值的元素。",
+      "test_cases": [
+        "assert captured_output == \"1522 [3]\\n\""
+      ],
+      "solution": "base = 1522\nnums = [10, 3, 7, 7, 7]\nresult = list(filter(lambda x: x % 3 == 0, nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-016",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算相邻两项的和，输出长度比 nums 少 1 的列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1525\nnums = [13, 6, 10, 10, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1525 [19, 16, 20, 15]\n",
+      "hints": "把原序列与移位一项的切片同时交给 zip。",
+      "test_cases": [
+        "assert captured_output == \"1525 [19, 16, 20, 15]\\n\""
+      ],
+      "solution": "base = 1525\nnums = [13, 6, 10, 10, 5]\nresult = [x + y for x, y in zip(nums, nums[1:])]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-017",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算相邻两项的和，输出长度比 nums 少 1 的列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1526\nnums = [14, 7, 11, 4, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1526 [21, 18, 15, 10]\n",
+      "hints": "把原序列与移位一项的切片同时交给 zip。",
+      "test_cases": [
+        "assert captured_output == \"1526 [21, 18, 15, 10]\\n\""
+      ],
+      "solution": "base = 1526\nnums = [14, 7, 11, 4, 6]\nresult = [x + y for x, y in zip(nums, nums[1:])]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-018",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算相邻两项的和，输出长度比 nums 少 1 的列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1527\nnums = [15, 8, 12, 5, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1527 [23, 20, 17, 12]\n",
+      "hints": "把原序列与移位一项的切片同时交给 zip。",
+      "test_cases": [
+        "assert captured_output == \"1527 [23, 20, 17, 12]\\n\""
+      ],
+      "solution": "base = 1527\nnums = [15, 8, 12, 5, 7]\nresult = [x + y for x, y in zip(nums, nums[1:])]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-019",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 left 和 right 中相同位置元素相等的个数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1530\nleft = [1, 11, 4, 8, 5]\nright = [1, 12, 4, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1530 3\n",
+      "hints": "Python 中布尔值可用于数值求和。",
+      "test_cases": [
+        "assert captured_output == \"1530 3\\n\""
+      ],
+      "solution": "base = 1530\nleft = [1, 11, 4, 8, 5]\nright = [1, 12, 4, 7, 5]\nresult = sum(x == y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-020",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 left 和 right 中相同位置元素相等的个数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1531\nleft = [2, 12, 5, 9, 6]\nright = [2, 13, 5, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1531 3\n",
+      "hints": "Python 中布尔值可用于数值求和。",
+      "test_cases": [
+        "assert captured_output == \"1531 3\\n\""
+      ],
+      "solution": "base = 1531\nleft = [2, 12, 5, 9, 6]\nright = [2, 13, 5, 8, 6]\nresult = sum(x == y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-021",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 left 和 right 中相同位置元素相等的个数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1532\nleft = [3, 13, 6, 10, 7]\nright = [3, 14, 6, 9, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1532 3\n",
+      "hints": "Python 中布尔值可用于数值求和。",
+      "test_cases": [
+        "assert captured_output == \"1532 3\\n\""
+      ],
+      "solution": "base = 1532\nleft = [3, 13, 6, 10, 7]\nright = [3, 14, 6, 9, 7]\nresult = sum(x == y for x, y in zip(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-022",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 nums 中所有偶数的平方和，忽略奇数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1535\nnums = [6, 3, 9, 6, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1535 72\n",
+      "hints": "生成器表达式可在 for 后附加 if。",
+      "test_cases": [
+        "assert captured_output == \"1535 72\\n\""
+      ],
+      "solution": "base = 1535\nnums = [6, 3, 9, 6, 5]\nresult = sum(x * x for x in nums if x % 2 == 0)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-023",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 nums 中所有偶数的平方和，忽略奇数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1536\nnums = [7, 4, 10, 7, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1536 152\n",
+      "hints": "生成器表达式可在 for 后附加 if。",
+      "test_cases": [
+        "assert captured_output == \"1536 152\\n\""
+      ],
+      "solution": "base = 1536\nnums = [7, 4, 10, 7, 6]\nresult = sum(x * x for x in nums if x % 2 == 0)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-024",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "计算 nums 中所有偶数的平方和，忽略奇数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1537\nnums = [8, 5, 11, 8, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1537 128\n",
+      "hints": "生成器表达式可在 for 后附加 if。",
+      "test_cases": [
+        "assert captured_output == \"1537 128\\n\""
+      ],
+      "solution": "base = 1537\nnums = [8, 5, 11, 8, 7]\nresult = sum(x * x for x in nums if x % 2 == 0)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-025",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 islice 从 nums 迭代器中取下标 1、2、3 的元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1540\nfrom itertools import islice\nnums = [11, 8, 3, 4, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1540 [8, 3, 4]\n",
+      "hints": "islice(iterable, start, stop) 允许对迭代器切片。",
+      "test_cases": [
+        "assert captured_output == \"1540 [8, 3, 4]\\n\""
+      ],
+      "solution": "base = 1540\nfrom itertools import islice\nnums = [11, 8, 3, 4, 5]\nresult = list(islice(iter(nums), 1, 4))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-026",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 islice 从 nums 迭代器中取下标 1、2、3 的元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1541\nfrom itertools import islice\nnums = [12, 9, 4, 5, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1541 [9, 4, 5]\n",
+      "hints": "islice(iterable, start, stop) 允许对迭代器切片。",
+      "test_cases": [
+        "assert captured_output == \"1541 [9, 4, 5]\\n\""
+      ],
+      "solution": "base = 1541\nfrom itertools import islice\nnums = [12, 9, 4, 5, 6]\nresult = list(islice(iter(nums), 1, 4))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-027",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "使用 islice 从 nums 迭代器中取下标 1、2、3 的元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1542\nfrom itertools import islice\nnums = [13, 10, 5, 6, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1542 [10, 5, 6]\n",
+      "hints": "islice(iterable, start, stop) 允许对迭代器切片。",
+      "test_cases": [
+        "assert captured_output == \"1542 [10, 5, 6]\\n\""
+      ],
+      "solution": "base = 1542\nfrom itertools import islice\nnums = [13, 10, 5, 6, 7]\nresult = list(islice(iter(nums), 1, 4))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-028",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "依照原顺序移除 nums 中的重复元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1545\nnums = [16, 13, 16, 8, 13, 9]\nresult = ___\nprint(base, result)",
+      "expected_output": "1545 [16, 13, 8, 9]\n",
+      "hints": "dict.fromkeys 遵循首次出现的顺序。",
+      "test_cases": [
+        "assert captured_output == \"1545 [16, 13, 8, 9]\\n\""
+      ],
+      "solution": "base = 1545\nnums = [16, 13, 16, 8, 13, 9]\nresult = list(dict.fromkeys(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-029",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "依照原顺序移除 nums 中的重复元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1546\nnums = [17, 14, 17, 9, 14, 10]\nresult = ___\nprint(base, result)",
+      "expected_output": "1546 [17, 14, 9, 10]\n",
+      "hints": "dict.fromkeys 遵循首次出现的顺序。",
+      "test_cases": [
+        "assert captured_output == \"1546 [17, 14, 9, 10]\\n\""
+      ],
+      "solution": "base = 1546\nnums = [17, 14, 17, 9, 14, 10]\nresult = list(dict.fromkeys(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-M-030",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "依照原顺序移除 nums 中的重复元素。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1547\nnums = [1, 2, 1, 10, 2, 4]\nresult = ___\nprint(base, result)",
+      "expected_output": "1547 [1, 2, 10, 4]\n",
+      "hints": "dict.fromkeys 遵循首次出现的顺序。",
+      "test_cases": [
+        "assert captured_output == \"1547 [1, 2, 10, 4]\\n\""
+      ],
+      "solution": "base = 1547\nnums = [1, 2, 1, 10, 2, 4]\nresult = list(dict.fromkeys(nums))\nprint(base, result)"
+    }
+  ]
+}

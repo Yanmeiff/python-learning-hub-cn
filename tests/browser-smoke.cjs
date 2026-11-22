@@ -10,10 +10,10 @@ async function run() {
   page.on("pageerror", error => errors.push(error.message));
   try {
     await page.goto(SITE, {waitUntil:"domcontentloaded"});
-    await page.waitForFunction(() => document.getElementById("progress-total")?.textContent === "1780", {timeout:15000});
-    await page.waitForFunction(() => document.getElementById("hub-total")?.textContent === "1780", {timeout:15000});
+    await page.waitForFunction(() => document.getElementById("progress-total")?.textContent === "1900", {timeout:15000});
+    await page.waitForFunction(() => document.getElementById("hub-total")?.textContent === "1900", {timeout:15000});
     await page.waitForFunction(() => document.querySelectorAll("#heatmap-grid .heat-cell").length >= 365, {timeout:15000});
-    await page.waitForFunction(() => document.querySelectorAll("#mastery-list .mastery-item").length === 6, {timeout:15000});
+    await page.waitForFunction(() => document.querySelectorAll("#mastery-list .mastery-item").length === 7, {timeout:15000});
 
     const style = await page.evaluate(() => {
       const grid = document.querySelector(".hub-stats");
@@ -104,6 +104,24 @@ async function run() {
     });
     assert.ok(layout.mainTop >= layout.sideBottom - 2, "mobile layout must stack sidebar above dashboard");
     await page.screenshot({path:"hub-dashboard-mobile.png",fullPage:true});
+
+    // New chapter must be navigable and judged by real Pyodide.
+    await page.locator('.chapter-head').last().click();
+    await page.locator('.qlink[data-id="CH16-E-001"]').click();
+    await page.waitForFunction(() => document.getElementById("q-id").textContent === "CH16-E-001");
+    const ch16 = await page.evaluate(() => ({
+      code: document.querySelector("#editor").value,
+      template: document.querySelector("#q-description").textContent
+    }));
+    assert.match(ch16.template, /列表推导式/);
+    const newCase = await page.evaluate(async () => {
+      const response = await fetch("data/questions/CH16_Iteration_Generators/easy_30.json");
+      const data = await response.json();
+      return data.questions[0];
+    });
+    await submit("CH16-E-001", newCase.solution, true, newCase.expected_output);
+    await page.locator("#btn-dashboard").click();
+    assert.equal(await page.locator("#hub-total").textContent(), "1900");
     assert.deepEqual(errors, [], "page should not contain uncaught JavaScript errors");
     console.log("Browser smoke checks passed: CSS, dashboard, 1780 questions, real Pyodide, exact stdout, judging, mistakes, mobile layout");
   } finally {

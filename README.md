@@ -19,7 +19,7 @@
 > 本站通过 GitHub Actions 自动发布 `docs/` 目录。部署状态可在仓库 **Actions → Deploy Python Learning Hub to GitHub Pages** 中查看。
 
 PyQuest 是一套以 **learn-py.org** 知识体系为蓝本的 Python 交互式练习题集，
-按"超简单 → 简单 → 中等 → 较难"四档难度阶梯组织，共规划 **29 章 × 120 题 = 3480 道**练习题。
+按"超简单 → 简单 → 中等 → 较难"四档难度阶梯组织，共规划 **29 章**练习题；已完成章节包含 CH02 的 100 题，因此按其余章节每章 120 题补完后，预计为 **3460 道**。
 
 ## ✨ 特性
 
@@ -40,9 +40,10 @@ PyQuest 是一套以 **learn-py.org** 知识体系为蓝本的 Python 交互式�
 | CH05 字符串格式化 | ✅ 120 道 | CH13 元组 (Tuples) | ✅ 120 道 |
 | CH06 条件语句 | ✅ 120 道 | CH14 字典 (Dictionaries) | ✅ 120 道 |
 | CH07 循环 (for) | ✅ 120 道 | CH15 集合 (Sets) | ✅ 120 道 |
-| CH08 循环 (while) | ✅ 120 道 | CH16 ~ CH29 | ⏳ 待生成 |
+| CH08 循环 (while) | ✅ 120 道 | CH16 迭代、推导式与生成器 | ✅ 120 道 |
+| CH17 ~ CH29 | ⏳ 待生成 | | |
 
-> **进度合计：15 章 = 1780 道**，全库校验通过。剩余 14 章正在分批生成中。
+> **进度合计：16 章 = 1900 道**，新增 CH16 已按原题库结构准备了 120 道；剩余 13 章待补。CH16 生成及验证：`python generator/gen_ch16.py --check`。
 
 ## 🚀 快速开始
 
@@ -61,7 +62,7 @@ python generator/validate.py
 ```
 OK: CH01_Hello_World 120 道通过
 ...
-全库校验通过：15 章，1780 道
+全库校验通过：16 章，1900 道
 ```
 
 ### 重新生成某一章的题库
@@ -163,3 +164,10 @@ PyQuest/
 两个网站独立运行，**彼此不会自动同步学习进度或错题记录**。原先内嵌教程的历史阅读标记不会被清除，若曾使用内嵌教程，JSON 备份仍可保留这一历史数据，但目前不再展示独立的教程阅读器。
 
 原项目内容来源与许可： [walter201230/Python](https://github.com/walter201230/Python)（教程内容 CC BY 4.0）。此版本仅提供原站链接，不再复制或托管这些教程文章。
+
+
+## 📖 补齐 CH16–CH29
+
+本仓库扩展工作将原作者已整理的 CH01–CH15 与 [小白学 Python](https://github.com/walter201230/Python) 的后续知识点对应。具体拟定章节及来源见 [补全计划](docs/CH16_CH29_ROADMAP.md)。
+
+新增加的 CH16 按原结构生成四个 30 题 JSON 文件，使用 `generator/ch16_cases.json` 保存独立题目和参考解法，运行 `python generator/gen_ch16.py --check` 会重新用 Python 执行全部参考解法并比对题库文件。未合并的扩展工作不会改变 master 正式站点。

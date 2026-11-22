@@ -420,6 +420,34 @@
           "n": 30
         }
       ]
+    },
+    {
+      "id": "CH16",
+      "dir": "CH16_Iteration_Generators",
+      "title": "CH16 迭代、推导式与生成器",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
     }
   ]
 }

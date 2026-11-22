@@ -1,0 +1,427 @@
+{
+  "chapter": "CH16",
+  "title": "迭代、推导式与生成器",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH16-H-001",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对 nums 按宽度 3 的滑动窗口计算窗口内元素总和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2000\nnums = [12, 13, 12, 9, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2000 [37, 34, 26]\n",
+      "hints": "窗口起点 i 的最大值取决于窗口宽度。",
+      "test_cases": [
+        "assert captured_output == \"2000 [37, 34, 26]\\n\""
+      ],
+      "solution": "base = 2000\nnums = [12, 13, 12, 9, 5]\nresult = [sum(nums[i:i+3]) for i in range(len(nums)-2)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-002",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对 nums 按宽度 3 的滑动窗口计算窗口内元素总和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2001\nnums = [13, 14, 13, 10, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2001 [40, 37, 29]\n",
+      "hints": "窗口起点 i 的最大值取决于窗口宽度。",
+      "test_cases": [
+        "assert captured_output == \"2001 [40, 37, 29]\\n\""
+      ],
+      "solution": "base = 2001\nnums = [13, 14, 13, 10, 6]\nresult = [sum(nums[i:i+3]) for i in range(len(nums)-2)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-003",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对 nums 按宽度 3 的滑动窗口计算窗口内元素总和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2002\nnums = [14, 2, 3, 4, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2002 [19, 9, 14]\n",
+      "hints": "窗口起点 i 的最大值取决于窗口宽度。",
+      "test_cases": [
+        "assert captured_output == \"2002 [19, 9, 14]\\n\""
+      ],
+      "solution": "base = 2002\nnums = [14, 2, 3, 4, 7]\nresult = [sum(nums[i:i+3]) for i in range(len(nums)-2)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-004",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 itertools.accumulate 计算 nums 每个前缀的累计和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2005\nfrom itertools import accumulate\nnums = [17, 5, 6, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2005 [17, 22, 28, 35, 40]\n",
+      "hints": "accumulate() 默认连续累加。",
+      "test_cases": [
+        "assert captured_output == \"2005 [17, 22, 28, 35, 40]\\n\""
+      ],
+      "solution": "base = 2005\nfrom itertools import accumulate\nnums = [17, 5, 6, 7, 5]\nresult = list(accumulate(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-005",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 itertools.accumulate 计算 nums 每个前缀的累计和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2006\nfrom itertools import accumulate\nnums = [1, 6, 7, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2006 [1, 7, 14, 22, 28]\n",
+      "hints": "accumulate() 默认连续累加。",
+      "test_cases": [
+        "assert captured_output == \"2006 [1, 7, 14, 22, 28]\\n\""
+      ],
+      "solution": "base = 2006\nfrom itertools import accumulate\nnums = [1, 6, 7, 8, 6]\nresult = list(accumulate(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-006",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 itertools.accumulate 计算 nums 每个前缀的累计和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2007\nfrom itertools import accumulate\nnums = [2, 7, 8, 9, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2007 [2, 9, 17, 26, 33]\n",
+      "hints": "accumulate() 默认连续累加。",
+      "test_cases": [
+        "assert captured_output == \"2007 [2, 9, 17, 26, 33]\\n\""
+      ],
+      "solution": "base = 2007\nfrom itertools import accumulate\nnums = [2, 7, 8, 9, 7]\nresult = list(accumulate(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-007",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "利用嵌套推导式求二维 rows 的三列列和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2010\nrows = [[5, 10, 11], [7, 12, 13]]\nresult = ___\nprint(base, result)",
+      "expected_output": "2010 [12, 22, 24]\n",
+      "hints": "先遍历列索引，再在内部迭代每一行。",
+      "test_cases": [
+        "assert captured_output == \"2010 [12, 22, 24]\\n\""
+      ],
+      "solution": "base = 2010\nrows = [[5, 10, 11], [7, 12, 13]]\nresult = [sum(row[col] for row in rows) for col in range(3)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-008",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "利用嵌套推导式求二维 rows 的三列列和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2011\nrows = [[6, 11, 12], [8, 13, 14]]\nresult = ___\nprint(base, result)",
+      "expected_output": "2011 [14, 24, 26]\n",
+      "hints": "先遍历列索引，再在内部迭代每一行。",
+      "test_cases": [
+        "assert captured_output == \"2011 [14, 24, 26]\\n\""
+      ],
+      "solution": "base = 2011\nrows = [[6, 11, 12], [8, 13, 14]]\nresult = [sum(row[col] for row in rows) for col in range(3)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-009",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "利用嵌套推导式求二维 rows 的三列列和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2012\nrows = [[7, 12, 13], [9, 14, 15]]\nresult = ___\nprint(base, result)",
+      "expected_output": "2012 [16, 26, 28]\n",
+      "hints": "先遍历列索引，再在内部迭代每一行。",
+      "test_cases": [
+        "assert captured_output == \"2012 [16, 26, 28]\\n\""
+      ],
+      "solution": "base = 2012\nrows = [[7, 12, 13], [9, 14, 15]]\nresult = [sum(row[col] for row in rows) for col in range(3)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-010",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对长度不同的两个列表逐项相加，缺失位置按 0 计算。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2015\nfrom itertools import zip_longest\nleft = [10, 2, 5, 10, 5]\nright = [10, 2, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2015 [20, 4, 10, 10, 5]\n",
+      "hints": "zip_longest 能保留较长序列的尾部。",
+      "test_cases": [
+        "assert captured_output == \"2015 [20, 4, 10, 10, 5]\\n\""
+      ],
+      "solution": "base = 2015\nfrom itertools import zip_longest\nleft = [10, 2, 5, 10, 5]\nright = [10, 2, 5]\nresult = [x + y for x, y in zip_longest(left, right, fillvalue=0)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-011",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对长度不同的两个列表逐项相加，缺失位置按 0 计算。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2016\nfrom itertools import zip_longest\nleft = [11, 3, 6, 4, 6]\nright = [11, 3, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2016 [22, 6, 12, 4, 6]\n",
+      "hints": "zip_longest 能保留较长序列的尾部。",
+      "test_cases": [
+        "assert captured_output == \"2016 [22, 6, 12, 4, 6]\\n\""
+      ],
+      "solution": "base = 2016\nfrom itertools import zip_longest\nleft = [11, 3, 6, 4, 6]\nright = [11, 3, 6]\nresult = [x + y for x, y in zip_longest(left, right, fillvalue=0)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-012",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对长度不同的两个列表逐项相加，缺失位置按 0 计算。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2017\nfrom itertools import zip_longest\nleft = [12, 4, 7, 5, 7]\nright = [12, 4, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2017 [24, 8, 14, 5, 7]\n",
+      "hints": "zip_longest 能保留较长序列的尾部。",
+      "test_cases": [
+        "assert captured_output == \"2017 [24, 8, 14, 5, 7]\\n\""
+      ],
+      "solution": "base = 2017\nfrom itertools import zip_longest\nleft = [12, 4, 7, 5, 7]\nright = [12, 4, 7]\nresult = [x + y for x, y in zip_longest(left, right, fillvalue=0)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-013",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "不创建中间列表，使用 itertools.chain 顺序连接两段序列。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2020\nfrom itertools import chain\nleft = [15, 7, 10]\nright = [8, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2020 [15, 7, 10, 8, 5]\n",
+      "hints": "chain 接受若干可迭代对象。",
+      "test_cases": [
+        "assert captured_output == \"2020 [15, 7, 10, 8, 5]\\n\""
+      ],
+      "solution": "base = 2020\nfrom itertools import chain\nleft = [15, 7, 10]\nright = [8, 5]\nresult = list(chain(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-014",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "不创建中间列表，使用 itertools.chain 顺序连接两段序列。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2021\nfrom itertools import chain\nleft = [16, 8, 11]\nright = [9, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2021 [16, 8, 11, 9, 6]\n",
+      "hints": "chain 接受若干可迭代对象。",
+      "test_cases": [
+        "assert captured_output == \"2021 [16, 8, 11, 9, 6]\\n\""
+      ],
+      "solution": "base = 2021\nfrom itertools import chain\nleft = [16, 8, 11]\nright = [9, 6]\nresult = list(chain(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-015",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "不创建中间列表，使用 itertools.chain 顺序连接两段序列。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2022\nfrom itertools import chain\nleft = [17, 9, 12]\nright = [10, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2022 [17, 9, 12, 10, 7]\n",
+      "hints": "chain 接受若干可迭代对象。",
+      "test_cases": [
+        "assert captured_output == \"2022 [17, 9, 12, 10, 7]\\n\""
+      ],
+      "solution": "base = 2022\nfrom itertools import chain\nleft = [17, 9, 12]\nright = [10, 7]\nresult = list(chain(left, right))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-016",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计 nums 中全部两两不重复的无序组合的数量。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2025\nfrom itertools import combinations\nnums = [3, 12, 4, 6, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2025 10\n",
+      "hints": "combinations 不会把 (a,b) 与 (b,a) 当作两组。",
+      "test_cases": [
+        "assert captured_output == \"2025 10\\n\""
+      ],
+      "solution": "base = 2025\nfrom itertools import combinations\nnums = [3, 12, 4, 6, 5]\nresult = len(list(combinations(nums, 2)))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-017",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计 nums 中全部两两不重复的无序组合的数量。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2026\nfrom itertools import combinations\nnums = [4, 13, 5, 7, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2026 10\n",
+      "hints": "combinations 不会把 (a,b) 与 (b,a) 当作两组。",
+      "test_cases": [
+        "assert captured_output == \"2026 10\\n\""
+      ],
+      "solution": "base = 2026\nfrom itertools import combinations\nnums = [4, 13, 5, 7, 6]\nresult = len(list(combinations(nums, 2)))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-018",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计 nums 中全部两两不重复的无序组合的数量。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2027\nfrom itertools import combinations\nnums = [5, 14, 6, 8, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2027 10\n",
+      "hints": "combinations 不会把 (a,b) 与 (b,a) 当作两组。",
+      "test_cases": [
+        "assert captured_output == \"2027 10\\n\""
+      ],
+      "solution": "base = 2027\nfrom itertools import combinations\nnums = [5, 14, 6, 8, 7]\nresult = len(list(combinations(nums, 2)))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-019",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造有序数对，统计 x 来自 left、y 来自 right 且 x < y 的情况数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2030\nleft = [8, 4, 9]\nright = [9, 4, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2030 3\n",
+      "hints": "两层 for 会枚举笛卡尔积。",
+      "test_cases": [
+        "assert captured_output == \"2030 3\\n\""
+      ],
+      "solution": "base = 2030\nleft = [8, 4, 9]\nright = [9, 4, 5]\nresult = sum(1 for x in left for y in right if x < y)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-020",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造有序数对，统计 x 来自 left、y 来自 right 且 x < y 的情况数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2031\nleft = [9, 5, 10]\nright = [10, 5, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2031 3\n",
+      "hints": "两层 for 会枚举笛卡尔积。",
+      "test_cases": [
+        "assert captured_output == \"2031 3\\n\""
+      ],
+      "solution": "base = 2031\nleft = [9, 5, 10]\nright = [10, 5, 6]\nresult = sum(1 for x in left for y in right if x < y)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-021",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造有序数对，统计 x 来自 left、y 来自 right 且 x < y 的情况数。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2032\nleft = [10, 6, 11]\nright = [11, 6, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2032 3\n",
+      "hints": "两层 for 会枚举笛卡尔积。",
+      "test_cases": [
+        "assert captured_output == \"2032 3\\n\""
+      ],
+      "solution": "base = 2032\nleft = [10, 6, 11]\nright = [11, 6, 7]\nresult = sum(1 for x in left for y in right if x < y)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-022",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "在迭代器已耗尽时安全读取一个默认值 -1。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2035\nvalues = [13, 9]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = ___\nprint(base, result)",
+      "expected_output": "2035 [13, 9, -1]\n",
+      "hints": "next(iterator, default) 可避免 StopIteration。",
+      "test_cases": [
+        "assert captured_output == \"2035 [13, 9, -1]\\n\""
+      ],
+      "solution": "base = 2035\nvalues = [13, 9]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = [first, second, third]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-023",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "在迭代器已耗尽时安全读取一个默认值 -1。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2036\nvalues = [14, 10]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = ___\nprint(base, result)",
+      "expected_output": "2036 [14, 10, -1]\n",
+      "hints": "next(iterator, default) 可避免 StopIteration。",
+      "test_cases": [
+        "assert captured_output == \"2036 [14, 10, -1]\\n\""
+      ],
+      "solution": "base = 2036\nvalues = [14, 10]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = [first, second, third]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-024",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "在迭代器已耗尽时安全读取一个默认值 -1。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2037\nvalues = [15, 11]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = ___\nprint(base, result)",
+      "expected_output": "2037 [15, 11, -1]\n",
+      "hints": "next(iterator, default) 可避免 StopIteration。",
+      "test_cases": [
+        "assert captured_output == \"2037 [15, 11, -1]\\n\""
+      ],
+      "solution": "base = 2037\nvalues = [15, 11]\nit = iter(values)\nfirst = next(it)\nsecond = next(it)\nthird = next(it, -1)\nresult = [first, second, third]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-025",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "将 nums 与自身的逆序配对，求出每对元素的差。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2040\nnums = [1, 14, 8, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "2040 [-4, 7, 0, -7, 4]\n",
+      "hints": "reversed(nums) 可以提供反方向的迭代序列。",
+      "test_cases": [
+        "assert captured_output == \"2040 [-4, 7, 0, -7, 4]\\n\""
+      ],
+      "solution": "base = 2040\nnums = [1, 14, 8, 7, 5]\nresult = [x - y for x, y in zip(nums, reversed(nums))]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-026",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "将 nums 与自身的逆序配对，求出每对元素的差。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2041\nnums = [2, 2, 9, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "2041 [-4, -6, 0, 6, 4]\n",
+      "hints": "reversed(nums) 可以提供反方向的迭代序列。",
+      "test_cases": [
+        "assert captured_output == \"2041 [-4, -6, 0, 6, 4]\\n\""
+      ],
+      "solution": "base = 2041\nnums = [2, 2, 9, 8, 6]\nresult = [x - y for x, y in zip(nums, reversed(nums))]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-027",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "将 nums 与自身的逆序配对，求出每对元素的差。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2042\nnums = [3, 3, 10, 9, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "2042 [-4, -6, 0, 6, 4]\n",
+      "hints": "reversed(nums) 可以提供反方向的迭代序列。",
+      "test_cases": [
+        "assert captured_output == \"2042 [-4, -6, 0, 6, 4]\\n\""
+      ],
+      "solution": "base = 2042\nnums = [3, 3, 10, 9, 7]\nresult = [x - y for x, y in zip(nums, reversed(nums))]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-028",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计相邻相同元素组成的连续组长度（不全局去重）。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2045\nfrom itertools import groupby\nnums = [15, 15, 115, 215, 215, 215, 315, 315]\nresult = ___\nprint(base, result)",
+      "expected_output": "2045 [2, 1, 3, 2]\n",
+      "hints": "groupby 只合并相邻且键相同的元素。",
+      "test_cases": [
+        "assert captured_output == \"2045 [2, 1, 3, 2]\\n\""
+      ],
+      "solution": "base = 2045\nfrom itertools import groupby\nnums = [15, 15, 115, 215, 215, 215, 315, 315]\nresult = [len(list(group)) for _, group in groupby(nums)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-029",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计相邻相同元素组成的连续组长度（不全局去重）。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2046\nfrom itertools import groupby\nnums = [16, 16, 116, 216, 216, 216, 316, 316]\nresult = ___\nprint(base, result)",
+      "expected_output": "2046 [2, 1, 3, 2]\n",
+      "hints": "groupby 只合并相邻且键相同的元素。",
+      "test_cases": [
+        "assert captured_output == \"2046 [2, 1, 3, 2]\\n\""
+      ],
+      "solution": "base = 2046\nfrom itertools import groupby\nnums = [16, 16, 116, 216, 216, 216, 316, 316]\nresult = [len(list(group)) for _, group in groupby(nums)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-H-030",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "统计相邻相同元素组成的连续组长度（不全局去重）。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 2047\nfrom itertools import groupby\nnums = [17, 17, 117, 217, 217, 217, 317, 317]\nresult = ___\nprint(base, result)",
+      "expected_output": "2047 [2, 1, 3, 2]\n",
+      "hints": "groupby 只合并相邻且键相同的元素。",
+      "test_cases": [
+        "assert captured_output == \"2047 [2, 1, 3, 2]\\n\""
+      ],
+      "solution": "base = 2047\nfrom itertools import groupby\nnums = [17, 17, 117, 217, 217, 217, 317, 317]\nresult = [len(list(group)) for _, group in groupby(nums)]\nprint(base, result)"
+    }
+  ]
+}

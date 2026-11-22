@@ -19,6 +19,8 @@ jobs:
           node-version: 22
       - name: Check JavaScript syntax
         run: node --check docs/app.js && node --check docs/learning/learning-store.js && node --check docs/learning/pyodide-judge.js && node --check docs/learning/dashboard.js
+      - name: Validate full Python question bank
+        run: python3 generator/gen_ch16.py --check && python3 generator/validate.py
       - name: Run learning data tests
         run: node --test tests/*.test.js
 
