@@ -1,0 +1,541 @@
+{
+  "CH17": {
+    "dir": "CH17_Classes_Objects",
+    "title": "面向对象基础",
+    "categories": [
+      "objects"
+    ],
+    "tiers": {
+      "E": [
+        {
+          "title": "实例属性读取",
+          "body": "class Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___",
+          "answer": "p.name",
+          "hint": "实例属性通常保存在 self 上"
+        },
+        {
+          "title": "构造并访问数值属性",
+          "body": "class Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___",
+          "answer": "box.width",
+          "hint": "使用实例点号访问属性"
+        },
+        {
+          "title": "调用实例方法",
+          "body": "class Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___",
+          "answer": "c.next()",
+          "hint": "方法调用要加括号"
+        },
+        {
+          "title": "使用类属性",
+          "body": "class Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___",
+          "answer": "Config.prefix + ':' + c.value",
+          "hint": "类属性与实例属性可以组合"
+        },
+        {
+          "title": "对象列表的属性",
+          "body": "class Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___",
+          "answer": "[item.value for item in items]",
+          "hint": "用列表推导式逐个读取对象属性"
+        }
+      ],
+      "M": [
+        {
+          "title": "封装面积方法",
+          "body": "class Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()",
+          "answer": "self.w * self.h",
+          "hint": "方法内部使用 self 获取两个边长"
+        },
+        {
+          "title": "状态递增方法",
+          "body": "class Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]",
+          "answer": "self.value",
+          "hint": "修改属性后返回当前状态"
+        },
+        {
+          "title": "实例方法带默认值",
+          "body": "class Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]",
+          "answer": "x * factor",
+          "hint": "参数默认值仅在未传递时生效"
+        },
+        {
+          "title": "classmethod 工厂",
+          "body": "class Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]",
+          "answer": "cls(*pair)",
+          "hint": "类方法第一个参数是 cls"
+        },
+        {
+          "title": "property 只读属性",
+          "body": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter",
+          "answer": "2 * self.radius",
+          "hint": "property 允许以属性方式读取计算结果"
+        }
+      ],
+      "H": [
+        {
+          "title": "对象批量求和",
+          "body": "class Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___",
+          "answer": "sum(p.total() for p in products)",
+          "hint": "分别计算每个对象金额并求和"
+        },
+        {
+          "title": "比较对象属性后排序",
+          "body": "class Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___",
+          "answer": "[s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]",
+          "hint": "sorted 的 key 可读取对象的分数"
+        },
+        {
+          "title": "属性校验 setter",
+          "body": "class Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance",
+          "answer": "max(0, value)",
+          "hint": "负余额按零处理"
+        },
+        {
+          "title": "构造时保持数据独立",
+          "body": "class Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]",
+          "answer": "list(items) if items is not None else []",
+          "hint": "不要共享可变默认容器"
+        },
+        {
+          "title": "对象之间的协作",
+          "body": "class Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]",
+          "answer": "self.amount",
+          "hint": "转账同时影响两个实例"
+        }
+      ],
+      "X": [
+        {
+          "title": "类实现有边界的栈",
+          "body": "class Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]",
+          "answer": "self.items.pop() if self.items else None",
+          "hint": "空栈需要返回 None"
+        },
+        {
+          "title": "对象状态机切换",
+          "body": "class TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]",
+          "answer": "(self.index + 1) % len(self.states)",
+          "hint": "使用模运算构成循环状态"
+        },
+        {
+          "title": "有界计数器",
+          "body": "class BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]",
+          "answer": "max(self.minimum, min(self.maximum, self.value + delta))",
+          "hint": "先将增量结果限制在允许的区间内"
+        },
+        {
+          "title": "类作为可调用对象",
+          "body": "class Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]",
+          "answer": "self.factor * x",
+          "hint": "__call__ 使实例能像函数一样调用"
+        },
+        {
+          "title": "多实例状态隔离",
+          "body": "class Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]",
+          "answer": "self.stock.get(key, 0) + qty",
+          "hint": "字典 get 提供不存在键时的默认库存"
+        }
+      ]
+    }
+  },
+  "CH18": {
+    "dir": "CH18_Inheritance_Polymorphism",
+    "title": "继承、组合与多态",
+    "tiers": {
+      "E": [
+        {
+          "title": "继承父类属性",
+          "body": "class Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___",
+          "answer": "d.name",
+          "hint": "子类继承父类初始化方法"
+        },
+        {
+          "title": "isinstance 检查继承",
+          "body": "class Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___",
+          "answer": "isinstance(item, Parent)",
+          "hint": "isinstance 会考虑继承关系"
+        },
+        {
+          "title": "覆盖父类方法",
+          "body": "class Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___",
+          "answer": "obj.speak()",
+          "hint": "实例方法按对象实际类型分派"
+        },
+        {
+          "title": "super 初始化",
+          "body": "class User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___",
+          "answer": "(user.name, user.level)",
+          "hint": "super 调用父类构造方法"
+        },
+        {
+          "title": "组合两个对象",
+          "body": "class Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___",
+          "answer": "station.sensor.value",
+          "hint": "组合关系是对象持有另一个对象"
+        }
+      ],
+      "M": [
+        {
+          "title": "子类扩展返回值",
+          "body": "class Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()",
+          "answer": "self.side ** 2",
+          "hint": "正方形面积由边长计算"
+        },
+        {
+          "title": "super 扩展方法",
+          "body": "class Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()",
+          "answer": "super().label() + ':' + word",
+          "hint": "调用父类方法并追加标记"
+        },
+        {
+          "title": "覆盖多态求面积",
+          "body": "class Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___",
+          "answer": "[shape.area() for shape in shapes]",
+          "hint": "统一调用同名方法"
+        },
+        {
+          "title": "继承的类变量",
+          "body": "class Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___",
+          "answer": "(Parent.count, Child.count)",
+          "hint": "子类同名类属性不会改变父类属性"
+        },
+        {
+          "title": "多态转换器",
+          "body": "class Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)",
+          "answer": "word + ':' + super().format(value)",
+          "hint": "复用父类转换逻辑"
+        }
+      ],
+      "H": [
+        {
+          "title": "继承与运算覆盖",
+          "body": "class Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]",
+          "answer": "super().withdraw(min(amount, self.balance))",
+          "hint": "子类限制取出金额而不改变基类实现"
+        },
+        {
+          "title": "抽象概念的多态累计",
+          "body": "class FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___",
+          "answer": "sum(fee.cost(n) for fee in fees)",
+          "hint": "不同对象实现相同接口"
+        },
+        {
+          "title": "组合封装计量器",
+          "body": "class Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]",
+          "answer": "self.counter.step() * b",
+          "hint": "组合对象可复用内部对象功能"
+        },
+        {
+          "title": "继承链中的 MRO",
+          "body": "class A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___",
+          "answer": "(obj.tag(), [cls.__name__ for cls in C.__mro__])",
+          "hint": "方法解析顺序从实际子类开始"
+        },
+        {
+          "title": "子类带额外属性",
+          "body": "class Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()",
+          "answer": "super().total() + self.tax",
+          "hint": "子类通过 super 复用价格"
+        }
+      ],
+      "X": [
+        {
+          "title": "模板方法多态",
+          "body": "class Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)",
+          "answer": "x * x",
+          "hint": "父类控制流程，子类覆盖单个步骤"
+        },
+        {
+          "title": "基类与子类共享状态",
+          "body": "class Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log",
+          "answer": "super().emit(x)",
+          "hint": "仅满足条件时调用父类行为"
+        },
+        {
+          "title": "多态算法策略",
+          "body": "class Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]",
+          "answer": "sorted(values, key=self.strategy.key)",
+          "hint": "将排序键函数委托给注入对象"
+        },
+        {
+          "title": "可组合校验规则",
+          "body": "class MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]",
+          "answer": "all(rule.valid(value) for rule in self.rules)",
+          "hint": "多态规则组合使用 all"
+        },
+        {
+          "title": "mixin 复用功能",
+          "body": "class NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()",
+          "answer": "self.describe() + ':' + str(self.size)",
+          "hint": "混入类提供可被子类复用的方法"
+        }
+      ]
+    }
+  },
+  "CH19": {
+    "dir": "CH19_Modules_Imports",
+    "title": "模块、包与导入",
+    "tiers": {
+      "E": [
+        {
+          "title": "使用 math 模块",
+          "body": "import math\nresult = ___",
+          "answer": "math.isqrt(a * a + b)",
+          "hint": "math.isqrt 返回整数平方根"
+        },
+        {
+          "title": "from import 别名",
+          "body": "from math import ceil as upper\nresult = ___",
+          "answer": "upper(a / b)",
+          "hint": "别名可以像原函数一样调用"
+        },
+        {
+          "title": "statistics 平均数",
+          "body": "import statistics\nresult = ___",
+          "answer": "statistics.mean(nums)",
+          "hint": "统计模块提供 mean"
+        },
+        {
+          "title": "operator 内置运算",
+          "body": "from operator import add\nresult = ___",
+          "answer": "add(a, b)",
+          "hint": "operator.add 执行加法"
+        },
+        {
+          "title": "collections Counter",
+          "body": "from collections import Counter\nresult = ___",
+          "answer": "Counter([n, n, b])[n]",
+          "hint": "Counter 可以统计元素出现次数"
+        }
+      ],
+      "M": [
+        {
+          "title": "math gcd 最大公约数",
+          "body": "from math import gcd\nresult = ___",
+          "answer": "gcd(a * b, a)",
+          "hint": "gcd 接收两个整数"
+        },
+        {
+          "title": "functools reduce 归约",
+          "body": "from functools import reduce\nfrom operator import mul\nresult = ___",
+          "answer": "reduce(mul, [n, b, 2], 1)",
+          "hint": "reduce 会从左到右组合元素"
+        },
+        {
+          "title": "bisect 插入位置",
+          "body": "from bisect import bisect_left\nitems = sorted(nums)\nresult = ___",
+          "answer": "bisect_left(items, a)",
+          "hint": "返回保持排序的最左插入索引"
+        },
+        {
+          "title": "itertools repeat",
+          "body": "from itertools import repeat\nresult = ___",
+          "answer": "list(repeat(word, n))",
+          "hint": "repeat 按次数生成重复值"
+        },
+        {
+          "title": "string 模块常量",
+          "body": "import string\nresult = ___",
+          "answer": "string.ascii_lowercase[:n]",
+          "hint": "string.ascii_lowercase 是英文字母序列"
+        }
+      ],
+      "H": [
+        {
+          "title": "动态创建模块对象",
+          "body": "import types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___",
+          "answer": "mod.factor * a",
+          "hint": "ModuleType 能表示模块对象"
+        },
+        {
+          "title": "importlib 导入标准模块",
+          "body": "from importlib import import_module\nm = import_module('math')\nresult = ___",
+          "answer": "m.factorial(n)",
+          "hint": "import_module 按字符串加载模块"
+        },
+        {
+          "title": "functools partial 预置参数",
+          "body": "from functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___",
+          "answer": "[scale(x) for x in nums]",
+          "hint": "partial 可以固定函数的部分参数"
+        },
+        {
+          "title": "模块命名空间字典",
+          "body": "import math\nresult = ___",
+          "answer": "'sqrt' in vars(math)",
+          "hint": "vars(module) 返回模块的属性命名空间"
+        },
+        {
+          "title": "inspect 签名分析",
+          "body": "import inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___",
+          "answer": "str(inspect.signature(combine))",
+          "hint": "inspect.signature 显示函数参数"
+        }
+      ],
+      "X": [
+        {
+          "title": "依赖注入避免全局常量",
+          "body": "from operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))",
+          "answer": "[operation(x) for x in items]",
+          "hint": "把依赖以函数参数形式注入"
+        },
+        {
+          "title": "模块对象状态隔离",
+          "body": "from types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___",
+          "answer": "[left.value, right.value]",
+          "hint": "不同模块对象有独立命名空间"
+        },
+        {
+          "title": "导入模块映射并转换",
+          "body": "from importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___",
+          "answer": "[mods['math'].isqrt(a * a), mods['operator'].add(a, b)]",
+          "hint": "可用字典保存导入的模块"
+        },
+        {
+          "title": "使用 lru_cache 避免重复计算",
+          "body": "from functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___",
+          "answer": "([square(x) for x in values], len(calls))",
+          "hint": "相同参数的计算结果会被缓存"
+        },
+        {
+          "title": "pkgutil 标准库模块枚举",
+          "body": "from types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___",
+          "answer": "{key: value for key, value in vars(module).items()}",
+          "hint": "将模块式命名空间映射为数据字典"
+        }
+      ]
+    }
+  },
+  "CH20": {
+    "dir": "CH20_Magic_Methods",
+    "title": "魔术方法与容器协议",
+    "tiers": {
+      "E": [
+        {
+          "title": "对象 repr 展示",
+          "body": "class Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___",
+          "answer": "repr(Token(a))",
+          "hint": "repr 调用 __repr__"
+        },
+        {
+          "title": "len 使用协议",
+          "body": "class Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___",
+          "answer": "len(Bucket(nums))",
+          "hint": "len() 会查找 __len__"
+        },
+        {
+          "title": "bool 判断空容器",
+          "body": "class Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___",
+          "answer": "bool(Queue(nums[:n]))",
+          "hint": "具有 __len__ 的对象可由 bool 判断"
+        },
+        {
+          "title": "getitem 按索引读取",
+          "body": "class Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___",
+          "answer": "Values(nums)[1]",
+          "hint": "索引语法会调用 __getitem__"
+        },
+        {
+          "title": "str 格式化对象",
+          "body": "class Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___",
+          "answer": "str(Record(word))",
+          "hint": "str 使用 __str__"
+        }
+      ],
+      "M": [
+        {
+          "title": "自定义加法",
+          "body": "class Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value",
+          "answer": "Score(self.value + other.value)",
+          "hint": "__add__ 应返回新的 Score 对象"
+        },
+        {
+          "title": "自定义比较",
+          "body": "class Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)",
+          "answer": "self.value < other.value",
+          "hint": "__lt__ 接受右操作数"
+        },
+        {
+          "title": "包含判断协议",
+          "body": "class Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]",
+          "answer": "x in self.values",
+          "hint": "in 会调用 __contains__"
+        },
+        {
+          "title": "迭代容器",
+          "body": "class Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))",
+          "answer": "iter(self.values)",
+          "hint": "__iter__ 需返回迭代器"
+        },
+        {
+          "title": "属性缺失兜底",
+          "body": "class Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing",
+          "answer": "0 if name == 'missing' else None",
+          "hint": "__getattr__ 在正常属性找不到时运行"
+        }
+      ],
+      "H": [
+        {
+          "title": "对象 hash 与 eq 一致",
+          "body": "class Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})",
+          "answer": "hash((self.x, self.y))",
+          "hint": "相等的对象需要有相同的哈希值"
+        },
+        {
+          "title": "可迭代容器的过滤",
+          "body": "class EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))",
+          "answer": "(x for x in self.data if x % 2 == 0)",
+          "hint": "__iter__ 可返回生成器表达式"
+        },
+        {
+          "title": "上下文管理协议",
+          "body": "class Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___",
+          "answer": "t.compute(a)",
+          "hint": "with 调用 __enter__ 并在离开时调用 __exit__"
+        },
+        {
+          "title": "属性描述器",
+          "body": "class Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value",
+          "answer": "max(0, value)",
+          "hint": "数据描述器可在设置时进行校验"
+        },
+        {
+          "title": "反向加法协议",
+          "body": "class Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)",
+          "answer": "other + self.value",
+          "hint": "右操作数的 __radd__ 可处理左边的整数"
+        }
+      ],
+      "X": [
+        {
+          "title": "自定义向量运算",
+          "body": "class Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)",
+          "answer": "Vector(self.x + other.x, self.y + other.y)",
+          "hint": "矢量相加需要逐项相加并返回新实例"
+        },
+        {
+          "title": "带切片的容器协议",
+          "body": "class Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]",
+          "answer": "self.data[key]",
+          "hint": "列表原本支持整数和切片两种索引"
+        },
+        {
+          "title": "可调用的数据变换器",
+          "body": "class Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)",
+          "answer": "[x + self.offset for x in sequence]",
+          "hint": "实现 __call__ 来执行批量映射"
+        },
+        {
+          "title": "比较协议排序",
+          "body": "class Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]",
+          "answer": "self.rank < other.rank",
+          "hint": "sorted 可调用对象的 __lt__"
+        },
+        {
+          "title": "__slots__ 控制实例字段",
+          "body": "class Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()",
+          "answer": "self.x ** 2 + self.y ** 2",
+          "hint": "slots 列出允许的实例属性"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "chapter": "CH18",
+  "title": "继承、组合与多态",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH18-X-001",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18401\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18401 [256, 16, 289, 36, 225]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18401 [256, 16, 289, 36, 225]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18401\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-002",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18402\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18402 [361, 25, 400, 49, 324]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18402 [361, 25, 400, 49, 324]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18402\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-003",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18403\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18403 [484, 36, 529, 64, 441]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18403 [484, 36, 529, 64, 441]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18403\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-004",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18404\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18404 [625, 49, 676, 81, 576]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18404 [625, 49, 676, 81, 576]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18404\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-005",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18405\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18405 [784, 64, 841, 100, 729]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18405 [784, 64, 841, 100, 729]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18405\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-006",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模板方法多态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18406\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return ___\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)",
+      "expected_output": "18406 [961, 81, 1024, 121, 900]\n",
+      "hints": "父类控制流程，子类覆盖单个步骤",
+      "test_cases": [
+        "assert captured_output == '18406 [961, 81, 1024, 121, 900]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18406\nclass Pipeline:\n    def convert(self, x): return x\n    def run(self, items):\n        return [self.convert(x) for x in items]\nclass SquarePipeline(Pipeline):\n    def convert(self, x): return x * x\nresult = SquarePipeline().run(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-007",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18407\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18407 [16, 4, 6]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18407 [16, 4, 6]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18407\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-008",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18408\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18408 [20, 18]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18408 [20, 18]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18408\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-009",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18409\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18409 [22, 6, 8]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18409 [22, 6, 8]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18409\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-010",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18410\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18410 [26, 24]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18410 [26, 24]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18410\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-011",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18411\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18411 [28, 8, 10]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18411 [28, 8, 10]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18411\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-012",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "基类与子类共享状态：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18412\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            ___\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)",
+      "expected_output": "18412 [32, 30]\n",
+      "hints": "仅满足条件时调用父类行为",
+      "test_cases": [
+        "assert captured_output == '18412 [32, 30]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18412\nclass Event:\n    def __init__(self): self.log = []\n    def emit(self, x): self.log.append(x)\nclass FilteredEvent(Event):\n    def emit(self, x):\n        if x % 2 == 0:\n            super().emit(x)\ne = FilteredEvent()\nfor value in nums: e.emit(value)\nresult = e.log\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-013",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18413\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18413 [[4, 6, 15, 16, 17], [17, 16, 15, 6, 4]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18413 [[4, 6, 15, 16, 17], [17, 16, 15, 6, 4]]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18413\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-014",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18414\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18414 [[5, 7, 18, 19, 20], [20, 19, 18, 7, 5]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18414 [[5, 7, 18, 19, 20], [20, 19, 18, 7, 5]]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18414\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-015",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18415\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18415 [[6, 8, 21, 22, 23], [23, 22, 21, 8, 6]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18415 [[6, 8, 21, 22, 23], [23, 22, 21, 8, 6]]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18415\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-016",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18416\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18416 [[7, 9, 24, 25, 26], [26, 25, 24, 9, 7]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18416 [[7, 9, 24, 25, 26], [26, 25, 24, 9, 7]]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18416\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-017",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18417\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18417 [[8, 10, 27, 28, 29], [29, 28, 27, 10, 8]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18417 [[8, 10, 27, 28, 29], [29, 28, 27, 10, 8]]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18417\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-018",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多态算法策略：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18418\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return ___\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)",
+      "expected_output": "18418 [[9, 11, 30, 31, 32], [32, 31, 30, 11, 9]]\n",
+      "hints": "将排序键函数委托给注入对象",
+      "test_cases": [
+        "assert captured_output == '18418 [[9, 11, 30, 31, 32], [32, 31, 30, 11, 9]]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18418\nclass Asc:\n    def key(self, x): return x\nclass Desc:\n    def key(self, x): return -x\nclass Sorter:\n    def __init__(self, strategy): self.strategy = strategy\n    def sort(self, values): return sorted(values, key=self.strategy.key)\nresult = [Sorter(Asc()).sort(nums), Sorter(Desc()).sort(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-019",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18419\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18419 [16, 4, 6]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18419 [16, 4, 6]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18419\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-020",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18420\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18420 [20, 18]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18420 [20, 18]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18420\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-021",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18421\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18421 [22, 6, 8]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18421 [22, 6, 8]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18421\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-022",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18422\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18422 [26, 24]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18422 [26, 24]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18422\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-023",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18423\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18423 [28, 8, 10]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18423 [28, 8, 10]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18423\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-024",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合校验规则：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18424\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return ___\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)",
+      "expected_output": "18424 [32, 30]\n",
+      "hints": "多态规则组合使用 all",
+      "test_cases": [
+        "assert captured_output == '18424 [32, 30]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18424\nclass MinRule:\n    def __init__(self, threshold): self.threshold = threshold\n    def valid(self, value): return value >= self.threshold\nclass EvenRule:\n    def valid(self, value): return value % 2 == 0\nclass AllRules:\n    def __init__(self, rules): self.rules = rules\n    def valid(self, value): return all(rule.valid(value) for rule in self.rules)\nrules = AllRules([MinRule(b), EvenRule()])\nresult = [x for x in nums if rules.valid(x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-025",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18425\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18425 PYTHON:16\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18425 PYTHON:16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18425\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-026",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18426\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18426 CODING:19\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18426 CODING:19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18426\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-027",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18427\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18427 VECTOR:22\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18427 VECTOR:22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18427\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-028",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18428\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18428 LAMBDA:25\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18428 LAMBDA:25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18428\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-029",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18429\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18429 ALPHA:28\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18429 ALPHA:28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18429\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-X-030",
+      "topic": "继承、组合与多态",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "mixin 复用功能：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18430\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return ___\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)",
+      "expected_output": "18430 BETA:31\n",
+      "hints": "混入类提供可被子类复用的方法",
+      "test_cases": [
+        "assert captured_output == '18430 BETA:31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18430\nclass NameMixin:\n    def describe(self): return self.name.upper()\nclass NamedThing(NameMixin):\n    def __init__(self, name, size):\n        self.name, self.size = name, size\n    def summary(self): return self.describe() + ':' + str(self.size)\nobj = NamedThing(word, a)\nresult = obj.summary()\nprint(case_tag, result)"
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "chapter": "CH25",
+  "title": "pathlib 与文件处理",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH25-X-001",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 25401\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25401 ['name,score', 'lambda,16', 'other,4']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25401 ['name,score', 'lambda,16', 'other,4']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 25401\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-002",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 25402\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25402 ['name,score', 'alpha,19', 'other,5']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25402 ['name,score', 'alpha,19', 'other,5']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 25402\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-003",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 25403\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25403 ['name,score', 'beta,22', 'other,6']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25403 ['name,score', 'beta,22', 'other,6']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 25403\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-004",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 25404\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25404 ['name,score', 'gamma,25', 'other,7']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25404 ['name,score', 'gamma,25', 'other,7']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 25404\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-005",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 25405\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25405 ['name,score', 'delta,28', 'other,8']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25405 ['name,score', 'delta,28', 'other,8']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 25405\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-006",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存 CSV 重新编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 25406\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25406 ['name,score', 'omega,31', 'other,9']\n",
+      "hints": "DictWriter 可以把记录字典写入内存文本流",
+      "test_cases": [
+        "assert captured_output == \"25406 ['name,score', 'omega,31', 'other,9']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 25406\nimport csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = output.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-007",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 25407\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25407 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25407 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 25407\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-008",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 25408\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25408 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25408 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 25408\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-009",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 25409\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25409 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25409 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 25409\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-010",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 25410\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25410 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25410 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 25410\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-011",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 25411\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25411 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25411 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 25411\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-012",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "按扩展名统计路径：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 25412\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25412 [('.csv', 2), ('.png', 1), ('.txt', 2)]\n",
+      "hints": "按后缀统计后将字典条目排序",
+      "test_cases": [
+        "assert captured_output == \"25412 [('.csv', 2), ('.png', 1), ('.txt', 2)]\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 25412\nfrom pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = sorted(counts.items())\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-013",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 25413\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25413 [16, 4]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25413 [16, 4]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 25413\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-014",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 25414\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25414 [19, 5]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25414 [19, 5]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 25414\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-015",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 25415\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25415 [22, 6]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25415 [22, 6]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 25415\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-016",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 25416\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25416 [25, 7]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25416 [25, 7]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 25416\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-017",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 25417\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25417 [28, 8]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25417 [28, 8]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 25417\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-018",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "JSON 深层安全取值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 25418\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25418 [31, 9]\n",
+      "hints": "JSON 数组会解码为列表",
+      "test_cases": [
+        "assert captured_output == '25418 [31, 9]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 25418\nimport json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = [item['value'] for item in restored['items']]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-019",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 25419\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25419 gamma:16\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25419 gamma:16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 25419\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-020",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 25420\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25420 delta:19\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25420 delta:19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 25420\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-021",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 25421\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25421 omega:22\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25421 omega:22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 25421\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-022",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 25422\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25422 python:25\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25422 python:25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 25422\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-023",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 25423\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25423 coding:28\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25423 coding:28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 25423\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-024",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存文件读写指针：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 25424\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25424 vector:31\n",
+      "hints": "写入后调用 seek(0) 才能从头读取",
+      "test_cases": [
+        "assert captured_output == '25424 vector:31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 25424\nfrom io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = stream.read()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-025",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 25425\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25425 delta:16\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25425 delta:16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 25425\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-026",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 25426\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25426 omega:19\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25426 omega:19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 25426\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-027",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 25427\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25427 python:22\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25427 python:22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 25427\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-028",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 25428\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25428 coding:25\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25428 coding:25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 25428\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-029",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 25429\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25429 vector:28\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25429 vector:28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 25429\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-X-030",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存压缩归档：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 25430\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "25430 lambda:31\n",
+      "hints": "ZIP 数据可以保存在 BytesIO 中而无需磁盘",
+      "test_cases": [
+        "assert captured_output == '25430 lambda:31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 25430\nfrom io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = z.read('data.txt').decode()\nprint(case_tag, result)"
+    }
+  ]
+}

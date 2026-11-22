@@ -1,0 +1,427 @@
+{
+  "chapter": "CH17",
+  "title": "面向对象基础",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH17-M-001",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17201\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17201 64\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17201 64\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17201\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-002",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17202\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17202 95\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17202 95\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17202\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-003",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17203\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17203 132\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17203 132\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17203\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-004",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17204\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17204 175\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17204 175\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17204\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-005",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17205\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17205 224\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17205 224\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17205\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-006",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "封装面积方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17206\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return ___\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)",
+      "expected_output": "17206 279\n",
+      "hints": "方法内部使用 self 获取两个边长",
+      "test_cases": [
+        "assert captured_output == '17206 279\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17206\nclass Rectangle:\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\nshape = Rectangle(a, b)\nresult = shape.area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-007",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17207\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17207 [20, 20]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17207 [20, 20]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17207\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-008",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17208\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17208 [24, 24]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17208 [24, 24]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17208\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-009",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17209\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17209 [28, 28]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17209 [28, 28]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17209\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-010",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17210\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17210 [32, 32]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17210 [32, 32]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17210\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-011",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17211\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17211 [36, 36]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17211 [36, 36]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17211\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-012",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "状态递增方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17212\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return ___\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)",
+      "expected_output": "17212 [40, 40]\n",
+      "hints": "修改属性后返回当前状态",
+      "test_cases": [
+        "assert captured_output == '17212 [40, 40]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17212\nclass Tally:\n    def __init__(self, value):\n        self.value = value\n    def add(self, step):\n        self.value += step\n        return self.value\nt = Tally(a)\nresult = [t.add(b), t.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-013",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17213\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17213 [32, 12]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17213 [32, 12]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17213\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-014",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17214\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17214 [38, 15]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17214 [38, 15]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17214\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-015",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17215\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17215 [44, 18]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17215 [44, 18]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17215\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-016",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17216\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17216 [50, 21]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17216 [50, 21]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17216\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-017",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17217\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17217 [56, 24]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17217 [56, 24]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17217\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-018",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "实例方法带默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17218\nclass Converter:\n    def scale(self, x, factor=2):\n        return ___\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)",
+      "expected_output": "17218 [62, 27]\n",
+      "hints": "参数默认值仅在未传递时生效",
+      "test_cases": [
+        "assert captured_output == '17218 [62, 27]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17218\nclass Converter:\n    def scale(self, x, factor=2):\n        return x * factor\nc = Converter()\nresult = [c.scale(a), c.scale(b, 3)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-019",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17219\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17219 [16, 4]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17219 [16, 4]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17219\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-020",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17220\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17220 [19, 5]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17220 [19, 5]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17220\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-021",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17221\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17221 [22, 6]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17221 [22, 6]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17221\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-022",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17222\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17222 [25, 7]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17222 [25, 7]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17222\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-023",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17223\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17223 [28, 8]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17223 [28, 8]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17223\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-024",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "classmethod 工厂：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17224\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return ___\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)",
+      "expected_output": "17224 [31, 9]\n",
+      "hints": "类方法第一个参数是 cls",
+      "test_cases": [
+        "assert captured_output == '17224 [31, 9]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17224\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    @classmethod\n    def from_pair(cls, pair):\n        return cls(*pair)\np = Point.from_pair((a, b))\nresult = [p.x, p.y]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-025",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17225\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17225 8\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17225 8\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17225\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-026",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17226\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17226 10\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17226 10\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17226\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-027",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17227\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17227 12\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17227 12\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17227\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-028",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17228\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17228 14\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17228 14\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17228\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-029",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17229\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17229 16\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17229 16\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17229\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-M-030",
+      "topic": "面向对象基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "property 只读属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17230\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return ___\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)",
+      "expected_output": "17230 18\n",
+      "hints": "property 允许以属性方式读取计算结果",
+      "test_cases": [
+        "assert captured_output == '17230 18\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17230\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    @property\n    def diameter(self):\n        return 2 * self.radius\nc = Circle(b)\nresult = c.diameter\nprint(case_tag, result)"
+    }
+  ]
+}

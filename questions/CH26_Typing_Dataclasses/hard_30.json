@@ -1,0 +1,427 @@
+{
+  "chapter": "CH26",
+  "title": "类型注解与数据类",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH26-H-001",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 26301\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26301 [0, 16]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26301 [0, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 26301\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-002",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 26302\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26302 [0, 19]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26302 [0, 19]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 26302\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-003",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 26303\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26303 [0, 22]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26303 [0, 22]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 26303\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-004",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 26304\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26304 [0, 25]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26304 [0, 25]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 26304\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-005",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 26305\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26305 [0, 28]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26305 [0, 28]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 26305\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-006",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "post_init 校验与调整：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 26306\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26306 [0, 31]\n",
+      "hints": "__post_init__ 在自动构造之后执行",
+      "test_cases": [
+        "assert captured_output == '26306 [0, 31]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 26306\nfrom dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = [Score(-n).raw, Score(a).raw]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-007",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 26307\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26307 (16, 4)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26307 (16, 4)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 26307\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-008",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 26308\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26308 (19, 5)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26308 (19, 5)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 26308\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-009",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 26309\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26309 (22, 6)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26309 (22, 6)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 26309\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-010",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 26310\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26310 (25, 7)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26310 (25, 7)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 26310\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-011",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 26311\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26311 (28, 8)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26311 (28, 8)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 26311\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-012",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "replace 生成新实例：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 26312\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26312 (31, 9)\n",
+      "hints": "replace 不修改原对象",
+      "test_cases": [
+        "assert captured_output == '26312 (31, 9)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 26312\nfrom dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = (config.limit, updated.limit)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-013",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 26313\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26313 16\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26313 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 26313\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-014",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 26314\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26314 19\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26314 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 26314\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-015",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 26315\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26315 22\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26315 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 26315\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-016",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 26316\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26316 25\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26316 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 26316\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-017",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 26317\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26317 28\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26317 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 26317\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-018",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "泛型容器注解：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 26318\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26318 31\n",
+      "hints": "泛型参数标注不改变实际存放的数据",
+      "test_cases": [
+        "assert captured_output == '26318 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 26318\nfrom typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = box.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-019",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 26319\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26319 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26319 (True, True)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 26319\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-020",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 26320\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26320 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26320 (True, True)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 26320\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-021",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 26321\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26321 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26321 (True, True)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 26321\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-022",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 26322\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26322 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26322 (True, True)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 26322\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-023",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 26323\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26323 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26323 (True, True)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 26323\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-024",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "字典验证器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 26324\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26324 (True, True)\n",
+      "hints": "检查实际值类型而非只写注解",
+      "test_cases": [
+        "assert captured_output == '26324 (True, True)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 26324\ndef validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = validate({'name': word, 'amount': a})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-025",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 26325\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26325 64\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26325 64\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 26325\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-026",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 26326\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26326 95\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26326 95\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 26326\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-027",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 26327\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26327 132\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26327 132\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 26327\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-028",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 26328\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26328 175\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26328 175\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 26328\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-029",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 26329\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26329 224\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26329 224\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 26329\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-H-030",
+      "topic": "类型注解与数据类",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "数据类派生属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 26330\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26330 279\n",
+      "hints": "property 配合 dataclass 提供计算字段",
+      "test_cases": [
+        "assert captured_output == '26330 279\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 26330\nfrom dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = Rectangle(a,b).area\nprint(case_tag, result)"
+    }
+  ]
+}

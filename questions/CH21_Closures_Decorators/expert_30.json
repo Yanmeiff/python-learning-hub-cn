@@ -1,0 +1,427 @@
+{
+  "chapter": "CH21",
+  "title": "闭包与装饰器",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH21-X-001",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 21401\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21401 [0, 64]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21401 [0, 64]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 21401\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-002",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 21402\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21402 [0, 95]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21402 [0, 95]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 21402\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-003",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 21403\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21403 [0, 132]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21403 [0, 132]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 21403\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-004",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 21404\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21404 [0, 175]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21404 [0, 175]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 21404\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-005",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 21405\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21405 [0, 224]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21405 [0, 224]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 21405\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-006",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器保证参数非负：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 21406\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)",
+      "expected_output": "21406 [0, 279]\n",
+      "hints": "在调用原函数前修正非法参数",
+      "test_cases": [
+        "assert captured_output == '21406 [0, 279]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 21406\nfrom functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return fn(max(0, value))\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-007",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 21407\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21407 [1, 16, 1, 256, 16]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21407 [1, 16, 1, 256, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 21407\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-008",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 21408\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21408 [4, 25, 4, 361, 25]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21408 [4, 25, 4, 361, 25]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 21408\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-009",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 21409\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21409 [9, 36, 9, 484, 36]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21409 [9, 36, 9, 484, 36]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 21409\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-010",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 21410\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21410 [16, 49, 16, 625, 49]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21410 [16, 49, 16, 625, 49]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 21410\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-011",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 21411\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21411 [25, 64, 25, 784, 64]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21411 [25, 64, 25, 784, 64]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 21411\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-012",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "幂等缓存与状态统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 21412\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)",
+      "expected_output": "21412 [36, 81, 36, 961, 81]\n",
+      "hints": "只把首次计算的结果写入缓存",
+      "test_cases": [
+        "assert captured_output == '21412 [36, 81, 36, 961, 81]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 21412\nfrom functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return cache[value]\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-013",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 21413\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21413 65\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21413 65\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 21413\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-014",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 21414\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21414 97\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21414 97\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 21414\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-015",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 21415\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21415 135\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21415 135\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 21415\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-016",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 21416\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21416 179\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21416 179\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 21416\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-017",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 21417\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21417 229\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21417 229\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 21417\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-018",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可组合闭包管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 21418\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)",
+      "expected_output": "21418 285\n",
+      "hints": "函数组合的执行顺序与输入顺序相反",
+      "test_cases": [
+        "assert captured_output == '21418 285\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 21418\ndef compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return value\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-019",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 21419\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21419 58\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21419 58\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 21419\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-020",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 21420\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21420 138\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21420 138\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 21420\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-021",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 21421\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21421 240\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21421 240\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 21421\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-022",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 21422\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21422 364\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21422 364\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 21422\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-023",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 21423\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21423 510\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21423 510\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 21423\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-024",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "装饰器聚合输入：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 21424\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21424 678\n",
+      "hints": "先逐项映射后交给消费者函数",
+      "test_cases": [
+        "assert captured_output == '21424 678\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 21424\ndef map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = total(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-025",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 21425\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21425 [5, 6, 4, 5]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21425 [5, 6, 4, 5]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 21425\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-026",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 21426\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21426 [6, 7, 5, 6]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21426 [6, 7, 5, 6]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 21426\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-027",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 21427\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21427 [7, 8, 6, 7]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21427 [7, 8, 6, 7]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 21427\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-028",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 21428\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21428 [8, 9, 7, 8]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21428 [8, 9, 7, 8]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 21428\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-029",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 21429\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21429 [9, 10, 8, 9]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21429 [9, 10, 8, 9]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 21429\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-X-030",
+      "topic": "闭包与装饰器",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "闭包产生可重置计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 21430\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21430 [10, 11, 9, 10]\n",
+      "hints": "重置必须恢复初始闭包值而不是清零",
+      "test_cases": [
+        "assert captured_output == '21430 [10, 11, 9, 10]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 21430\ndef counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = [c(), c(), c('reset'), c()]\nprint(case_tag, result)"
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "chapter": "CH17",
+  "title": "面向对象基础",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH17-H-001",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17301\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17301 44\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17301 44\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17301\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-002",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17302\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17302 53\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17302 53\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17302\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-003",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17303\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17303 62\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17303 62\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17303\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-004",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17304\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17304 71\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17304 71\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17304\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-005",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17305\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17305 80\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17305 80\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17305\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-006",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象批量求和：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17306\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17306 89\n",
+      "hints": "分别计算每个对象金额并求和",
+      "test_cases": [
+        "assert captured_output == '17306 89\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17306\nclass Product:\n    def __init__(self, price, qty):\n        self.price, self.qty = price, qty\n    def total(self):\n        return self.price * self.qty\nproducts = [Product(a, 2), Product(b, 3)]\nresult = sum(p.total() for p in products)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-007",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17307\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17307 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17307 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17307\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-008",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17308\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17308 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17308 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17308\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-009",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17309\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17309 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17309 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17309\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-010",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17310\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17310 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17310 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17310\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-011",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17311\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17311 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17311 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17311\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-012",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "比较对象属性后排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17312\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17312 ['B', 'C', 'A']\n",
+      "hints": "sorted 的 key 可读取对象的分数",
+      "test_cases": [
+        "assert captured_output == \"17312 ['B', 'C', 'A']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17312\nclass Student:\n    def __init__(self, name, score):\n        self.name, self.score = name, score\nstudents = [Student('A', b), Student('B', a), Student('C', a - 1)]\nresult = [s.name for s in sorted(students, key=lambda s: s.score, reverse=True)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-013",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17313\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17313 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17313 0\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17313\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-014",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17314\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17314 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17314 0\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17314\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-015",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17315\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17315 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17315 0\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17315\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-016",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17316\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17316 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17316 0\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17316\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-017",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17317\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17317 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17317 0\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17317\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-018",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性校验 setter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17318\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = ___\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)",
+      "expected_output": "17318 0\n",
+      "hints": "负余额按零处理",
+      "test_cases": [
+        "assert captured_output == '17318 0\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17318\nclass Account:\n    def __init__(self, balance):\n        self._balance = balance\n    @property\n    def balance(self):\n        return self._balance\n    @balance.setter\n    def balance(self, value):\n        self._balance = max(0, value)\na = Account(b)\na.balance = -n\nresult = a.balance\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-019",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17319\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17319 [[16, 4], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17319 [[16, 4], []]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17319\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-020",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17320\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17320 [[19, 5], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17320 [[19, 5], []]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17320\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-021",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17321\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17321 [[22, 6], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17321 [[22, 6], []]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17321\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-022",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17322\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17322 [[25, 7], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17322 [[25, 7], []]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17322\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-023",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17323\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17323 [[28, 8], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17323 [[28, 8], []]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17323\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-024",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "构造时保持数据独立：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17324\nclass Basket:\n    def __init__(self, items=None):\n        self.items = ___\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)",
+      "expected_output": "17324 [[31, 9], []]\n",
+      "hints": "不要共享可变默认容器",
+      "test_cases": [
+        "assert captured_output == '17324 [[31, 9], []]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17324\nclass Basket:\n    def __init__(self, items=None):\n        self.items = list(items) if items is not None else []\nfirst = Basket([a])\nsecond = Basket()\nfirst.items.append(b)\nresult = [first.items, second.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-025",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17325\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17325 [15, 5]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17325 [15, 5]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17325\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-026",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17326\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17326 [17, 7]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17326 [17, 7]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17326\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-027",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17327\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17327 [19, 9]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17327 [19, 9]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17327\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-028",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17328\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17328 [21, 11]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17328 [21, 11]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17328\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-029",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17329\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17329 [23, 13]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17329 [23, 13]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17329\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-H-030",
+      "topic": "面向对象基础",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象之间的协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17330\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return ___\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)",
+      "expected_output": "17330 [25, 15]\n",
+      "hints": "转账同时影响两个实例",
+      "test_cases": [
+        "assert captured_output == '17330 [25, 15]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17330\nclass Wallet:\n    def __init__(self, amount):\n        self.amount = amount\n    def transfer(self, other, value):\n        self.amount -= value\n        other.amount += value\n        return self.amount\nleft, right = Wallet(a), Wallet(b)\nresult = [left.transfer(right, n), right.amount]\nprint(case_tag, result)"
+    }
+  ]
+}

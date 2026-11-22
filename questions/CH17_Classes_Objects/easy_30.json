@@ -1,0 +1,427 @@
+{
+  "chapter": "CH17",
+  "title": "面向对象基础",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH17-E-001",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17101\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17101 alpha\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17101 alpha\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17101\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-002",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17102\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17102 beta\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17102 beta\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17102\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-003",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17103\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17103 gamma\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17103 gamma\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17103\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-004",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17104\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17104 delta\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17104 delta\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17104\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-005",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17105\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17105 omega\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17105 omega\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17105\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-006",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "实例属性读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17106\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17106 python\n",
+      "hints": "实例属性通常保存在 self 上",
+      "test_cases": [
+        "assert captured_output == '17106 python\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17106\nclass Person:\n    def __init__(self, name):\n        self.name = name\np = Person(word)\nresult = p.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-007",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17107\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17107 16\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17107 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17107\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-008",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17108\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17108 19\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17108 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17108\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-009",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17109\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17109 22\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17109 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17109\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-010",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17110\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17110 25\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17110 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17110\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-011",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17111\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17111 28\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17111 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17111\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-012",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "构造并访问数值属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17112\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17112 31\n",
+      "hints": "使用实例点号访问属性",
+      "test_cases": [
+        "assert captured_output == '17112 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17112\nclass Box:\n    def __init__(self, width):\n        self.width = width\nbox = Box(a)\nresult = box.width\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-013",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17113\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17113 5\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17113 5\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17113\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-014",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17114\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17114 6\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17114 6\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17114\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-015",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17115\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17115 7\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17115 7\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17115\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-016",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17116\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17116 8\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17116 8\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17116\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-017",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17117\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17117 9\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17117 9\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17117\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-018",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "调用实例方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17118\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17118 10\n",
+      "hints": "方法调用要加括号",
+      "test_cases": [
+        "assert captured_output == '17118 10\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17118\nclass Counter:\n    def __init__(self, count):\n        self.count = count\n    def next(self):\n        return self.count + 1\nc = Counter(b)\nresult = c.next()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-019",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17119\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17119 PY:delta\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17119 PY:delta\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17119\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-020",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17120\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17120 PY:omega\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17120 PY:omega\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17120\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-021",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17121\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17121 PY:python\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17121 PY:python\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17121\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-022",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17122\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17122 PY:coding\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17122 PY:coding\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17122\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-023",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17123\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17123 PY:vector\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17123 PY:vector\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17123\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-024",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17124\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17124 PY:lambda\n",
+      "hints": "类属性与实例属性可以组合",
+      "test_cases": [
+        "assert captured_output == '17124 PY:lambda\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17124\nclass Config:\n    prefix = 'PY'\n    def __init__(self, value):\n        self.value = value\nc = Config(word)\nresult = Config.prefix + ':' + c.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-025",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17125\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17125 [16, 4, 17, 6, 15]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17125 [16, 4, 17, 6, 15]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17125\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-026",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17126\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17126 [19, 5, 20, 7, 18]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17126 [19, 5, 20, 7, 18]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17126\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-027",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17127\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17127 [22, 6, 23, 8, 21]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17127 [22, 6, 23, 8, 21]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17127\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-028",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17128\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17128 [25, 7, 26, 9, 24]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17128 [25, 7, 26, 9, 24]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17128\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-029",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17129\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17129 [28, 8, 29, 10, 27]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17129 [28, 8, 29, 10, 27]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17129\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-E-030",
+      "topic": "面向对象基础",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象列表的属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17130\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "17130 [31, 9, 32, 11, 30]\n",
+      "hints": "用列表推导式逐个读取对象属性",
+      "test_cases": [
+        "assert captured_output == '17130 [31, 9, 32, 11, 30]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17130\nclass Item:\n    def __init__(self, value):\n        self.value = value\nitems = [Item(x) for x in nums]\nresult = [item.value for item in items]\nprint(case_tag, result)"
+    }
+  ]
+}

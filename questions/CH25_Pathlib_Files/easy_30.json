@@ -1,0 +1,427 @@
+{
+  "chapter": "CH25",
+  "title": "pathlib 与文件处理",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH25-E-001",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 25101\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25101 lambda.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25101 lambda.txt\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 25101\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-002",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 25102\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25102 alpha.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25102 alpha.txt\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 25102\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-003",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 25103\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25103 beta.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25103 beta.txt\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 25103\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-004",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 25104\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25104 gamma.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25104 gamma.txt\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 25104\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-005",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 25105\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25105 delta.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25105 delta.txt\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 25105\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-006",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "PurePosixPath 文件名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 25106\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25106 omega.txt\n",
+      "hints": "PurePosixPath.name 获取最后一段名称",
+      "test_cases": [
+        "assert captured_output == '25106 omega.txt\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 25106\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = path.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-007",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 25107\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25107 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25107 .csv\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 25107\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-008",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 25108\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25108 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25108 .csv\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 25108\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-009",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 25109\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25109 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25109 .csv\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 25109\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-010",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 25110\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25110 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25110 .csv\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 25110\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-011",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 25111\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25111 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25111 .csv\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 25111\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-012",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "后缀名读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 25112\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25112 .csv\n",
+      "hints": "suffix 包含前导句点",
+      "test_cases": [
+        "assert captured_output == '25112 .csv\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 25112\nfrom pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = path.suffix\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-013",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 25113\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25113 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25113 input\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 25113\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-014",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 25114\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25114 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25114 input\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 25114\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-015",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 25115\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25115 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25115 input\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 25115\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-016",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 25116\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25116 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25116 input\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 25116\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-017",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 25117\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25117 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25117 input\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 25117\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-018",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "父目录名称：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 25118\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25118 input\n",
+      "hints": "parent 返回上一级路径",
+      "test_cases": [
+        "assert captured_output == '25118 input\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 25118\nfrom pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = path.parent.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-019",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 25119\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25119 gamma.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25119 gamma.md\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 25119\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-020",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 25120\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25120 delta.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25120 delta.md\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 25120\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-021",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 25121\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25121 omega.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25121 omega.md\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 25121\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-022",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 25122\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25122 python.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25122 python.md\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 25122\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-023",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 25123\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25123 coding.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25123 coding.md\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 25123\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-024",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "修改文件后缀：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 25124\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25124 vector.md\n",
+      "hints": "with_suffix 返回新路径对象",
+      "test_cases": [
+        "assert captured_output == '25124 vector.md\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 25124\nfrom pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = str(path.with_suffix('.md'))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-025",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 25125\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25125 delta1\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25125 delta1\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 25125\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-026",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 25126\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25126 omega2\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25126 omega2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 25126\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-027",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 25127\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25127 python3\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25127 python3\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 25127\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-028",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 25128\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25128 coding4\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25128 coding4\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 25128\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-029",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 25129\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25129 vector5\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25129 vector5\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 25129\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH25-E-030",
+      "topic": "pathlib 与文件处理",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "StringIO 内存文件：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 25130\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "25130 lambda6\n",
+      "hints": "StringIO 在内存中模拟文本文件",
+      "test_cases": [
+        "assert captured_output == '25130 lambda6\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 25130\nfrom io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = file.getvalue()\nprint(case_tag, result)"
+    }
+  ]
+}

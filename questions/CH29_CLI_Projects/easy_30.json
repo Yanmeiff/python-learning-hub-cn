@@ -1,0 +1,427 @@
+{
+  "chapter": "CH29",
+  "title": "命令行工具与综合项目",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH29-E-001",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29101\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29101 1\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29101 1\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29101\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-002",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29102\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29102 2\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29102 2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29102\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-003",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29103\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29103 3\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29103 3\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29103\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-004",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29104\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29104 4\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29104 4\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29104\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-005",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29105\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29105 5\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29105 5\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29105\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-006",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "argparse 解析整数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29106\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29106 6\n",
+      "hints": "argparse 将传入字符串解析为整数",
+      "test_cases": [
+        "assert captured_output == '29106 6\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29106\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = args.count\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-007",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29107\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29107 ['run', '--name', 'omega', '--times', '1']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29107 ['run', '--name', 'omega', '--times', '1']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29107\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-008",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29108\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29108 ['run', '--name', 'python', '--times', '2']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29108 ['run', '--name', 'python', '--times', '2']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29108\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-009",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29109\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29109 ['run', '--name', 'coding', '--times', '3']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29109 ['run', '--name', 'coding', '--times', '3']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29109\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-010",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29110\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29110 ['run', '--name', 'vector', '--times', '4']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29110 ['run', '--name', 'vector', '--times', '4']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29110\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-011",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29111\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29111 ['run', '--name', 'lambda', '--times', '5']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29111 ['run', '--name', 'lambda', '--times', '5']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29111\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-012",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "shlex 命令行分词：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29112\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29112 ['run', '--name', 'alpha', '--times', '6']\n",
+      "hints": "shlex.split 按 shell 风格拆分命令",
+      "test_cases": [
+        "assert captured_output == \"29112 ['run', '--name', 'alpha', '--times', '6']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29112\nimport shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-013",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29113\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29113 {\"count\": 1, \"name\": \"python\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29113 {\"count\": 1, \"name\": \"python\"}\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29113\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-014",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29114\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29114 {\"count\": 2, \"name\": \"coding\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29114 {\"count\": 2, \"name\": \"coding\"}\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29114\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-015",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29115\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29115 {\"count\": 3, \"name\": \"vector\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29115 {\"count\": 3, \"name\": \"vector\"}\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29115\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-016",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29116\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29116 {\"count\": 4, \"name\": \"lambda\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29116 {\"count\": 4, \"name\": \"lambda\"}\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29116\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-017",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29117\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29117 {\"count\": 5, \"name\": \"alpha\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29117 {\"count\": 5, \"name\": \"alpha\"}\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29117\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-018",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "json 保存配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29118\nimport json\nconfig = {'name':word, 'count':n}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29118 {\"count\": 6, \"name\": \"beta\"}\n",
+      "hints": "sort_keys 提供稳定的 JSON 键顺序",
+      "test_cases": [
+        "assert captured_output == '29118 {\"count\": 6, \"name\": \"beta\"}\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29118\nimport json\nconfig = {'name':word, 'count':n}\nresult = json.dumps(config, sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-019",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29119\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29119 9623c1ec\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29119 9623c1ec\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29119\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-020",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29120\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29120 b0d51c58\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29120 b0d51c58\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29120\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-021",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29121\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29121 554e79e6\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29121 554e79e6\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29121\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-022",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29122\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29122 8ed3f6ad\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29122 8ed3f6ad\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29122\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-023",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29123\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29123 f44e64e7\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29123 f44e64e7\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29123\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-024",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "hashlib 数据摘要：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29124\nimport hashlib\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29124 be9d587d\n",
+      "hints": "哈希函数可以计算固定格式摘要",
+      "test_cases": [
+        "assert captured_output == '29124 be9d587d\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29124\nimport hashlib\npayload = word.encode()\nresult = hashlib.sha256(payload).hexdigest()[:8]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-025",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29125\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29125 dmVjdG9y\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29125 dmVjdG9y\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29125\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-026",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29126\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29126 bGFtYmRh\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29126 bGFtYmRh\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29126\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-027",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29127\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29127 YWxwaGE=\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29127 YWxwaGE=\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29127\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-028",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29128\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29128 YmV0YQ==\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29128 YmV0YQ==\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29128\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-029",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29129\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29129 Z2FtbWE=\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29129 Z2FtbWE=\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29129\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-E-030",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "base64 编码：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29130\nimport base64\npayload = word.encode()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29130 ZGVsdGE=\n",
+      "hints": "base64 编码结果是字节串，可再解码为文本",
+      "test_cases": [
+        "assert captured_output == '29130 ZGVsdGE=\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29130\nimport base64\npayload = word.encode()\nresult = base64.b64encode(payload).decode()\nprint(case_tag, result)"
+    }
+  ]
+}

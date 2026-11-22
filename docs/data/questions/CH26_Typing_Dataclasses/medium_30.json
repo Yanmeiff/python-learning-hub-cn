@@ -1,0 +1,427 @@
+{
+  "chapter": "CH26",
+  "title": "类型注解与数据类",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH26-M-001",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 26201\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26201 16\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26201 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 26201\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-002",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 26202\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26202 19\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26202 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 26202\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-003",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 26203\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26203 22\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26203 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 26203\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-004",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 26204\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26204 25\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26204 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 26204\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-005",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 26205\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26205 28\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26205 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 26205\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-006",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "字段默认值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 26206\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26206 31\n",
+      "hints": "dataclass 为未提供的可选字段使用默认值",
+      "test_cases": [
+        "assert captured_output == '26206 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 26206\nfrom dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = p.price * p.qty\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-007",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 26207\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26207 [[16], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26207 [[16], []]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 26207\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-008",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 26208\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26208 [[19], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26208 [[19], []]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 26208\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-009",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 26209\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26209 [[22], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26209 [[22], []]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 26209\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-010",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 26210\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26210 [[25], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26210 [[25], []]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 26210\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-011",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 26211\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26211 [[28], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26211 [[28], []]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 26211\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-012",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "default_factory 列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 26212\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26212 [[31], []]\n",
+      "hints": "用 default_factory 避免不同对象共享可变默认值",
+      "test_cases": [
+        "assert captured_output == '26212 [[31], []]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 26212\nfrom dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = [x.items, y.items]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-013",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 26213\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26213 {'name': 'gamma', 'age': 16}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26213 {'name': 'gamma', 'age': 16}\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 26213\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-014",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 26214\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26214 {'name': 'delta', 'age': 19}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26214 {'name': 'delta', 'age': 19}\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 26214\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-015",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 26215\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26215 {'name': 'omega', 'age': 22}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26215 {'name': 'omega', 'age': 22}\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 26215\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-016",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 26216\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26216 {'name': 'python', 'age': 25}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26216 {'name': 'python', 'age': 25}\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 26216\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-017",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 26217\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26217 {'name': 'coding', 'age': 28}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26217 {'name': 'coding', 'age': 28}\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 26217\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-018",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "asdict 转字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 26218\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26218 {'name': 'vector', 'age': 31}\n",
+      "hints": "asdict 会将数据类实例递归转为字典",
+      "test_cases": [
+        "assert captured_output == \"26218 {'name': 'vector', 'age': 31}\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 26218\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = asdict(Person(word, a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-019",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 26219\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26219 (16, 4)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26219 (16, 4)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 26219\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-020",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 26220\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26220 (19, 5)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26220 (19, 5)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 26220\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-021",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 26221\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26221 (22, 6)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26221 (22, 6)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 26221\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-022",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 26222\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26222 (25, 7)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26222 (25, 7)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 26222\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-023",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 26223\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26223 (28, 8)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26223 (28, 8)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 26223\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-024",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "dataclass 冻结：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 26224\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26224 (31, 9)\n",
+      "hints": "frozen=True 使字段不能被正常赋值修改",
+      "test_cases": [
+        "assert captured_output == '26224 (31, 9)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 26224\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = (point.x, point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-025",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 26225\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26225 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26225 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 26225\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-026",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 26226\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26226 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26226 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 26226\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-027",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 26227\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26227 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26227 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 26227\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-028",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 26228\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26228 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26228 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 26228\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-029",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 26229\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26229 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26229 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 26229\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH26-M-030",
+      "topic": "类型注解与数据类",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "数据类排序字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 26230\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "26230 ['B', 'A']\n",
+      "hints": "order=True 为数据类生成比较方法",
+      "test_cases": [
+        "assert captured_output == \"26230 ['B', 'A']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 26230\nfrom dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = [x.name for x in sorted(values)]\nprint(case_tag, result)"
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "chapter": "CH16",
+  "title": "迭代、推导式与生成器",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH16-E-001",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用列表推导式把 nums 中每个数字平方，按原顺序形成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1000\nnums = [15, 14, 13, 10, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1000 [225, 196, 169, 100, 25]\n",
+      "hints": "在方括号中用 for 遍历 nums。",
+      "test_cases": [
+        "assert captured_output == \"1000 [225, 196, 169, 100, 25]\\n\""
+      ],
+      "solution": "base = 1000\nnums = [15, 14, 13, 10, 5]\nresult = [x * x for x in nums]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-002",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用列表推导式把 nums 中每个数字平方，按原顺序形成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1001\nnums = [16, 2, 3, 4, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1001 [256, 4, 9, 16, 36]\n",
+      "hints": "在方括号中用 for 遍历 nums。",
+      "test_cases": [
+        "assert captured_output == \"1001 [256, 4, 9, 16, 36]\\n\""
+      ],
+      "solution": "base = 1001\nnums = [16, 2, 3, 4, 6]\nresult = [x * x for x in nums]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-003",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用列表推导式把 nums 中每个数字平方，按原顺序形成列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1002\nnums = [17, 3, 4, 5, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1002 [289, 9, 16, 25, 49]\n",
+      "hints": "在方括号中用 for 遍历 nums。",
+      "test_cases": [
+        "assert captured_output == \"1002 [289, 9, 16, 25, 49]\\n\""
+      ],
+      "solution": "base = 1002\nnums = [17, 3, 4, 5, 7]\nresult = [x * x for x in nums]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-004",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums 中筛选偶数并保持原顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1005\nnums = [3, 6, 7, 8, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1005 [6, 8]\n",
+      "hints": "推导式中的 if 负责筛选。",
+      "test_cases": [
+        "assert captured_output == \"1005 [6, 8]\\n\""
+      ],
+      "solution": "base = 1005\nnums = [3, 6, 7, 8, 5]\nresult = [x for x in nums if x % 2 == 0]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-005",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums 中筛选偶数并保持原顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1006\nnums = [4, 7, 8, 9, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1006 [4, 8, 6]\n",
+      "hints": "推导式中的 if 负责筛选。",
+      "test_cases": [
+        "assert captured_output == \"1006 [4, 8, 6]\\n\""
+      ],
+      "solution": "base = 1006\nnums = [4, 7, 8, 9, 6]\nresult = [x for x in nums if x % 2 == 0]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-006",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums 中筛选偶数并保持原顺序。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1007\nnums = [5, 8, 9, 10, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1007 [8, 10]\n",
+      "hints": "推导式中的 if 负责筛选。",
+      "test_cases": [
+        "assert captured_output == \"1007 [8, 10]\\n\""
+      ],
+      "solution": "base = 1007\nnums = [5, 8, 9, 10, 7]\nresult = [x for x in nums if x % 2 == 0]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-007",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 zip 对齐两个列表，将相同位置的两个元素相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1010\na = [8, 11, 12]\nb = [12, 6, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1010 [20, 17, 17]\n",
+      "hints": "zip 会按最短序列逐对配合。",
+      "test_cases": [
+        "assert captured_output == \"1010 [20, 17, 17]\\n\""
+      ],
+      "solution": "base = 1010\na = [8, 11, 12]\nb = [12, 6, 5]\nresult = [x + y for x, y in zip(a, b)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-008",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 zip 对齐两个列表，将相同位置的两个元素相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1011\na = [9, 12, 13]\nb = [13, 7, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1011 [22, 19, 19]\n",
+      "hints": "zip 会按最短序列逐对配合。",
+      "test_cases": [
+        "assert captured_output == \"1011 [22, 19, 19]\\n\""
+      ],
+      "solution": "base = 1011\na = [9, 12, 13]\nb = [13, 7, 6]\nresult = [x + y for x, y in zip(a, b)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-009",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 zip 对齐两个列表，将相同位置的两个元素相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1012\na = [10, 13, 3]\nb = [3, 8, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1012 [13, 21, 10]\n",
+      "hints": "zip 会按最短序列逐对配合。",
+      "test_cases": [
+        "assert captured_output == \"1012 [13, 21, 10]\\n\""
+      ],
+      "solution": "base = 1012\na = [10, 13, 3]\nb = [3, 8, 7]\nresult = [x + y for x, y in zip(a, b)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-010",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 enumerate 从 1 编号，把编号与对应数值相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1015\nnums = [13, 3, 6, 4]\nresult = ___\nprint(base, result)",
+      "expected_output": "1015 [14, 5, 9, 8]\n",
+      "hints": "enumerate(..., start=1) 从 1 开始计数。",
+      "test_cases": [
+        "assert captured_output == \"1015 [14, 5, 9, 8]\\n\""
+      ],
+      "solution": "base = 1015\nnums = [13, 3, 6, 4]\nresult = [index + value for index, value in enumerate(nums, start=1)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-011",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 enumerate 从 1 编号，把编号与对应数值相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1016\nnums = [14, 4, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1016 [15, 6, 10, 9]\n",
+      "hints": "enumerate(..., start=1) 从 1 开始计数。",
+      "test_cases": [
+        "assert captured_output == \"1016 [15, 6, 10, 9]\\n\""
+      ],
+      "solution": "base = 1016\nnums = [14, 4, 7, 5]\nresult = [index + value for index, value in enumerate(nums, start=1)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-012",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 enumerate 从 1 编号，把编号与对应数值相加。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1017\nnums = [15, 5, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1017 [16, 7, 11, 10]\n",
+      "hints": "enumerate(..., start=1) 从 1 开始计数。",
+      "test_cases": [
+        "assert captured_output == \"1017 [16, 7, 11, 10]\\n\""
+      ],
+      "solution": "base = 1017\nnums = [15, 5, 8, 6]\nresult = [index + value for index, value in enumerate(nums, start=1)]\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-013",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用 iter() 获取迭代器，并使用 next() 读取第一项。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1020\nnums = [1, 8, 11, 9, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1020 1\n",
+      "hints": "iter() 先创建迭代器，next() 取出下一元素。",
+      "test_cases": [
+        "assert captured_output == \"1020 1\\n\""
+      ],
+      "solution": "base = 1020\nnums = [1, 8, 11, 9, 5]\nresult = next(iter(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-014",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用 iter() 获取迭代器，并使用 next() 读取第一项。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1021\nnums = [2, 9, 12, 10, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1021 2\n",
+      "hints": "iter() 先创建迭代器，next() 取出下一元素。",
+      "test_cases": [
+        "assert captured_output == \"1021 2\\n\""
+      ],
+      "solution": "base = 1021\nnums = [2, 9, 12, 10, 6]\nresult = next(iter(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-015",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "用 iter() 获取迭代器，并使用 next() 读取第一项。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1022\nnums = [3, 10, 13, 4, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1022 3\n",
+      "hints": "iter() 先创建迭代器，next() 取出下一元素。",
+      "test_cases": [
+        "assert captured_output == \"1022 3\\n\""
+      ],
+      "solution": "base = 1022\nnums = [3, 10, 13, 4, 7]\nresult = next(iter(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-016",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "通过生成器表达式计算 nums 中所有数字的平方和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1025\nnums = [6, 13, 5, 7, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1025 304\n",
+      "hints": "sum 可以接收生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1025 304\\n\""
+      ],
+      "solution": "base = 1025\nnums = [6, 13, 5, 7, 5]\nresult = sum(x * x for x in nums)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-017",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "通过生成器表达式计算 nums 中所有数字的平方和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1026\nnums = [7, 14, 6, 8, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1026 381\n",
+      "hints": "sum 可以接收生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1026 381\\n\""
+      ],
+      "solution": "base = 1026\nnums = [7, 14, 6, 8, 6]\nresult = sum(x * x for x in nums)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-018",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "通过生成器表达式计算 nums 中所有数字的平方和。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1027\nnums = [8, 2, 7, 9, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1027 247\n",
+      "hints": "sum 可以接收生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1027 247\\n\""
+      ],
+      "solution": "base = 1027\nnums = [8, 2, 7, 9, 7]\nresult = sum(x * x for x in nums)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-019",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums[0] 开始，以 2 为步长生成连续的四个数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1030\nnums = [11, 5, 10, 5, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1030 [11, 13, 15, 17]\n",
+      "hints": "range(start, stop, step) 的 stop 不被包含。",
+      "test_cases": [
+        "assert captured_output == \"1030 [11, 13, 15, 17]\\n\""
+      ],
+      "solution": "base = 1030\nnums = [11, 5, 10, 5, 5]\nresult = list(range(nums[0], nums[0] + 8, 2))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-020",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums[0] 开始，以 2 为步长生成连续的四个数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1031\nnums = [12, 6, 11, 6, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1031 [12, 14, 16, 18]\n",
+      "hints": "range(start, stop, step) 的 stop 不被包含。",
+      "test_cases": [
+        "assert captured_output == \"1031 [12, 14, 16, 18]\\n\""
+      ],
+      "solution": "base = 1031\nnums = [12, 6, 11, 6, 6]\nresult = list(range(nums[0], nums[0] + 8, 2))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-021",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "从 nums[0] 开始，以 2 为步长生成连续的四个数字。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1032\nnums = [13, 7, 12, 7, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1032 [13, 15, 17, 19]\n",
+      "hints": "range(start, stop, step) 的 stop 不被包含。",
+      "test_cases": [
+        "assert captured_output == \"1032 [13, 15, 17, 19]\\n\""
+      ],
+      "solution": "base = 1032\nnums = [13, 7, 12, 7, 7]\nresult = list(range(nums[0], nums[0] + 8, 2))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-022",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "把 nums 的元素按逆序输出为一个新列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1035\nnums = [16, 10, 4, 10, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1035 [5, 10, 4, 10, 16]\n",
+      "hints": "reversed 返回反向迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1035 [5, 10, 4, 10, 16]\\n\""
+      ],
+      "solution": "base = 1035\nnums = [16, 10, 4, 10, 5]\nresult = list(reversed(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-023",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "把 nums 的元素按逆序输出为一个新列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1036\nnums = [17, 11, 5, 4, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1036 [6, 4, 5, 11, 17]\n",
+      "hints": "reversed 返回反向迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1036 [6, 4, 5, 11, 17]\\n\""
+      ],
+      "solution": "base = 1036\nnums = [17, 11, 5, 4, 6]\nresult = list(reversed(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-024",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "把 nums 的元素按逆序输出为一个新列表。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1037\nnums = [1, 12, 6, 5, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1037 [7, 5, 6, 12, 1]\n",
+      "hints": "reversed 返回反向迭代器。",
+      "test_cases": [
+        "assert captured_output == \"1037 [7, 5, 6, 12, 1]\\n\""
+      ],
+      "solution": "base = 1037\nnums = [1, 12, 6, 5, 7]\nresult = list(reversed(nums))\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-025",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "遍历 word 中的字符，转大写后用连字符连接。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1040\nword = \"py0thon\"\nresult = ___\nprint(base, result)",
+      "expected_output": "1040 P-Y-0-T-H-O-N\n",
+      "hints": "join 可以直接消费生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1040 P-Y-0-T-H-O-N\\n\""
+      ],
+      "solution": "base = 1040\nword = \"py0thon\"\nresult = '-'.join(ch.upper() for ch in word)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-026",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "遍历 word 中的字符，转大写后用连字符连接。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1041\nword = \"py1thon\"\nresult = ___\nprint(base, result)",
+      "expected_output": "1041 P-Y-1-T-H-O-N\n",
+      "hints": "join 可以直接消费生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1041 P-Y-1-T-H-O-N\\n\""
+      ],
+      "solution": "base = 1041\nword = \"py1thon\"\nresult = '-'.join(ch.upper() for ch in word)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-027",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "遍历 word 中的字符，转大写后用连字符连接。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1042\nword = \"py2thon\"\nresult = ___\nprint(base, result)",
+      "expected_output": "1042 P-Y-2-T-H-O-N\n",
+      "hints": "join 可以直接消费生成器表达式。",
+      "test_cases": [
+        "assert captured_output == \"1042 P-Y-2-T-H-O-N\\n\""
+      ],
+      "solution": "base = 1042\nword = \"py2thon\"\nresult = '-'.join(ch.upper() for ch in word)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-028",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "判断 nums 是否至少有一个数大于 nums[0] + 6。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1045\nnums = [9, 7, 3, 6, 5]\nresult = ___\nprint(base, result)",
+      "expected_output": "1045 False\n",
+      "hints": "any() 遇到第一个真值即可结束。",
+      "test_cases": [
+        "assert captured_output == \"1045 False\\n\""
+      ],
+      "solution": "base = 1045\nnums = [9, 7, 3, 6, 5]\nresult = any(x > nums[0] + 6 for x in nums)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-029",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "判断 nums 是否至少有一个数大于 nums[0] + 6。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1046\nnums = [10, 8, 4, 7, 6]\nresult = ___\nprint(base, result)",
+      "expected_output": "1046 False\n",
+      "hints": "any() 遇到第一个真值即可结束。",
+      "test_cases": [
+        "assert captured_output == \"1046 False\\n\""
+      ],
+      "solution": "base = 1046\nnums = [10, 8, 4, 7, 6]\nresult = any(x > nums[0] + 6 for x in nums)\nprint(base, result)"
+    },
+    {
+      "id": "CH16-E-030",
+      "topic": "迭代、推导式与生成器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "判断 nums 是否至少有一个数大于 nums[0] + 6。 已给定数据和 base；最后一行按“base 计算结果”输出，请补全 result 的表达式。",
+      "code_template": "base = 1047\nnums = [11, 9, 5, 8, 7]\nresult = ___\nprint(base, result)",
+      "expected_output": "1047 False\n",
+      "hints": "any() 遇到第一个真值即可结束。",
+      "test_cases": [
+        "assert captured_output == \"1047 False\\n\""
+      ],
+      "solution": "base = 1047\nnums = [11, 9, 5, 8, 7]\nresult = any(x > nums[0] + 6 for x in nums)\nprint(base, result)"
+    }
+  ]
+}

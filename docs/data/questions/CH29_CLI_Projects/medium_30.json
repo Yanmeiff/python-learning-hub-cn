@@ -1,0 +1,427 @@
+{
+  "chapter": "CH29",
+  "title": "命令行工具与综合项目",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH29-M-001",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29201\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29201 20\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29201 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29201\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-002",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29202\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29202 24\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29202 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29202\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-003",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29203\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29203 28\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29203 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29203\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-004",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29204\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29204 32\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29204 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29204\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-005",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29205\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29205 36\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29205 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29205\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-006",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "argparse 多参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29206\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29206 40\n",
+      "hints": "解析两个命令行选项并组合",
+      "test_cases": [
+        "assert captured_output == '29206 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29206\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = args.start + args.step\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-007",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29207\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29207 20\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29207 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29207\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-008",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29208\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29208 24\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29208 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29208\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-009",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29209\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29209 28\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29209 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29209\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-010",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29210\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29210 32\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29210 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29210\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-011",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29211\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29211 36\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29211 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29211\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-012",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "CSV 记录汇总：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29212\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29212 40\n",
+      "hints": "CSV 各字段读取后仍是文本",
+      "test_cases": [
+        "assert captured_output == '29212 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29212\nimport csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = sum(int(row['value']) for row in rows)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-013",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29213\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29213 [20, 8, 21, 10, 19]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29213 [20, 8, 21, 10, 19]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29213\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-014",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29214\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29214 [43, 15, 45, 19, 41]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29214 [43, 15, 45, 19, 41]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29214\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-015",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29215\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29215 [72, 24, 75, 30, 69]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29215 [72, 24, 75, 30, 69]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29215\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-016",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29216\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29216 [107, 35, 111, 43, 103]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29216 [107, 35, 111, 43, 103]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29216\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-017",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29217\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29217 [148, 48, 153, 58, 143]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29217 [148, 48, 153, 58, 143]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29217\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-018",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "配置驱动函数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29218\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29218 [195, 63, 201, 75, 189]\n",
+      "hints": "将配置对象作为独立参数传入",
+      "test_cases": [
+        "assert captured_output == '29218 [195, 63, 201, 75, 189]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29218\nconfig = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = transform(nums, config)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-019",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29219\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29219 {'A': 17, 'B': 4}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29219 {'A': 17, 'B': 4}\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29219\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-020",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29220\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29220 {'A': 21, 'B': 5}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29220 {'A': 21, 'B': 5}\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29220\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-021",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29221\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29221 {'A': 25, 'B': 6}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29221 {'A': 25, 'B': 6}\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29221\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-022",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29222\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29222 {'A': 29, 'B': 7}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29222 {'A': 29, 'B': 7}\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29222\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-023",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29223\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29223 {'A': 33, 'B': 8}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29223 {'A': 33, 'B': 8}\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29223\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-024",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "按字段聚合记录：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29224\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29224 {'A': 37, 'B': 9}\n",
+      "hints": "按记录类型分组求和",
+      "test_cases": [
+        "assert captured_output == \"29224 {'A': 37, 'B': 9}\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29224\nrecords = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = {kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-025",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29225\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29225 ['tool', '--title', 'vector item', '--count', '1']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29225 ['tool', '--title', 'vector item', '--count', '1']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29225\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-026",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29226\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29226 ['tool', '--title', 'lambda item', '--count', '2']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29226 ['tool', '--title', 'lambda item', '--count', '2']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29226\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-027",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29227\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29227 ['tool', '--title', 'alpha item', '--count', '3']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29227 ['tool', '--title', 'alpha item', '--count', '3']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29227\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-028",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29228\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29228 ['tool', '--title', 'beta item', '--count', '4']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29228 ['tool', '--title', 'beta item', '--count', '4']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29228\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-029",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29229\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29229 ['tool', '--title', 'gamma item', '--count', '5']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29229 ['tool', '--title', 'gamma item', '--count', '5']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29229\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-M-030",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "shlex 带空格值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29230\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29230 ['tool', '--title', 'delta item', '--count', '6']\n",
+      "hints": "引号允许命令参数包含空格",
+      "test_cases": [
+        "assert captured_output == \"29230 ['tool', '--title', 'delta item', '--count', '6']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29230\nimport shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = shlex.split(command)\nprint(case_tag, result)"
+    }
+  ]
+}

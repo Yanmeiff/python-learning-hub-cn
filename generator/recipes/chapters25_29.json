@@ -1,0 +1,672 @@
+{
+  "CH25": {
+    "dir": "CH25_Pathlib_Files",
+    "title": "pathlib 与文件处理",
+    "tiers": {
+      "E": [
+        {
+          "title": "PurePosixPath 文件名",
+          "body": "from pathlib import PurePosixPath\npath = PurePosixPath('/home/docs') / (word + '.txt')\nresult = ___",
+          "answer": "path.name",
+          "hint": "PurePosixPath.name 获取最后一段名称"
+        },
+        {
+          "title": "后缀名读取",
+          "body": "from pathlib import PurePosixPath\npath = PurePosixPath('reports') / (word + '.csv')\nresult = ___",
+          "answer": "path.suffix",
+          "hint": "suffix 包含前导句点"
+        },
+        {
+          "title": "父目录名称",
+          "body": "from pathlib import PurePosixPath\npath = PurePosixPath('/data/input') / (word + '.json')\nresult = ___",
+          "answer": "path.parent.name",
+          "hint": "parent 返回上一级路径"
+        },
+        {
+          "title": "修改文件后缀",
+          "body": "from pathlib import PurePosixPath\npath = PurePosixPath(word + '.txt')\nresult = ___",
+          "answer": "str(path.with_suffix('.md'))",
+          "hint": "with_suffix 返回新路径对象"
+        },
+        {
+          "title": "StringIO 内存文件",
+          "body": "from io import StringIO\nfile = StringIO()\nfile.write(word + str(n))\nresult = ___",
+          "answer": "file.getvalue()",
+          "hint": "StringIO 在内存中模拟文本文件"
+        }
+      ],
+      "M": [
+        {
+          "title": "pathlib 路径组合",
+          "body": "from pathlib import PurePosixPath\nroot = PurePosixPath('/data')\nresult = ___",
+          "answer": "str(root / word / ('v' + str(n) + '.txt'))",
+          "hint": "使用 / 运算符连接路径部分"
+        },
+        {
+          "title": "提取不带后缀名称",
+          "body": "from pathlib import PurePosixPath\npath = PurePosixPath('archive') / (word + '.tar.gz')\nresult = ___",
+          "answer": "path.stem",
+          "hint": "stem 只移除最后一个扩展名"
+        },
+        {
+          "title": "解析 CSV 内存数据",
+          "body": "import csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\n')\nresult = ___",
+          "answer": "list(csv.DictReader(source))[0]['value']",
+          "hint": "DictReader 用表头字段名读取"
+        },
+        {
+          "title": "按行读取内存文本",
+          "body": "from io import StringIO\nsource = StringIO(word + '\\n' + str(a) + '\\n')\nresult = ___",
+          "answer": "[line.strip() for line in source]",
+          "hint": "迭代文本流可以逐行读取"
+        },
+        {
+          "title": "JSON 字符串还原字典",
+          "body": "import json\npayload = json.dumps({'key': word, 'amount': a})\nresult = ___",
+          "answer": "json.loads(payload)['amount']",
+          "hint": "loads 把 JSON 文本转换成 Python 对象"
+        }
+      ],
+      "H": [
+        {
+          "title": "安全过滤特定扩展名",
+          "body": "from pathlib import PurePosixPath\nnames = [word + '.csv', 'readme.txt', 'table.csv']\nresult = ___",
+          "answer": "[name for name in names if PurePosixPath(name).suffix == '.csv']",
+          "hint": "过滤时比较 suffix 而不是查找子字符串"
+        },
+        {
+          "title": "CSV 合计字段",
+          "body": "import csv\nfrom io import StringIO\ntext_data = 'x,y\\n' + str(a) + ',' + str(b) + '\\n' + str(n) + ',3\\n'\nrows = list(csv.DictReader(StringIO(text_data)))\nresult = ___",
+          "answer": "sum(int(row['x']) + int(row['y']) for row in rows)",
+          "hint": "CSV 读取的字段仍然是字符串"
+        },
+        {
+          "title": "二进制缓冲字节拼接",
+          "body": "from io import BytesIO\nstream = BytesIO()\nstream.write(bytes([n, b, a % 256]))\nresult = ___",
+          "answer": "list(stream.getvalue())",
+          "hint": "BytesIO 在内存中保存 bytes"
+        },
+        {
+          "title": "嵌套路径相对化",
+          "body": "from pathlib import PurePosixPath\nroot = PurePosixPath('/app')\npath = root / 'assets' / (word + '.png')\nresult = ___",
+          "answer": "str(path.relative_to(root))",
+          "hint": "relative_to 用于计算已知共同根目录下的路径"
+        },
+        {
+          "title": "按 JSON 行解析",
+          "body": "import json\nlines = [json.dumps({'value': a}), json.dumps({'value': b}), json.dumps({'value': n})]\nresult = ___",
+          "answer": "[json.loads(line)['value'] for line in lines]",
+          "hint": "每一行都是一个独立 JSON 对象"
+        }
+      ],
+      "X": [
+        {
+          "title": "内存 CSV 重新编码",
+          "body": "import csv\nfrom io import StringIO\nrows = [{'name': word, 'score': a}, {'name': 'other', 'score': b}]\noutput = StringIO()\nwriter = csv.DictWriter(output, fieldnames=['name', 'score'], lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nresult = ___",
+          "answer": "output.getvalue().splitlines()",
+          "hint": "DictWriter 可以把记录字典写入内存文本流"
+        },
+        {
+          "title": "按扩展名统计路径",
+          "body": "from pathlib import PurePosixPath\nnames = [word + '.txt', 'log.txt', 'data.csv', 'a.csv', 'image.png']\ncounts = {}\nfor name in names:\n    suffix = PurePosixPath(name).suffix\n    counts[suffix] = counts.get(suffix, 0) + 1\nresult = ___",
+          "answer": "sorted(counts.items())",
+          "hint": "按后缀统计后将字典条目排序"
+        },
+        {
+          "title": "JSON 深层安全取值",
+          "body": "import json\npayload = {'items': [{'value': a}, {'value': b}], 'meta': {'name': word}}\nencoded = json.dumps(payload, ensure_ascii=False)\nrestored = json.loads(encoded)\nresult = ___",
+          "answer": "[item['value'] for item in restored['items']]",
+          "hint": "JSON 数组会解码为列表"
+        },
+        {
+          "title": "内存文件读写指针",
+          "body": "from io import StringIO\nstream = StringIO()\nstream.write(word + ':' + str(a))\nstream.seek(0)\nresult = ___",
+          "answer": "stream.read()",
+          "hint": "写入后调用 seek(0) 才能从头读取"
+        },
+        {
+          "title": "内存压缩归档",
+          "body": "from io import BytesIO\nfrom zipfile import ZipFile, ZIP_DEFLATED\npayload = (word + ':' + str(a)).encode()\nbuffer = BytesIO()\nwith ZipFile(buffer, 'w', compression=ZIP_DEFLATED) as z:\n    z.writestr('data.txt', payload)\nwith ZipFile(BytesIO(buffer.getvalue())) as z:\n    result = ___",
+          "answer": "z.read('data.txt').decode()",
+          "hint": "ZIP 数据可以保存在 BytesIO 中而无需磁盘"
+        }
+      ]
+    }
+  },
+  "CH26": {
+    "dir": "CH26_Typing_Dataclasses",
+    "title": "类型注解与数据类",
+    "tiers": {
+      "E": [
+        {
+          "title": "函数注解读取",
+          "body": "def add(x: int, y: int) -> int: return x + y\nresult = ___",
+          "answer": "add.__annotations__['return'].__name__",
+          "hint": "__annotations__ 保存函数声明的类型"
+        },
+        {
+          "title": "dataclass 自动构造",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Point:\n    x: int\n    y: int\np = Point(a, b)\nresult = ___",
+          "answer": "(p.x, p.y)",
+          "hint": "dataclass 自动生成构造方法"
+        },
+        {
+          "title": "Optional 注解",
+          "body": "from typing import Optional\ndef choose(value: Optional[int]) -> int:\n    return value if value is not None else n\nresult = ___",
+          "answer": "choose(None)",
+          "hint": "Optional 表示参数可以是 None"
+        },
+        {
+          "title": "数据类比较相等",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Item:\n    value: int\nresult = ___",
+          "answer": "Item(a) == Item(a)",
+          "hint": "dataclass 默认实现基于字段的相等比较"
+        },
+        {
+          "title": "注解不会运行时转换",
+          "body": "def show(value: int): return str(value)\nresult = ___",
+          "answer": "show(a)",
+          "hint": "类型注解本身不会替代程序逻辑"
+        }
+      ],
+      "M": [
+        {
+          "title": "字段默认值",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Product:\n    price: int\n    qty: int = 1\np = Product(a)\nresult = ___",
+          "answer": "p.price * p.qty",
+          "hint": "dataclass 为未提供的可选字段使用默认值"
+        },
+        {
+          "title": "default_factory 列表",
+          "body": "from dataclasses import dataclass, field\n@dataclass\nclass Basket:\n    items: list = field(default_factory=list)\nx, y = Basket(), Basket()\nx.items.append(a)\nresult = ___",
+          "answer": "[x.items, y.items]",
+          "hint": "用 default_factory 避免不同对象共享可变默认值"
+        },
+        {
+          "title": "asdict 转字典",
+          "body": "from dataclasses import dataclass, asdict\n@dataclass\nclass Person:\n    name: str\n    age: int\nresult = ___",
+          "answer": "asdict(Person(word, a))",
+          "hint": "asdict 会将数据类实例递归转为字典"
+        },
+        {
+          "title": "dataclass 冻结",
+          "body": "from dataclasses import dataclass\n@dataclass(frozen=True)\nclass Coord:\n    x: int\n    y: int\npoint = Coord(a, b)\nresult = ___",
+          "answer": "(point.x, point.y)",
+          "hint": "frozen=True 使字段不能被正常赋值修改"
+        },
+        {
+          "title": "数据类排序字段",
+          "body": "from dataclasses import dataclass\n@dataclass(order=True)\nclass Ranked:\n    score: int\n    name: str\nvalues = [Ranked(b, 'B'), Ranked(a, 'A')]\nresult = ___",
+          "answer": "[x.name for x in sorted(values)]",
+          "hint": "order=True 为数据类生成比较方法"
+        }
+      ],
+      "H": [
+        {
+          "title": "post_init 校验与调整",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Score:\n    raw: int\n    def __post_init__(self):\n        self.raw = max(0, min(100, self.raw))\nresult = ___",
+          "answer": "[Score(-n).raw, Score(a).raw]",
+          "hint": "__post_init__ 在自动构造之后执行"
+        },
+        {
+          "title": "replace 生成新实例",
+          "body": "from dataclasses import dataclass, replace\n@dataclass\nclass Config:\n    name: str\n    limit: int\nconfig = Config(word, a)\nupdated = replace(config, limit=b)\nresult = ___",
+          "answer": "(config.limit, updated.limit)",
+          "hint": "replace 不修改原对象"
+        },
+        {
+          "title": "泛型容器注解",
+          "body": "from typing import Generic, TypeVar\nT = TypeVar('T')\nclass Box(Generic[T]):\n    def __init__(self, value: T): self.value = value\nbox = Box[int](a)\nresult = ___",
+          "answer": "box.value",
+          "hint": "泛型参数标注不改变实际存放的数据"
+        },
+        {
+          "title": "字典验证器",
+          "body": "def validate(record: dict) -> tuple:\n    key = record.get('name')\n    amount = record.get('amount', 0)\n    return isinstance(key, str), isinstance(amount, int)\nresult = ___",
+          "answer": "validate({'name': word, 'amount': a})",
+          "hint": "检查实际值类型而非只写注解"
+        },
+        {
+          "title": "数据类派生属性",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    @property\n    def area(self) -> int: return self.width * self.height\nresult = ___",
+          "answer": "Rectangle(a,b).area",
+          "hint": "property 配合 dataclass 提供计算字段"
+        }
+      ],
+      "X": [
+        {
+          "title": "嵌套数据类转换",
+          "body": "from dataclasses import dataclass, asdict\n@dataclass\nclass Address:\n    city: str\n    code: int\n@dataclass\nclass User:\n    name: str\n    address: Address\nuser = User(word, Address('A', a))\nresult = ___",
+          "answer": "asdict(user)['address']['code']",
+          "hint": "asdict 能递归转换嵌套数据类"
+        },
+        {
+          "title": "冻结数据类与哈希",
+          "body": "from dataclasses import dataclass\n@dataclass(frozen=True)\nclass Key:\n    name: str\n    amount: int\nkeys = {Key(word,a), Key(word,a), Key(word,b)}\nresult = ___",
+          "answer": "len(keys)",
+          "hint": "冻结数据类的不可变字段可参与哈希"
+        },
+        {
+          "title": "字段元信息读取",
+          "body": "from dataclasses import dataclass, field, fields\n@dataclass\nclass Metric:\n    name: str\n    score: int = field(default=0, metadata={'unit':'point'})\nresult = ___",
+          "answer": "fields(Metric)[1].metadata['unit']",
+          "hint": "field 的 metadata 可以保留额外描述"
+        },
+        {
+          "title": "工厂生成安全默认列表",
+          "body": "from dataclasses import dataclass, field\n@dataclass\nclass Report:\n    entries: list[int] = field(default_factory=list)\n    def add(self, value: int):\n        self.entries.append(value)\n        return len(self.entries)\nx, y = Report(), Report()\nx.add(a)\nx.add(b)\nresult = ___",
+          "answer": "(x.entries, y.entries)",
+          "hint": "两个实例不应共享可变集合"
+        },
+        {
+          "title": "使用类型提示处理数据",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Invoice:\n    unit_price: int\n    quantity: int\n    def total(self) -> int:\n        return self.unit_price * self.quantity\ninvoices: list[Invoice] = [Invoice(a, n), Invoice(b, 2)]\nresult = ___",
+          "answer": "sum(invoice.total() for invoice in invoices)",
+          "hint": "类型注解和实际求和逻辑配合"
+        }
+      ]
+    }
+  },
+  "CH27": {
+    "dir": "CH27_Async_Concurrency",
+    "title": "异步与并发基础",
+    "tiers": {
+      "E": [
+        {
+          "title": "识别协程函数",
+          "body": "import inspect\nasync def task(x): return x + n\nresult = ___",
+          "answer": "inspect.iscoroutinefunction(task)",
+          "hint": "async def 定义协程函数"
+        },
+        {
+          "title": "创建协程对象",
+          "body": "import inspect\nasync def value(): return a\ncoro = value()\nis_coro = inspect.iscoroutine(coro)\ncoro.close()\nresult = ___",
+          "answer": "is_coro",
+          "hint": "调用 async 函数获得协程对象，不会直接执行函数体"
+        },
+        {
+          "title": "直接完成的协程返回值",
+          "body": "async def calc(x): return x * b\ncoro = calc(a)\ntry:\n    coro.send(None)\nexcept StopIteration as done:\n    value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "不含 await 的协程可在第一次 send 时完成"
+        },
+        {
+          "title": "无挂起 await 的组合",
+          "body": "async def twice(x): return 2 * x\nasync def combine(x): return await twice(x) + n\ncoro = combine(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "await 可以取得另一个协程的返回结果"
+        },
+        {
+          "title": "检查协程状态",
+          "body": "import inspect\nasync def sample(): return word\ncoro = sample()\nstatus = inspect.getcoroutinestate(coro)\ncoro.close()\nresult = ___",
+          "answer": "status",
+          "hint": "协程创建后处于尚未运行的状态"
+        }
+      ],
+      "M": [
+        {
+          "title": "异步任务包装结果",
+          "body": "async def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "await 的返回值参与后续计算"
+        },
+        {
+          "title": "关闭未执行的协程",
+          "body": "import inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___",
+          "answer": "inspect.getcoroutinestate(coro)",
+          "hint": "close 可以关闭尚未运行的协程"
+        },
+        {
+          "title": "协程返回列表",
+          "body": "async def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "协程可以返回普通 Python 列表"
+        },
+        {
+          "title": "async 内的同步校验",
+          "body": "async def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "协程函数体仍能使用常规条件表达式"
+        },
+        {
+          "title": "同步生成器模拟协作",
+          "body": "def steps(items):\n    for item in items:\n        yield item + n\nresult = ___",
+          "answer": "list(steps(nums))",
+          "hint": "生成器使用 yield 在每步之间保存状态"
+        }
+      ],
+      "H": [
+        {
+          "title": "两个协程的串行 await",
+          "body": "async def first(x): return x + n\nasync def second(x): return x * b\nasync def workflow(x):\n    y = await first(x)\n    return await second(y)\ncoro = workflow(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "多个 await 可按先后依赖完成计算"
+        },
+        {
+          "title": "模拟协作任务交错",
+          "body": "def stream(label, values):\n    for x in values:\n        yield (label, x)\nleft = stream('A', nums[:3])\nright = stream('B', nums[3:])\nresult = ___",
+          "answer": "[next(left), next(right), next(left), next(right)]",
+          "hint": "交替从两个迭代器取值，模拟协作式调度"
+        },
+        {
+          "title": "同步调度器处理多个任务",
+          "body": "def task(name, count):\n    for index in range(count):\n        yield (name, index)\na_task, b_task = task('a', n + 2), task('b', b)\nresult = ___",
+          "answer": "[next(a_task), next(b_task), next(a_task)]",
+          "hint": "保存各任务的迭代状态"
+        },
+        {
+          "title": "异步函数 introspection",
+          "body": "import inspect\nasync def job(x): return x * 2\nresult = ___",
+          "answer": "(inspect.iscoroutinefunction(job), inspect.signature(job).parameters['x'].name)",
+          "hint": "inspect 可以检查协程函数的签名"
+        },
+        {
+          "title": "协程的异常传播",
+          "body": "async def fail(x):\n    if x < 0: raise ValueError('negative')\n    return x\ncoro = fail(-n)\ntry: coro.send(None)\nexcept ValueError as exc: value = str(exc)\nresult = ___",
+          "answer": "value",
+          "hint": "在执行协程时抛出的异常可由调用方捕获"
+        }
+      ],
+      "X": [
+        {
+          "title": "完整协程链",
+          "body": "async def load(x): return x + n\nasync def transform(x): return x * b\nasync def work(x):\n    loaded = await load(x)\n    return await transform(loaded)\ncoro = work(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "下游协程等待上游结果后再继续"
+        },
+        {
+          "title": "异常协程兜底",
+          "body": "async def fragile(x):\n    if x == 0: raise ZeroDivisionError('zero')\n    return a // x\nasync def safe(x):\n    try: return await fragile(x)\n    except ZeroDivisionError: return -1\ncoro = safe(0)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "await 传播的异常可以被外层 async 函数捕获"
+        },
+        {
+          "title": "合并两条协作流",
+          "body": "def producer(label, items):\n    for x in items:\n        yield f'{label}:{x}'\nleft, right = producer('left', nums[:3]), producer('right', nums[3:])\nresult = ___",
+          "answer": "[next(left), next(right), next(left), next(right)]",
+          "hint": "每个生成器独立维护执行位置"
+        },
+        {
+          "title": "协程中累加逻辑",
+          "body": "async def total(values):\n    running = 0\n    for value in values:\n        running += value\n    return running\ncoro = total(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "没有挂起点的协程可同步推进到终止"
+        },
+        {
+          "title": "协程封装数据变换",
+          "body": "async def map_items(values, transform):\n    return [transform(item) for item in values]\ncoro = map_items(nums, lambda item: item * n)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
+          "hint": "异步接口与纯函数变换可结合使用"
+        }
+      ]
+    }
+  },
+  "CH28": {
+    "dir": "CH28_Testing_Logging_Quality",
+    "title": "测试、日志与工程规范",
+    "tiers": {
+      "E": [
+        {
+          "title": "assert 正常通过",
+          "body": "value = a + b\nassert value >= a\nresult = ___",
+          "answer": "value",
+          "hint": "assert 适合检查明确的不变量"
+        },
+        {
+          "title": "unittest 测试用例",
+          "body": "import unittest\nclass MathTests(unittest.TestCase):\n    def test_add(self): self.assertEqual(a + b, b + a)\ntest_case = MathTests('test_add')\nresult = ___",
+          "answer": "test_case.countTestCases()",
+          "hint": "TestCase 可以统计其包含的测试方法"
+        },
+        {
+          "title": "logging 级别",
+          "body": "import logging\nresult = ___",
+          "answer": "logging.getLevelName(logging.WARNING)",
+          "hint": "日志级别有可读名称"
+        },
+        {
+          "title": "代码检查语法 AST",
+          "body": "import ast\nnode = ast.parse('x = ' + str(n))\nresult = ___",
+          "answer": "type(node.body[0]).__name__",
+          "hint": "ast.parse 只分析代码结构，不执行它"
+        },
+        {
+          "title": "读取配置字典",
+          "body": "from configparser import ConfigParser\ncfg = ConfigParser()\ncfg.read_dict({'server': {'port': str(a)}})\nresult = ___",
+          "answer": "cfg.getint('server', 'port')",
+          "hint": "getint 把配置中的字符串转为整数"
+        }
+      ],
+      "M": [
+        {
+          "title": "unittest 断言列表",
+          "body": "import unittest\ncase = unittest.TestCase()\ncase.assertCountEqual([a,b,n], [n,a,b])\nresult = ___",
+          "answer": "True",
+          "hint": "assertCountEqual 对顺序不敏感"
+        },
+        {
+          "title": "logging 内存输出",
+          "body": "import logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('ch28'+str(a))\nlogger.addHandler(handler)\nlogger.setLevel(logging.INFO)\nlogger.info(word)\nlogger.removeHandler(handler)\nresult = ___",
+          "answer": "stream.getvalue().strip()",
+          "hint": "StreamHandler 可写入内存流用于测试日志"
+        },
+        {
+          "title": "用 ast 分析函数数量",
+          "body": "import ast\ncode = 'def alpha(): pass\\ndef beta(): pass\\nx=' + str(n)\ntree = ast.parse(code)\nresult = ___",
+          "answer": "sum(isinstance(node, ast.FunctionDef) for node in tree.body)",
+          "hint": "AST 的 body 包含顶层函数定义节点"
+        },
+        {
+          "title": "配置默认参数",
+          "body": "from configparser import ConfigParser\ncfg = ConfigParser()\ncfg.read_dict({'DEFAULT': {'timeout': str(n)}, 'service': {'enabled':'yes'}})\nresult = ___",
+          "answer": "(cfg.getint('service','timeout'), cfg.getboolean('service','enabled'))",
+          "hint": "ConfigParser 会继承 DEFAULT 节配置"
+        },
+        {
+          "title": "日志严重程度判断",
+          "body": "import logging\nlevels = [logging.DEBUG, logging.INFO, logging.WARNING, logging.ERROR]\nresult = ___",
+          "answer": "[logging.getLevelName(x) for x in levels if x >= logging.WARNING]",
+          "hint": "日志级别由数值决定优先级"
+        }
+      ],
+      "H": [
+        {
+          "title": "unittest.mock 替换依赖",
+          "body": "from unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___",
+          "answer": "(load(client), client.get.call_count)",
+          "hint": "Mock 可记录被调用次数"
+        },
+        {
+          "title": "解析 TOML 配置",
+          "body": "import tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___",
+          "answer": "(config['app']['name'], config['app']['port'])",
+          "hint": "tomllib.loads 接收 TOML 文本"
+        },
+        {
+          "title": "AST 操作符统计",
+          "body": "import ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___",
+          "answer": "sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))",
+          "hint": "ast.walk 能遍历全部后代节点"
+        },
+        {
+          "title": "mock 边界值验证",
+          "body": "from unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___",
+          "answer": "([predicate(x) for x in values], predicate.call_count)",
+          "hint": "side_effect 可以提供动态模拟行为"
+        },
+        {
+          "title": "测试输入参数组合",
+          "body": "from itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___",
+          "answer": "len(list(product(values, flags)))",
+          "hint": "product 构造笛卡尔积测试场景"
+        }
+      ],
+      "X": [
+        {
+          "title": "组合单元测试断言",
+          "body": "import unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___",
+          "answer": "len(values)",
+          "hint": "一个测试用例可以检查多个不变量"
+        },
+        {
+          "title": "捕获标准日志并按级别过滤",
+          "body": "import logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___",
+          "answer": "stream.getvalue().splitlines()",
+          "hint": "日志器级别会过滤低于阈值的消息"
+        },
+        {
+          "title": "断言失败信息检查",
+          "body": "try:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___",
+          "answer": "message",
+          "hint": "失败的 assert 会抛出 AssertionError"
+        },
+        {
+          "title": "测试替身的调用参数",
+          "body": "from unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___",
+          "answer": "(service.call_args.args[0], service.call_args.kwargs['flag'])",
+          "hint": "Mock.call_args 保留最后一次调用参数"
+        },
+        {
+          "title": "软件配置结构验证",
+          "body": "import ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___",
+          "answer": "(fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))",
+          "hint": "AST 可检验函数命名、参数与返回语句"
+        }
+      ]
+    }
+  },
+  "CH29": {
+    "dir": "CH29_CLI_Projects",
+    "title": "命令行工具与综合项目",
+    "tiers": {
+      "E": [
+        {
+          "title": "argparse 解析整数",
+          "body": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--count', type=int)\nargs = parser.parse_args(['--count', str(n)])\nresult = ___",
+          "answer": "args.count",
+          "hint": "argparse 将传入字符串解析为整数"
+        },
+        {
+          "title": "shlex 命令行分词",
+          "body": "import shlex\ncommand = 'run --name ' + word + ' --times ' + str(n)\nresult = ___",
+          "answer": "shlex.split(command)",
+          "hint": "shlex.split 按 shell 风格拆分命令"
+        },
+        {
+          "title": "json 保存配置",
+          "body": "import json\nconfig = {'name':word, 'count':n}\nresult = ___",
+          "answer": "json.dumps(config, sort_keys=True)",
+          "hint": "sort_keys 提供稳定的 JSON 键顺序"
+        },
+        {
+          "title": "hashlib 数据摘要",
+          "body": "import hashlib\npayload = word.encode()\nresult = ___",
+          "answer": "hashlib.sha256(payload).hexdigest()[:8]",
+          "hint": "哈希函数可以计算固定格式摘要"
+        },
+        {
+          "title": "base64 编码",
+          "body": "import base64\npayload = word.encode()\nresult = ___",
+          "answer": "base64.b64encode(payload).decode()",
+          "hint": "base64 编码结果是字节串，可再解码为文本"
+        }
+      ],
+      "M": [
+        {
+          "title": "argparse 多参数",
+          "body": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--start', type=int)\nparser.add_argument('--step', type=int, default=1)\nargs = parser.parse_args(['--start', str(a), '--step', str(b)])\nresult = ___",
+          "answer": "args.start + args.step",
+          "hint": "解析两个命令行选项并组合"
+        },
+        {
+          "title": "CSV 记录汇总",
+          "body": "import csv\nfrom io import StringIO\nsource = StringIO('name,value\\n' + word + ',' + str(a) + '\\nother,' + str(b))\nrows = list(csv.DictReader(source))\nresult = ___",
+          "answer": "sum(int(row['value']) for row in rows)",
+          "hint": "CSV 各字段读取后仍是文本"
+        },
+        {
+          "title": "配置驱动函数",
+          "body": "config = {'factor':n, 'offset':b}\ndef transform(values, config):\n    return [x * config['factor'] + config['offset'] for x in values]\nresult = ___",
+          "answer": "transform(nums, config)",
+          "hint": "将配置对象作为独立参数传入"
+        },
+        {
+          "title": "按字段聚合记录",
+          "body": "records = [{'type':'A','v':a}, {'type':'B','v':b}, {'type':'A','v':n}]\nresult = ___",
+          "answer": "{kind:sum(r['v'] for r in records if r['type']==kind) for kind in ('A','B')}",
+          "hint": "按记录类型分组求和"
+        },
+        {
+          "title": "shlex 带空格值",
+          "body": "import shlex\ncommand = 'tool --title \"' + word + ' item\" --count ' + str(n)\nresult = ___",
+          "answer": "shlex.split(command)",
+          "hint": "引号允许命令参数包含空格"
+        }
+      ],
+      "H": [
+        {
+          "title": "以 dataclass 表示配置",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Options:\n    step: int\n    offset: int\ndef run(items, options): return [x * options.step + options.offset for x in items]\nresult = ___",
+          "answer": "run(nums, Options(n,b))",
+          "hint": "用数据类封装配置并传递给计算函数"
+        },
+        {
+          "title": "解析 JSON 并生成报告",
+          "body": "import json\npayload = json.dumps({'items':[{'qty':n,'price':a}, {'qty':2,'price':b}]})\nrecords = json.loads(payload)['items']\nresult = ___",
+          "answer": "sum(x['qty'] * x['price'] for x in records)",
+          "hint": "按数量乘单价计算总额"
+        },
+        {
+          "title": "argparse 必填选项",
+          "body": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--file', required=True)\nparser.add_argument('--limit', type=int, default=10)\nargs = parser.parse_args(['--file', word+'.csv', '--limit', str(n)])\nresult = ___",
+          "answer": "(args.file, args.limit)",
+          "hint": "必填参数缺失会触发 argparse 的错误"
+        },
+        {
+          "title": "按条件过滤数据",
+          "body": "records = [{'name':word,'score':a}, {'name':'other','score':b}, {'name':'third','score':n}]\nresult = ___",
+          "answer": "[r['name'] for r in records if r['score'] >= b]",
+          "hint": "列表推导式根据阈值筛选字典"
+        },
+        {
+          "title": "文件名批量规范化",
+          "body": "from pathlib import PurePosixPath\npaths = ['data/'+word+'.txt','data/other.csv','data/a.txt']\nresult = ___",
+          "answer": "[PurePosixPath(p).stem.upper() for p in paths if p.endswith('.txt')]",
+          "hint": "先按扩展名筛选，再读取 stem"
+        }
+      ],
+      "X": [
+        {
+          "title": "内存数据导入导出",
+          "body": "import csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___",
+          "answer": "sum(int(x['score']) for x in csv.DictReader(stream))",
+          "hint": "导出的 CSV 可以重新读取做校验"
+        },
+        {
+          "title": "多步骤数据管道",
+          "body": "def normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___",
+          "answer": "summarize(select_even(normalize(nums + [-n])))",
+          "hint": "按规范化、筛选、汇总顺序执行"
+        },
+        {
+          "title": "命令行与数据报告整合",
+          "body": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___",
+          "answer": "sum(r['v'] for r in records if r['v'] >= args.threshold)",
+          "hint": "先解析阈值再应用于记录"
+        },
+        {
+          "title": "轻量发布清单生成",
+          "body": "import json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___",
+          "answer": "json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)",
+          "hint": "根据路径后缀找出源代码文件"
+        },
+        {
+          "title": "综合校验与输出报告",
+          "body": "from dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___",
+          "answer": "{'orders':len(orders),'total':sum(item.total() for item in orders)}",
+          "hint": "先封装订单再聚合数量和金额"
+        }
+      ]
+    }
+  }
+}

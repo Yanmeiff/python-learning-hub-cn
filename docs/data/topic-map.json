@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "PyQuest 现有 15 章题库的知识领域映射；掌握度按每道题最近一次作答估算。",
+  "description": "PyQuest 29 章题库的知识领域映射；掌握度基于最近一次作答。",
   "categories": [
     {
       "id": "basics",
@@ -51,6 +51,56 @@
       "label": "字典与数据组织",
       "chapters": [
         "CH14"
+      ]
+    },
+    {
+      "id": "iteration-generators",
+      "label": "迭代与生成器",
+      "chapters": [
+        "CH16"
+      ]
+    },
+    {
+      "id": "object-oriented",
+      "label": "类、继承与协议",
+      "chapters": [
+        "CH17",
+        "CH18",
+        "CH20",
+        "CH24"
+      ]
+    },
+    {
+      "id": "modules-files",
+      "label": "模块与文件处理",
+      "chapters": [
+        "CH19",
+        "CH25"
+      ]
+    },
+    {
+      "id": "decorators-exceptions",
+      "label": "装饰器、异常与正则",
+      "chapters": [
+        "CH21",
+        "CH22",
+        "CH23"
+      ]
+    },
+    {
+      "id": "typing-quality",
+      "label": "类型、测试与工程",
+      "chapters": [
+        "CH26",
+        "CH28",
+        "CH29"
+      ]
+    },
+    {
+      "id": "async-concurrency",
+      "label": "异步与并发",
+      "chapters": [
+        "CH27"
       ]
     }
   ]

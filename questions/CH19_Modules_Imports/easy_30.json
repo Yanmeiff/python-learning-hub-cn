@@ -1,0 +1,427 @@
+{
+  "chapter": "CH19",
+  "title": "模块、包与导入",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH19-E-001",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19101\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19101 16\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19101 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19101\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-002",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19102\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19102 19\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19102 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19102\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-003",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19103\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19103 22\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19103 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19103\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-004",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19104\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19104 25\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19104 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19104\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-005",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19105\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19105 28\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19105 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19105\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-006",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "使用 math 模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19106\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19106 31\n",
+      "hints": "math.isqrt 返回整数平方根",
+      "test_cases": [
+        "assert captured_output == '19106 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19106\nimport math\nresult = math.isqrt(a * a + b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-007",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19107\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19107 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19107 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19107\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-008",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19108\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19108 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19108 4\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19108\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-009",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19109\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19109 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19109 4\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19109\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-010",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19110\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19110 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19110 4\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19110\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-011",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19111\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19111 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19111 4\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19111\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-012",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "from import 别名：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19112\nfrom math import ceil as upper\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19112 4\n",
+      "hints": "别名可以像原函数一样调用",
+      "test_cases": [
+        "assert captured_output == '19112 4\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19112\nfrom math import ceil as upper\nresult = upper(a / b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-013",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19113\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19113 11.6\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19113 11.6\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19113\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-014",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19114\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19114 13.8\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19114 13.8\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19114\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-015",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19115\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19115 16\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19115 16\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19115\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-016",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19116\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19116 18.2\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19116 18.2\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19116\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-017",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19117\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19117 20.4\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19117 20.4\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19117\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-018",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "statistics 平均数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19118\nimport statistics\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19118 22.6\n",
+      "hints": "统计模块提供 mean",
+      "test_cases": [
+        "assert captured_output == '19118 22.6\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19118\nimport statistics\nresult = statistics.mean(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-019",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19119\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19119 20\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19119 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19119\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-020",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19120\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19120 24\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19120 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19120\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-021",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19121\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19121 28\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19121 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19121\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-022",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19122\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19122 32\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19122 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19122\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-023",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19123\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19123 36\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19123 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19123\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-024",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "operator 内置运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19124\nfrom operator import add\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19124 40\n",
+      "hints": "operator.add 执行加法",
+      "test_cases": [
+        "assert captured_output == '19124 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19124\nfrom operator import add\nresult = add(a, b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-025",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19125\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19125 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19125 2\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19125\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-026",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19126\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19126 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19126 2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19126\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-027",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19127\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19127 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19127 2\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19127\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-028",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19128\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19128 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19128 2\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19128\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-029",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19129\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19129 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19129 2\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19129\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-E-030",
+      "topic": "模块、包与导入",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "collections Counter：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19130\nfrom collections import Counter\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19130 2\n",
+      "hints": "Counter 可以统计元素出现次数",
+      "test_cases": [
+        "assert captured_output == '19130 2\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19130\nfrom collections import Counter\nresult = Counter([n, n, b])[n]\nprint(case_tag, result)"
+    }
+  ]
+}

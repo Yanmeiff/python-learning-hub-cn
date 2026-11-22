@@ -19,7 +19,7 @@
 > 本站通过 GitHub Actions 自动发布 `docs/` 目录。部署状态可在仓库 **Actions → Deploy Python Learning Hub to GitHub Pages** 中查看。
 
 PyQuest 是一套以 **learn-py.org** 知识体系为蓝本的 Python 交互式练习题集，
-按"超简单 → 简单 → 中等 → 较难"四档难度阶梯组织，共规划 **29 章 × 120 题 = 3480 道**练习题。
+按"超简单 → 简单 → 中等 → 较难"四档难度阶梯组织，共计 **29 章、3460 道题**；CH02 原作者已生成 100 道，CH01 和 CH03–CH29 各 120 道。
 
 ## ✨ 特性
 
@@ -40,9 +40,11 @@ PyQuest 是一套以 **learn-py.org** 知识体系为蓝本的 Python 交互式�
 | CH05 字符串格式化 | ✅ 120 道 | CH13 元组 (Tuples) | ✅ 120 道 |
 | CH06 条件语句 | ✅ 120 道 | CH14 字典 (Dictionaries) | ✅ 120 道 |
 | CH07 循环 (for) | ✅ 120 道 | CH15 集合 (Sets) | ✅ 120 道 |
-| CH08 循环 (while) | ✅ 120 道 | CH16 ~ CH29 | ⏳ 待生成 |
+| CH08 循环 (while) | ✅ 120 道 | CH16 迭代、推导式与生成器 | ✅ 120 道 |
+| CH17–CH20 面向对象与模块 | ✅ 480 道 | CH21–CH24 进阶语言特性 | ✅ 480 道 |
+| CH25–CH29 文件、异步与工程 | ✅ 600 道 | 全部 29 章 | ✅ 3460 道 |
 
-> **进度合计：15 章 = 1780 道**，全库校验通过。剩余 14 章正在分批生成中。
+> **进度合计：29 章，共 3460 道。** 新增 CH17–CH29 共 1560 道，按四档难度各 30 道构建，所有标准答案均由 Python 实际运行并自动生成断言。
 
 ## 🚀 快速开始
 
@@ -61,7 +63,7 @@ python generator/validate.py
 ```
 OK: CH01_Hello_World 120 道通过
 ...
-全库校验通过：15 章，1780 道
+全库校验通过：29 章，3460 道
 ```
 
 ### 重新生成某一章的题库
@@ -123,7 +125,7 @@ PyQuest/
 
 ## 🗺️ 路线图
 
-- [x] **阶段一**：题库生成（29 章 × 120 道，进行中，已 15 章）
+- [x] **阶段一**：完成 29 章、3460 道题库（CH02 保留原始 100 道）
 - [x] **阶段二**：在线练习前端（GitHub Pages + Pyodide 实时判分）
 - [ ] **阶段三**：本地测试与判分验证
 - [ ] **阶段四**：部署上线与推广
@@ -163,3 +165,24 @@ PyQuest/
 两个网站独立运行，**彼此不会自动同步学习进度或错题记录**。原先内嵌教程的历史阅读标记不会被清除，若曾使用内嵌教程，JSON 备份仍可保留这一历史数据，但目前不再展示独立的教程阅读器。
 
 原项目内容来源与许可： [walter201230/Python](https://github.com/walter201230/Python)（教程内容 CC BY 4.0）。此版本仅提供原站链接，不再复制或托管这些教程文章。
+
+
+## 📖 补齐 CH16–CH29
+
+本仓库扩展工作将原作者已整理的 CH01–CH15 与 [小白学 Python](https://github.com/walter201230/Python) 的后续知识点对应。具体拟定章节及来源见 [补全计划](docs/CH16_CH29_ROADMAP.md)。
+
+CH16 保留四档题库与 `generator/ch16_cases.json`。CH17–CH29 的 13 章题库由 `generator/recipes/chapters*.json` 和 `generator/gen_ch17_ch29.py` 可复现生成，每章四档各 30 道（每档五类任务、每类六组数据）。实际执行全部标准答案、逐题校验输出与断言，并保持 `questions/` 和 `docs/data/questions/` 完全一致。运行 `python generator/gen_ch17_ch29.py --check` 可复核。本次更新仅在 Draft PR，合并前不会改变正式站点。
+
+## ✅ 完整题库校验
+
+```bash
+python generator/gen_ch16.py --check
+python generator/gen_ch17_ch29.py --check
+python generator/validate.py
+node --test tests/*.test.js
+```
+
+- 29 章、3460 道均保留 PyQuest 原有的十字段格式，包含可运行的 Python 参考解法和 `captured_output` 断言。
+- CH17–CH29 每章 20 类不同练习目标、每类 6 组输入，共 120 道。参数变体侧重巩固同一知识点，**不等同于每道都是独立的算法题型**。
+- 浏览器中的 Python 运行依赖 Pyodide；部分工程课程采用标准库的内存模拟，未要求在浏览器安装 pytest、Pydantic、uv、ruff 等工具。
+- 本题库为针对原教程知识点编写的扩展，**不是 PyQuest 原作者公布的官方后续章节**。

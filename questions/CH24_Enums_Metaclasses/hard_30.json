@@ -1,0 +1,427 @@
+{
+  "chapter": "CH24",
+  "title": "枚举与元类初步",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH24-H-001",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24301\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24301 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24301 (True, False)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24301\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-002",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24302\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24302 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24302 (True, False)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24302\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-003",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24303\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24303 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24303 (True, False)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24303\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-004",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24304\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24304 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24304 (True, False)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24304\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-005",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24305\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24305 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24305 (True, False)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24305\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-006",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Flag 按位组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24306\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24306 (True, False)\n",
+      "hints": "Flag 可以组合并测试成员是否包含",
+      "test_cases": [
+        "assert captured_output == '24306 (True, False)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24306\nfrom enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = (Access.READ in permissions, Access.EXEC in permissions)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-007",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24307\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24307 64\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24307 64\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24307\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-008",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24308\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24308 95\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24308 95\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24308\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-009",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24309\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24309 132\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24309 132\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24309\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-010",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24310\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24310 175\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24310 175\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24310\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-011",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24311\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24311 224\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24311 224\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24311\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-012",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "使用 type 批量定义方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24312\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24312 279\n",
+      "hints": "动态属性字典可包含方法",
+      "test_cases": [
+        "assert captured_output == '24312 279\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24312\ndef describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = Dynamic(a).describe()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-013",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24313\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24313 [5, 20]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24313 [5, 20]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24313\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-014",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24314\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24314 [7, 24]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24314 [7, 24]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24314\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-015",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24315\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24315 [9, 28]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24315 [9, 28]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24315\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-016",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24316\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24316 [11, 32]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24316 [11, 32]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24316\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-017",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24317\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24317 [13, 36]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24317 [13, 36]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24317\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-018",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "Enum 枚举携带元组：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24318\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24318 [15, 40]\n",
+      "hints": "枚举成员可以存放元组",
+      "test_cases": [
+        "assert captured_output == '24318 [15, 40]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24318\nfrom enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = [sum(entry.value) for entry in Pair]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-019",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24319\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24319 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24319 ['ERROR']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24319\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-020",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24320\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24320 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24320 ['ERROR']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24320\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-021",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24321\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24321 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24321 ['ERROR']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24321\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-022",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24322\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24322 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24322 ['ERROR']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24322\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-023",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24323\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24323 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24323 ['ERROR']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24323\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-024",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "自定义枚举方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24324\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24324 ['ERROR']\n",
+      "hints": "枚举成员也支持自定义方法",
+      "test_cases": [
+        "assert captured_output == \"24324 ['ERROR']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24324\nfrom enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = [item.name for item in Status if item.is_error()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-025",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24325\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24325 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24325 (True, True)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24325\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-026",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24326\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24326 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24326 (True, True)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24326\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-027",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24327\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24327 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24327 (True, True)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24327\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-028",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24328\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24328 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24328 (True, True)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24328\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-029",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24329\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24329 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24329 (True, True)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24329\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-H-030",
+      "topic": "枚举与元类初步",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态子类与 isinstance：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24330\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24330 (True, True)\n",
+      "hints": "动态创建类的第二参数指定父类元组",
+      "test_cases": [
+        "assert captured_output == '24330 (True, True)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24330\nBase = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = (isinstance(obj, Base), issubclass(Child, Base))\nprint(case_tag, result)"
+    }
+  ]
+}

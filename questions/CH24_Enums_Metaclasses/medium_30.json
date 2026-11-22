@@ -1,0 +1,427 @@
+{
+  "chapter": "CH24",
+  "title": "枚举与元类初步",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH24-M-001",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24201\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24201 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24201 True\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24201\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-002",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24202\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24202 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24202 True\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24202\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-003",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24203\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24203 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24203 True\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24203\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-004",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24204\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24204 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24204 True\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24204\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-005",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24205\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24205 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24205 True\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24205\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-006",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "IntEnum 整数比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24206\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24206 True\n",
+      "hints": "IntEnum 允许整数方式的比较",
+      "test_cases": [
+        "assert captured_output == '24206 True\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24206\nfrom enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = Rank.SENIOR > Rank.JUNIOR\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-007",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24207\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24207 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24207 [1, 2]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24207\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-008",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24208\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24208 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24208 [1, 2]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24208\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-009",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24209\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24209 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24209 [1, 2]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24209\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-010",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24210\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24210 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24210 [1, 2]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24210\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-011",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24211\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24211 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24211 [1, 2]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24211\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-012",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "auto 自动赋值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24212\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24212 [1, 2]\n",
+      "hints": "auto 为 Enum 成员产生默认递增值",
+      "test_cases": [
+        "assert captured_output == '24212 [1, 2]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24212\nfrom enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = [x.value for x in Code]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-013",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24213\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24213 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24213 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24213\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-014",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24214\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24214 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24214 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24214\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-015",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24215\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24215 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24215 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24215\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-016",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24216\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24216 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24216 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24216\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-017",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24217\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24217 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24217 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24217\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-018",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举成员列表过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24218\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24218 ['B', 'C']\n",
+      "hints": "可以按成员 value 过滤",
+      "test_cases": [
+        "assert captured_output == \"24218 ['B', 'C']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24218\nfrom enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = [x.name for x in Stage if x.value >= 2]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-019",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24219\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24219 ('Point', 20)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24219 ('Point', 20)\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24219\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-020",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24220\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24220 ('Point', 24)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24220 ('Point', 24)\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24220\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-021",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24221\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24221 ('Point', 28)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24221 ('Point', 28)\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24221\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-022",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24222\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24222 ('Point', 32)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24222 ('Point', 32)\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24222\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-023",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24223\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24223 ('Point', 36)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24223 ('Point', 36)\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24223\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-024",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "动态创建类 type：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24224\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24224 ('Point', 40)\n",
+      "hints": "type(name, bases, attrs) 能动态定义一个类",
+      "test_cases": [
+        "assert captured_output == \"24224 ('Point', 40)\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24224\nPoint = type('Point', (), {'x': a, 'y': b})\nresult = (Point.__name__, Point.x + Point.y)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-025",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24225\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24225 4\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24225 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24225\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-026",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24226\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24226 5\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24226 5\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24226\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-027",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24227\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24227 6\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24227 6\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24227\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-028",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24228\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24228 7\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24228 7\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24228\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-029",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24229\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24229 8\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24229 8\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24229\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-M-030",
+      "topic": "枚举与元类初步",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "枚举名称取成员：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24230\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24230 9\n",
+      "hints": "枚举类支持方括号按名称查找",
+      "test_cases": [
+        "assert captured_output == '24230 9\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24230\nfrom enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = Mood['CALM'].value\nprint(case_tag, result)"
+    }
+  ]
+}

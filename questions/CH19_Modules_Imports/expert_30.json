@@ -1,0 +1,427 @@
+{
+  "chapter": "CH19",
+  "title": "模块、包与导入",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH19-X-001",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19401\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19401 [64, 16, 68, 24, 60]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19401 [64, 16, 68, 24, 60]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19401\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-002",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19402\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19402 [95, 25, 100, 35, 90]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19402 [95, 25, 100, 35, 90]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19402\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-003",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19403\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19403 [132, 36, 138, 48, 126]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19403 [132, 36, 138, 48, 126]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19403\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-004",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19404\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19404 [175, 49, 182, 63, 168]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19404 [175, 49, 182, 63, 168]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19404\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-005",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19405\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19405 [224, 64, 232, 80, 216]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19405 [224, 64, 232, 80, 216]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19405\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-006",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "依赖注入避免全局常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19406\nfrom operator import mul\ndef pipeline(items, operation):\n    return ___\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)",
+      "expected_output": "19406 [279, 81, 288, 99, 270]\n",
+      "hints": "把依赖以函数参数形式注入",
+      "test_cases": [
+        "assert captured_output == '19406 [279, 81, 288, 99, 270]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19406\nfrom operator import mul\ndef pipeline(items, operation):\n    return [operation(x) for x in items]\nresult = pipeline(nums, lambda x: mul(x, b))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-007",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19407\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19407 [16, 4]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19407 [16, 4]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19407\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-008",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19408\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19408 [19, 5]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19408 [19, 5]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19408\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-009",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19409\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19409 [22, 6]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19409 [22, 6]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19409\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-010",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19410\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19410 [25, 7]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19410 [25, 7]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19410\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-011",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19411\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19411 [28, 8]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19411 [28, 8]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19411\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-012",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "模块对象状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19412\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19412 [31, 9]\n",
+      "hints": "不同模块对象有独立命名空间",
+      "test_cases": [
+        "assert captured_output == '19412 [31, 9]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19412\nfrom types import ModuleType\nleft, right = ModuleType('left'), ModuleType('right')\nleft.value = a\nright.value = b\nresult = [left.value, right.value]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-013",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19413\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19413 [16, 20]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19413 [16, 20]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19413\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-014",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19414\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19414 [19, 24]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19414 [19, 24]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19414\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-015",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19415\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19415 [22, 28]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19415 [22, 28]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19415\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-016",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19416\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19416 [25, 32]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19416 [25, 32]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19416\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-017",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19417\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19417 [28, 36]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19417 [28, 36]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19417\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-018",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "导入模块映射并转换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19418\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19418 [31, 40]\n",
+      "hints": "可用字典保存导入的模块",
+      "test_cases": [
+        "assert captured_output == '19418 [31, 40]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19418\nfrom importlib import import_module\nnames = ('math', 'operator')\nmods = {name: import_module(name) for name in names}\nresult = [mods['math'].isqrt(a * a), mods['operator'].add(a, b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-019",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19419\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19419 ([1, 1, 16, 1], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19419 ([1, 1, 16, 1], 2)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19419\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-020",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19420\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19420 ([4, 4, 25, 4], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19420 ([4, 4, 25, 4], 2)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19420\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-021",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19421\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19421 ([9, 9, 36, 9], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19421 ([9, 9, 36, 9], 2)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19421\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-022",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19422\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19422 ([16, 16, 49, 16], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19422 ([16, 16, 49, 16], 2)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19422\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-023",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19423\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19423 ([25, 25, 64, 25], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19423 ([25, 25, 64, 25], 2)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19423\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-024",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "使用 lru_cache 避免重复计算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19424\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19424 ([36, 36, 81, 36], 2)\n",
+      "hints": "相同参数的计算结果会被缓存",
+      "test_cases": [
+        "assert captured_output == '19424 ([36, 36, 81, 36], 2)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19424\nfrom functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef square(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ([square(x) for x in values], len(calls))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-025",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19425\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19425 {'name': 'coding', 'version': 1}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19425 {'name': 'coding', 'version': 1}\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19425\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-026",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19426\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19426 {'name': 'vector', 'version': 2}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19426 {'name': 'vector', 'version': 2}\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19426\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-027",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19427\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19427 {'name': 'lambda', 'version': 3}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19427 {'name': 'lambda', 'version': 3}\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19427\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-028",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19428\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19428 {'name': 'alpha', 'version': 4}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19428 {'name': 'alpha', 'version': 4}\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19428\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-029",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19429\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19429 {'name': 'beta', 'version': 5}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19429 {'name': 'beta', 'version': 5}\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19429\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-X-030",
+      "topic": "模块、包与导入",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "pkgutil 标准库模块枚举：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19430\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19430 {'name': 'gamma', 'version': 6}\n",
+      "hints": "将模块式命名空间映射为数据字典",
+      "test_cases": [
+        "assert captured_output == \"19430 {'name': 'gamma', 'version': 6}\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19430\nfrom types import SimpleNamespace\nmodule = SimpleNamespace(name=word, version=n)\nresult = {key: value for key, value in vars(module).items()}\nprint(case_tag, result)"
+    }
+  ]
+}

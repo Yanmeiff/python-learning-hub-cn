@@ -1,0 +1,427 @@
+{
+  "chapter": "CH20",
+  "title": "魔术方法与容器协议",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH20-H-001",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20301\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20301 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20301 2\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20301\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-002",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20302\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20302 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20302 2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20302\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-003",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20303\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20303 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20303 2\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20303\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-004",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20304\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20304 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20304 2\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20304\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-005",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20305\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20305 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20305 2\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20305\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-006",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "对象 hash 与 eq 一致：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20306\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return ___\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)",
+      "expected_output": "20306 2\n",
+      "hints": "相等的对象需要有相同的哈希值",
+      "test_cases": [
+        "assert captured_output == '20306 2\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20306\nclass Point:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __eq__(self, other): return isinstance(other, Point) and (self.x,self.y)==(other.x,other.y)\n    def __hash__(self): return hash((self.x, self.y))\nresult = len({Point(a,b), Point(a,b), Point(b,a)})\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-007",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20307\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20307 [16, 4, 6]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20307 [16, 4, 6]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20307\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-008",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20308\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20308 [20, 18]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20308 [20, 18]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20308\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-009",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20309\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20309 [22, 6, 8]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20309 [22, 6, 8]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20309\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-010",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20310\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20310 [26, 24]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20310 [26, 24]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20310\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-011",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20311\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20311 [28, 8, 10]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20311 [28, 8, 10]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20311\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-012",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "可迭代容器的过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20312\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return ___\nresult = list(EvenValues(nums))\nprint(case_tag, result)",
+      "expected_output": "20312 [32, 30]\n",
+      "hints": "__iter__ 可返回生成器表达式",
+      "test_cases": [
+        "assert captured_output == '20312 [32, 30]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20312\nclass EvenValues:\n    def __init__(self, data): self.data = data\n    def __iter__(self):\n        return (x for x in self.data if x % 2 == 0)\nresult = list(EvenValues(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-013",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20313\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20313 20\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20313 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20313\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-014",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20314\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20314 24\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20314 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20314\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-015",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20315\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20315 28\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20315 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20315\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-016",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20316\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20316 32\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20316 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20316\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-017",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20317\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20317 36\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20317 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20317\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-018",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "上下文管理协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20318\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "20318 40\n",
+      "hints": "with 调用 __enter__ 并在离开时调用 __exit__",
+      "test_cases": [
+        "assert captured_output == '20318 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20318\nclass Tracker:\n    def __enter__(self): return self\n    def __exit__(self, exc_type, exc, tb): return False\n    def compute(self, x): return x + b\nwith Tracker() as t:\n    result = t.compute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-019",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20319\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20319 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20319 0\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20319\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-020",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20320\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20320 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20320 0\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20320\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-021",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20321\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20321 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20321 0\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20321\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-022",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20322\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20322 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20322 0\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20322\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-023",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20323\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20323 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20323 0\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20323\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-024",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "属性描述器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20324\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = ___\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)",
+      "expected_output": "20324 0\n",
+      "hints": "数据描述器可在设置时进行校验",
+      "test_cases": [
+        "assert captured_output == '20324 0\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20324\nclass Positive:\n    def __get__(self, obj, typ=None): return obj._value\n    def __set__(self, obj, value): obj._value = max(0, value)\nclass Item:\n    value = Positive()\n    def __init__(self, x): self.value = x\nresult = Item(-n).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-025",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20325\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20325 20\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20325 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20325\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-026",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20326\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20326 24\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20326 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20326\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-027",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20327\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20327 28\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20327 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20327\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-028",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20328\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20328 32\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20328 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20328\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-029",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20329\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20329 36\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20329 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20329\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-H-030",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "反向加法协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20330\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return ___\nresult = a + Offset(b)\nprint(case_tag, result)",
+      "expected_output": "20330 40\n",
+      "hints": "右操作数的 __radd__ 可处理左边的整数",
+      "test_cases": [
+        "assert captured_output == '20330 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20330\nclass Offset:\n    def __init__(self, value): self.value = value\n    def __radd__(self, other): return other + self.value\nresult = a + Offset(b)\nprint(case_tag, result)"
+    }
+  ]
+}

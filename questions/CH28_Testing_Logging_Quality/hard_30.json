@@ -1,0 +1,427 @@
+{
+  "chapter": "CH28",
+  "title": "测试、日志与工程规范",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH28-H-001",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 28301\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28301 (64, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28301 (64, 1)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 28301\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-002",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 28302\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28302 (95, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28302 (95, 1)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 28302\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-003",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 28303\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28303 (132, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28303 (132, 1)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 28303\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-004",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 28304\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28304 (175, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28304 (175, 1)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 28304\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-005",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 28305\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28305 (224, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28305 (224, 1)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 28305\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-006",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "unittest.mock 替换依赖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 28306\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28306 (279, 1)\n",
+      "hints": "Mock 可记录被调用次数",
+      "test_cases": [
+        "assert captured_output == '28306 (279, 1)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 28306\nfrom unittest.mock import Mock\nclient = Mock()\nclient.get.return_value = {'value': a}\ndef load(api): return api.get()['value'] * b\nresult = (load(client), client.get.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-007",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 28307\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28307 ('delta', 16)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28307 ('delta', 16)\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 28307\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-008",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 28308\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28308 ('omega', 19)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28308 ('omega', 19)\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 28308\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-009",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 28309\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28309 ('python', 22)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28309 ('python', 22)\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 28309\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-010",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 28310\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28310 ('coding', 25)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28310 ('coding', 25)\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 28310\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-011",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 28311\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28311 ('vector', 28)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28311 ('vector', 28)\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 28311\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-012",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "解析 TOML 配置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 28312\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28312 ('lambda', 31)\n",
+      "hints": "tomllib.loads 接收 TOML 文本",
+      "test_cases": [
+        "assert captured_output == \"28312 ('lambda', 31)\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 28312\nimport tomllib\npayload = ('[app]\\nname = \"' + word + '\"\\nport = ' + str(a)).encode()\nconfig = tomllib.loads(payload.decode())\nresult = (config['app']['name'], config['app']['port'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-013",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 28313\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28313 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28313 2\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 28313\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-014",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 28314\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28314 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28314 2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 28314\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-015",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 28315\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28315 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28315 2\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 28315\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-016",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 28316\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28316 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28316 2\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 28316\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-017",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 28317\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28317 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28317 2\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 28317\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-018",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "AST 操作符统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 28318\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28318 2\n",
+      "hints": "ast.walk 能遍历全部后代节点",
+      "test_cases": [
+        "assert captured_output == '28318 2\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 28318\nimport ast\nexpression = ast.parse('result = a + b * ' + str(n))\nresult = sum(isinstance(node, ast.BinOp) for node in ast.walk(expression))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-019",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 28319\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28319 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28319 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 28319\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-020",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 28320\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28320 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28320 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 28320\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-021",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 28321\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28321 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28321 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 28321\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-022",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 28322\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28322 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28322 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 28322\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-023",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 28323\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28323 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28323 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 28323\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-024",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "mock 边界值验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 28324\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28324 ([True, False, False], 3)\n",
+      "hints": "side_effect 可以提供动态模拟行为",
+      "test_cases": [
+        "assert captured_output == '28324 ([True, False, False], 3)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 28324\nfrom unittest.mock import Mock\npredicate = Mock(side_effect=lambda x: x > b)\nvalues = [a, n, b]\nresult = ([predicate(x) for x in values], predicate.call_count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-025",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 28325\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28325 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28325 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 28325\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-026",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 28326\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28326 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28326 4\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 28326\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-027",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 28327\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28327 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28327 4\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 28327\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-028",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 28328\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28328 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28328 4\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 28328\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-029",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 28329\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28329 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28329 4\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 28329\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-H-030",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "测试输入参数组合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 28330\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28330 4\n",
+      "hints": "product 构造笛卡尔积测试场景",
+      "test_cases": [
+        "assert captured_output == '28330 4\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 28330\nfrom itertools import product\nvalues = [n, b]\nflags = [True, False]\nresult = len(list(product(values, flags)))\nprint(case_tag, result)"
+    }
+  ]
+}
