@@ -11,12 +11,12 @@
 
 ## 🖥️ 在线练习
 
-**👉 [https://pystay.github.io/python-pyquest/](https://pystay.github.io/python-pyquest/)**
+**👉 [https://yanmeiff.github.io/python-learning-hub-cn/](https://yanmeiff.github.io/python-learning-hub-cn/)**
 
 在浏览器中直接刷题：代码通过 **Pyodide（WebAssembly 版 Python）** 实时运行判分，无需安装任何软件。
 完成一题自动记录进度（保存在浏览器本地）。题库、前端与判分逻辑全部开源于此仓库。
 
-> 若链接暂未生效，请到仓库 **Settings → Pages** 选择分支 `master` 与目录 `/docs` 后保存，等待 1~2 分钟即可访问。
+> 本站通过 GitHub Actions 自动发布 `docs/` 目录。部署状态可在仓库 **Actions → Deploy Python Learning Hub to GitHub Pages** 中查看。
 
 PyQuest 是一套以 **learn-py.org** 知识体系为蓝本的 Python 交互式练习题集，
 按"超简单 → 简单 → 中等 → 较难"四档难度阶梯组织，共规划 **29 章 × 120 题 = 3480 道**练习题。
