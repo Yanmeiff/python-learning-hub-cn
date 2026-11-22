@@ -280,8 +280,8 @@
         },
         {
           "title": "创建协程对象",
-          "body": "import inspect\nasync def value(): return a\ncoro = value()\nresult = ___",
-          "answer": "inspect.iscoroutine(coro)",
+          "body": "import inspect\nasync def value(): return a\ncoro = value()\nis_coro = inspect.iscoroutine(coro)\ncoro.close()\nresult = ___",
+          "answer": "is_coro",
           "hint": "调用 async 函数获得协程对象，不会直接执行函数体"
         },
         {
@@ -306,8 +306,8 @@
       "M": [
         {
           "title": "异步任务包装结果",
-          "body": "async def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: result = done.value",
-          "answer": "result",
+          "body": "async def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
           "hint": "await 的返回值参与后续计算"
         },
         {
@@ -318,14 +318,14 @@
         },
         {
           "title": "协程返回列表",
-          "body": "async def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: result = done.value",
-          "answer": "result",
+          "body": "async def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
           "hint": "协程可以返回普通 Python 列表"
         },
         {
           "title": "async 内的同步校验",
-          "body": "async def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: result = done.value",
-          "answer": "result",
+          "body": "async def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___",
+          "answer": "value",
           "hint": "协程函数体仍能使用常规条件表达式"
         },
         {
