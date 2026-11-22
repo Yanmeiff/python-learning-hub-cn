@@ -81,7 +81,8 @@
         meta.dueAt = addDays(timestamp, REVIEW_INTERVALS[0]);
         meta.lastResult = "wrong";
       } else if (data.reviewMeta[item.qid]) {
-        meta.stage = Math.min((Number(meta.stage) || 0) + 1, REVIEW_INTERVALS.length - 1);
+        meta.stage = meta.lastResult === "wrong" ? 0 :
+          Math.min((Number(meta.stage) || 0) + 1, REVIEW_INTERVALS.length - 1);
         meta.dueAt = addDays(timestamp, REVIEW_INTERVALS[meta.stage]);
         meta.lastResult = "passed";
       }
