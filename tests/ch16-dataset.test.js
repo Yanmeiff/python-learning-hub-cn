@@ -11,8 +11,8 @@ test("CH16 follows PyQuest's complete four-tier JSON format", () => {
   const chapter = index.chapters.find(ch => ch.id === "CH16");
   assert.ok(chapter);
   assert.equal(chapter.count, 120);
-  assert.equal(index.chapters.length,16);
-  assert.equal(index.chapters.reduce((s,ch)=>s+ch.count,0),1900);
+  assert.equal(index.chapters.length,29);
+  assert.equal(index.chapters.reduce((s,ch)=>s+ch.count,0),3460);
   const seen = new Set(), outputs=new Set();
   for(const [file,suffix] of [["easy_30.json","E"],["medium_30.json","M"],["hard_30.json","H"],["expert_30.json","X"]]){
     const a=JSON.parse(fs.readFileSync(path.join(dir,file),"utf8"));
