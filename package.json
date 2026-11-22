@@ -21,7 +21,8 @@
     "gen:ch15": "python generator/gen_ch15.py",
     "validate": "python generator/validate.py",
     "sync:site": "python generator/sync_site.py",
-    "serve": "python -m http.server 8000 -d docs"
+    "serve": "python -m http.server 8000 -d docs",
+    "test:learning": "node --test tests/*.test.js"
   },
   "license": "MIT"
 }

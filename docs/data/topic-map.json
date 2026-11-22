@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "description": "PyQuest 现有 15 章题库的知识领域映射；掌握度按每道题最近一次作答估算。",
+  "categories": [
+    {
+      "id": "basics",
+      "label": "基础输出与变量",
+      "chapters": [
+        "CH01",
+        "CH02"
+      ]
+    },
+    {
+      "id": "operators-strings",
+      "label": "运算与字符串",
+      "chapters": [
+        "CH04",
+        "CH05"
+      ]
+    },
+    {
+      "id": "control-flow",
+      "label": "条件与循环",
+      "chapters": [
+        "CH06",
+        "CH07",
+        "CH08"
+      ]
+    },
+    {
+      "id": "functions",
+      "label": "函数与作用域",
+      "chapters": [
+        "CH09",
+        "CH10",
+        "CH11",
+        "CH12"
+      ]
+    },
+    {
+      "id": "sequences",
+      "label": "列表、元组与集合",
+      "chapters": [
+        "CH03",
+        "CH13",
+        "CH15"
+      ]
+    },
+    {
+      "id": "dictionaries",
+      "label": "字典与数据组织",
+      "chapters": [
+        "CH14"
+      ]
+    }
+  ]
+}

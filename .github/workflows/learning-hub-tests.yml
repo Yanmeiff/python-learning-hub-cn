@@ -1,0 +1,19 @@
+name: Learning Hub tests
+on:
+  push:
+    branches:
+      - master
+      - "feat/**"
+  pull_request:
+    branches:
+      - master
+jobs:
+  test-learning-store:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run learning data tests
+        run: node --test tests/*.test.js
