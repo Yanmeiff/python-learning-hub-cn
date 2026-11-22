@@ -1,0 +1,41 @@
+name: Generate remaining PyQuest chapters
+
+on:
+  push:
+    branches:
+      - feat/pyquest-ch16-ch29
+    paths:
+      - "generator/recipes/**"
+      - "generator/gen_ch17_ch29.py"
+      - ".github/workflows/generate-advanced-questions.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-commit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/pyquest-ch16-ch29
+          persist-credentials: true
+      - name: Run all 1560 Python reference solutions and write JSON banks
+        run: python3 generator/gen_ch17_ch29.py --write
+      - name: Validate entire 3460-question bank
+        run: |
+          python3 generator/gen_ch16.py --check
+          python3 generator/gen_ch17_ch29.py --check
+          python3 generator/validate.py
+      - name: Commit generated question files and index to development branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add questions/CH{17..29}_*/ docs/data/questions/CH{17..29}_*/ docs/data/index.json docs/data/topic-map.json
+          if git diff --staged --quiet; then
+            echo "Generated files already current."
+          else
+            git commit -m "build: generate CH17–CH29 1560 verified Python exercises"
+            git push origin HEAD:feat/pyquest-ch16-ch29
+          fi

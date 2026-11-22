@@ -1,0 +1,538 @@
+{
+  "CH21": {
+    "dir": "CH21_Closures_Decorators",
+    "title": "闭包与装饰器",
+    "tiers": {
+      "E": [
+        {
+          "title": "闭包读取外层值",
+          "body": "def outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___",
+          "answer": "f()",
+          "hint": "闭包保留创建函数时的局部变量"
+        },
+        {
+          "title": "函数作为返回值",
+          "body": "def scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___",
+          "answer": "fn(b)",
+          "hint": "高阶函数可返回一个新函数"
+        },
+        {
+          "title": "lambda 闭包",
+          "body": "base = b\nf = lambda x: x + base\nresult = ___",
+          "answer": "f(a)",
+          "hint": "lambda 可访问外层变量"
+        },
+        {
+          "title": "检查自由变量",
+          "body": "def maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___",
+          "answer": "fn()",
+          "hint": "嵌套函数可以捕获定义作用域中的变量"
+        },
+        {
+          "title": "装饰器包装结果",
+          "body": "def double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___",
+          "answer": "identity(a)",
+          "hint": "装饰器返回的函数取代原函数"
+        }
+      ],
+      "M": [
+        {
+          "title": "nonlocal 累加器",
+          "body": "def counter():\n    count = 0\n    def step(x):\n        nonlocal count\n        count += x\n        return count\n    return step\nc = counter()\nresult = ___",
+          "answer": "[c(n), c(b), c(a)]",
+          "hint": "nonlocal 更新外层闭包里的变量"
+        },
+        {
+          "title": "带参数的装饰器",
+          "body": "def multiply(factor):\n    def decorate(fn):\n        def wrapper(x): return ___\n        return wrapper\n    return decorate\n@multiply(n)\ndef increase(x): return x + 1\nresult = increase(b)",
+          "answer": "fn(x) * factor",
+          "hint": "两层函数分别接受装饰器参数和待装饰函数"
+        },
+        {
+          "title": "保留元信息 wraps",
+          "body": "from functools import wraps\ndef trace(fn):\n    @wraps(fn)\n    def wrapper(x): return fn(x) + n\n    return wrapper\n@trace\ndef calc(x): return x * 2\nresult = ___",
+          "answer": "(calc.__name__, calc(b))",
+          "hint": "functools.wraps 保留原函数名称"
+        },
+        {
+          "title": "闭包参数独立",
+          "body": "def make_adder(offset):\n    return lambda value: value + offset\nadd_n = make_adder(n)\nadd_b = make_adder(b)\nresult = ___",
+          "answer": "[add_n(a), add_b(a)]",
+          "hint": "每次调用外层函数都会产生不同环境"
+        },
+        {
+          "title": "装饰器记录次数",
+          "body": "def counted(fn):\n    count = 0\n    def wrapper(x):\n        nonlocal count\n        count += 1\n        return fn(x), count\n    return wrapper\n@counted\ndef square(x): return x * x\nresult = ___",
+          "answer": "[square(n), square(b)]",
+          "hint": "被包装函数记住自身调用计数"
+        }
+      ],
+      "H": [
+        {
+          "title": "闭包运行总和",
+          "body": "def accumulator(start):\n    total = start\n    def add(x):\n        nonlocal total\n        total += x\n        return total\n    return add\nf = accumulator(n)\nresult = ___",
+          "answer": "[f(x) for x in nums[:3]]",
+          "hint": "列表推导式依次调用同一个闭包"
+        },
+        {
+          "title": "组合多个装饰器",
+          "body": "def plus(k):\n    return lambda fn: lambda x: fn(x) + k\ndef times(k):\n    return lambda fn: lambda x: fn(x) * k\n@plus(n)\n@times(b)\ndef f(x): return x\nresult = ___",
+          "answer": "f(a)",
+          "hint": "装饰器先从靠近函数的一层开始应用"
+        },
+        {
+          "title": "缓存装饰器",
+          "body": "from functools import lru_cache\ncalls = []\n@lru_cache(maxsize=None)\ndef calc(x):\n    calls.append(x)\n    return x * x\nvalues = [n, n, b, n]\nresult = ___",
+          "answer": "([calc(x) for x in values], len(calls))",
+          "hint": "缓存命中时不会再次执行函数体"
+        },
+        {
+          "title": "装饰器给异常兜底",
+          "body": "def default_on_error(fallback):\n    def deco(fn):\n        def wrapper(x):\n            try: return fn(x)\n            except ZeroDivisionError: return fallback\n        return wrapper\n    return deco\n@default_on_error(-1)\ndef inverse(x): return a // x\nresult = ___",
+          "answer": "[inverse(0), inverse(b)]",
+          "hint": "包装器可捕获原函数抛出的指定异常"
+        },
+        {
+          "title": "闭包工厂维护映射",
+          "body": "def frequency():\n    counts = {}\n    def push(key):\n        counts[key] = counts.get(key, 0) + 1\n        return counts[key]\n    return push\nf = frequency()\nresult = ___",
+          "answer": "[f(word), f(word), f('other')]",
+          "hint": "闭包中的可变字典可累积统计"
+        }
+      ],
+      "X": [
+        {
+          "title": "装饰器保证参数非负",
+          "body": "from functools import wraps\ndef nonnegative(fn):\n    @wraps(fn)\n    def wrapper(value):\n        return ___\n    return wrapper\n@nonnegative\ndef score(value): return value * b\nresult = [score(-n), score(a)]",
+          "answer": "fn(max(0, value))",
+          "hint": "在调用原函数前修正非法参数"
+        },
+        {
+          "title": "幂等缓存与状态统计",
+          "body": "from functools import wraps\ndef memo(fn):\n    cache = {}\n    @wraps(fn)\n    def inner(value):\n        if value not in cache:\n            cache[value] = fn(value)\n        return ___\n    return inner\n@memo\ndef square(x): return x * x\nresult = [square(x) for x in [n,b,n,a,b]]",
+          "answer": "cache[value]",
+          "hint": "只把首次计算的结果写入缓存"
+        },
+        {
+          "title": "可组合闭包管道",
+          "body": "def compose(*functions):\n    def run(value):\n        for fn in reversed(functions):\n            value = fn(value)\n        return ___\n    return run\nf = compose(lambda x: x + n, lambda x: x * b)\nresult = f(a)",
+          "answer": "value",
+          "hint": "函数组合的执行顺序与输入顺序相反"
+        },
+        {
+          "title": "装饰器聚合输入",
+          "body": "def map_each(fn):\n    def decorator(consumer):\n        def wrapped(items):\n            return consumer([fn(x) for x in items])\n        return wrapped\n    return decorator\n@map_each(lambda x: x * n)\ndef total(values): return sum(values)\nresult = ___",
+          "answer": "total(nums)",
+          "hint": "先逐项映射后交给消费者函数"
+        },
+        {
+          "title": "闭包产生可重置计数器",
+          "body": "def counter(start):\n    count = start\n    def action(mode='next'):\n        nonlocal count\n        if mode == 'reset':\n            count = start\n        else:\n            count += 1\n        return count\n    return action\nc = counter(b)\nresult = ___",
+          "answer": "[c(), c(), c('reset'), c()]",
+          "hint": "重置必须恢复初始闭包值而不是清零"
+        }
+      ]
+    }
+  },
+  "CH22": {
+    "dir": "CH22_Exceptions_Context",
+    "title": "异常与上下文管理器",
+    "tiers": {
+      "E": [
+        {
+          "title": "捕获除零异常",
+          "body": "try:\n    value = a // 0\nexcept ZeroDivisionError:\n    value = b\nresult = ___",
+          "answer": "value",
+          "hint": "except 捕获指定异常后继续运行"
+        },
+        {
+          "title": "try else 分支",
+          "body": "try:\n    value = a // b\nexcept ZeroDivisionError:\n    value = -1\nelse:\n    value += n\nresult = ___",
+          "answer": "value",
+          "hint": "未发生异常时运行 else"
+        },
+        {
+          "title": "finally 总会执行",
+          "body": "events = []\ntry:\n    events.append(a)\nfinally:\n    events.append(b)\nresult = ___",
+          "answer": "events",
+          "hint": "finally 在正常和异常路径都执行"
+        },
+        {
+          "title": "ValueError 类型转换",
+          "body": "try:\n    result = int(word)\nexcept ValueError:\n    result = ___",
+          "answer": "n",
+          "hint": "非法数字字符串会触发 ValueError"
+        },
+        {
+          "title": "isinstance 区分错误",
+          "body": "def safe_add(x, y):\n    if not isinstance(x, int): return None\n    return x + y\nresult = ___",
+          "answer": "[safe_add(a,b), safe_add(word,b)]",
+          "hint": "先校验参数类型再执行运算"
+        }
+      ],
+      "M": [
+        {
+          "title": "自定义异常类型",
+          "body": "class TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___",
+          "answer": "b",
+          "hint": "继承 ValueError 定义特定领域异常"
+        },
+        {
+          "title": "contextlib suppress",
+          "body": "from contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___",
+          "answer": "values",
+          "hint": "suppress 忽略指定类型的异常"
+        },
+        {
+          "title": "with StringIO 文本流",
+          "body": "from io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___",
+          "answer": "value",
+          "hint": "StringIO 是可用 with 管理的内存文本流"
+        },
+        {
+          "title": "异常分组统计",
+          "body": "values = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___",
+          "answer": "good",
+          "hint": "失败项跳过并保留合法转换结果"
+        },
+        {
+          "title": "assert 验证不变量",
+          "body": "def require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___",
+          "answer": "require_positive(b)",
+          "hint": "assert 为程序不变量提供断言"
+        }
+      ],
+      "H": [
+        {
+          "title": "多种异常分类",
+          "body": "values = ['0', str(n), word, str(b)]\nresults = []\nfor raw in values:\n    try: results.append(a // int(raw))\n    except ZeroDivisionError: results.append('zero')\n    except ValueError: results.append('invalid')\nresult = ___",
+          "answer": "results",
+          "hint": "异常类型不同应分别处理"
+        },
+        {
+          "title": "自定义上下文管理器",
+          "body": "class Session:\n    def __init__(self): self.log = []\n    def __enter__(self): self.log.append('enter'); return self\n    def __exit__(self, typ, value, traceback): self.log.append('exit'); return False\nsession = Session()\nwith session as obj:\n    obj.log.append(word)\nresult = ___",
+          "answer": "session.log",
+          "hint": "enter 在主体前执行，exit 在主体后执行"
+        },
+        {
+          "title": "异常链字符串",
+          "body": "class DataError(Exception): pass\ndef parse(value):\n    try: return int(value)\n    except ValueError as exc: raise DataError('bad') from exc\ntry:\n    parse(word)\nexcept DataError as err:\n    result = ___",
+          "answer": "type(err.__cause__).__name__",
+          "hint": "raise ... from ... 保留原异常为 __cause__"
+        },
+        {
+          "title": "局部资源清理",
+          "body": "log = []\ndef work(value):\n    try:\n        log.append('start')\n        return value + n\n    finally:\n        log.append('done')\nanswer = work(a)\nresult = ___",
+          "answer": "(answer, log)",
+          "hint": "finally 即使函数提前 return 也会执行"
+        },
+        {
+          "title": "上下文管理装饰器",
+          "body": "from contextlib import contextmanager\nlog = []\n@contextmanager\ndef phase():\n    log.append('start')\n    try: yield\n    finally: log.append('stop')\nwith phase():\n    log.append(word)\nresult = ___",
+          "answer": "log",
+          "hint": "contextmanager 装饰的生成器在 yield 前后包围 with 主体"
+        }
+      ],
+      "X": [
+        {
+          "title": "异常保护的批量流水线",
+          "body": "def safe_map(values, operation):\n    results = []\n    for value in values:\n        try: results.append(operation(value))\n        except (TypeError, ValueError, ZeroDivisionError):\n            results.append(None)\n    return ___\ninputs = [str(a), word, str(b), '0']\nresult = safe_map(inputs, lambda x: a // int(x))",
+          "answer": "results",
+          "hint": "对每个元素单独捕获异常，避免整个批次失败"
+        },
+        {
+          "title": "ExitStack 管理多份资源",
+          "body": "from contextlib import ExitStack\nfrom io import StringIO\nwith ExitStack() as stack:\n    first = stack.enter_context(StringIO())\n    second = stack.enter_context(StringIO())\n    first.write(str(a))\n    second.write(word)\n    value = [first.getvalue(), second.getvalue()]\nresult = ___",
+          "answer": "value",
+          "hint": "ExitStack 可以管理动态数量的上下文"
+        },
+        {
+          "title": "恢复事务状态",
+          "body": "class Store:\n    def __init__(self, value): self.value = value\n    def transaction(self, delta, fail=False):\n        old = self.value\n        try:\n            self.value += delta\n            if fail: raise ValueError('rollback')\n        except ValueError:\n            self.value = ___\n        return self.value\ns = Store(a)\nresult = [s.transaction(b, True), s.transaction(n)]",
+          "answer": "old",
+          "hint": "失败时恢复修改前的快照"
+        },
+        {
+          "title": "校验函数抛出自定义异常",
+          "body": "class FormatError(Exception): pass\ndef parse(values):\n    parsed = []\n    for value in values:\n        try: parsed.append(int(value))\n        except ValueError as err:\n            raise FormatError(value) from err\n    return parsed\ntry:\n    parse([str(a), word])\nexcept FormatError as error:\n    result = ___",
+          "answer": "[str(error), type(error.__cause__).__name__]",
+          "hint": "错误信息与异常原因可同时保留"
+        },
+        {
+          "title": "上下文内抑制特定异常",
+          "body": "class IgnoreZero:\n    def __enter__(self): return self\n    def __exit__(self, typ, exc, tb): return ___\nitems = []\nwith IgnoreZero():\n    items.append(a)\n    raise ZeroDivisionError()\nitems.append(b)\nresult = items",
+          "answer": "typ is ZeroDivisionError",
+          "hint": "__exit__ 返回真值可抑制被识别的异常"
+        }
+      ]
+    }
+  },
+  "CH23": {
+    "dir": "CH23_Regex",
+    "title": "正则表达式",
+    "tiers": {
+      "E": [
+        {
+          "title": "re.search 搜索数字",
+          "body": "import re\ntext = word + str(a)\nresult = ___",
+          "answer": "re.search(r'\\d+', text).group()",
+          "hint": "\\d 匹配数字字符"
+        },
+        {
+          "title": "re.findall 抽取字符",
+          "body": "import re\ntext = word + '-' + str(n)\nresult = ___",
+          "answer": "re.findall(r'[a-z]+', text)",
+          "hint": "findall 返回所有不重叠匹配"
+        },
+        {
+          "title": "re.fullmatch 整体验证",
+          "body": "import re\ntext = str(a)\nresult = ___",
+          "answer": "bool(re.fullmatch(r'\\d+', text))",
+          "hint": "fullmatch 要求整个字符串匹配"
+        },
+        {
+          "title": "re.sub 文字替换",
+          "body": "import re\ntext = 'cat-' + str(n) + '-cat'\nresult = ___",
+          "answer": "re.sub('cat', 'dog', text)",
+          "hint": "sub 会替换所有符合模式的片段"
+        },
+        {
+          "title": "re.split 按分隔符拆分",
+          "body": "import re\ntext = word + ',red;blue'\nresult = ___",
+          "answer": "re.split(r'[,;]', text)",
+          "hint": "字符集合可同时匹配多种分隔符"
+        }
+      ],
+      "M": [
+        {
+          "title": "数字串分组提取",
+          "body": "import re\ntext = 'id:' + str(a) + ', age:' + str(b)\nresult = ___",
+          "answer": "[int(x) for x in re.findall(r'\\d+', text)]",
+          "hint": "findall 的数字结果默认是字符串"
+        },
+        {
+          "title": "捕获组",
+          "body": "import re\ntext = word + '-' + str(a)\nmatch = re.fullmatch(r'([a-z]+)-(\\d+)', text)\nresult = ___",
+          "answer": "match.groups()",
+          "hint": "括号定义捕获组"
+        },
+        {
+          "title": "忽略大小写匹配",
+          "body": "import re\ntext = 'PyThOn-' + str(n)\nresult = ___",
+          "answer": "bool(re.search('python', text, flags=re.IGNORECASE))",
+          "hint": "re.IGNORECASE 控制大小写匹配"
+        },
+        {
+          "title": "替换数字为标记",
+          "body": "import re\ntext = word + str(n) + '-' + str(a)\nresult = ___",
+          "answer": "re.sub(r'\\d+', '#', text)",
+          "hint": "使用 + 匹配一段连续数字"
+        },
+        {
+          "title": "按单词边界查找",
+          "body": "import re\ntext = 'cat catalog cat-' + str(n)\nresult = ___",
+          "answer": "len(re.findall(r'\\bcat\\b', text))",
+          "hint": "\\b 可以避免匹配更长单词的一部分"
+        }
+      ],
+      "H": [
+        {
+          "title": "命名捕获组",
+          "body": "import re\ntext = word + ':' + str(a)\nmatch = re.fullmatch(r'(?P<key>[a-z]+):(?P<value>\\d+)', text)\nresult = ___",
+          "answer": "match.groupdict()",
+          "hint": "(?P<name>...) 创建命名组"
+        },
+        {
+          "title": "匹配重复单词",
+          "body": "import re\ntext = word + ' ' + word + ' other'\nresult = ___",
+          "answer": "re.findall(r'\\b(\\w+)\\s+\\1\\b', text)",
+          "hint": "反向引用 \\1 匹配第一个捕获组"
+        },
+        {
+          "title": "用回调替换数字",
+          "body": "import re\ntext = word + str(b) + '-' + str(n)\nresult = ___",
+          "answer": "re.sub(r'\\d+', lambda m: str(int(m.group()) * 2), text)",
+          "hint": "re.sub 的替换参数也可以是函数"
+        },
+        {
+          "title": "正则提取键值对",
+          "body": "import re\ntext = 'x=' + str(a) + ';y=' + str(b)\nresult = ___",
+          "answer": "dict(re.findall(r'([a-z])=(\\d+)', text))",
+          "hint": "多个捕获组使 findall 返回元组列表"
+        },
+        {
+          "title": "多行行首匹配",
+          "body": "import re\ntext = word + '\\n' + 'v' + str(n) + '\\n' + 'a' + str(a)\nresult = ___",
+          "answer": "re.findall(r'^\\w+', text, flags=re.MULTILINE)",
+          "hint": "MULTILINE 让 ^ 可以匹配每行开头"
+        }
+      ],
+      "X": [
+        {
+          "title": "识别日期并重排",
+          "body": "import re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___",
+          "answer": "re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)",
+          "hint": "替换串可使用编号捕获组"
+        },
+        {
+          "title": "正则解析简易日志",
+          "body": "import re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___",
+          "answer": "re.fullmatch(pattern, line).groupdict()",
+          "hint": "命名组能为日志字段赋予清晰名称"
+        },
+        {
+          "title": "提取重复数字串并去重",
+          "body": "import re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___",
+          "answer": "list(dict.fromkeys(re.findall(r'\\d+', text)))",
+          "hint": "dict.fromkeys 按首次出现顺序去重"
+        },
+        {
+          "title": "只匹配完整邮件风格标识",
+          "body": "import re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___",
+          "answer": "[x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]",
+          "hint": "使用 fullmatch 验证完整字符串格式"
+        },
+        {
+          "title": "查找重叠位置的前瞻",
+          "body": "import re\ntext = 'aaaa' + str(n)\nresult = ___",
+          "answer": "[match.start() for match in re.finditer(r'(?=aa)', text)]",
+          "hint": "零宽度正向前瞻可找到重叠位置"
+        }
+      ]
+    }
+  },
+  "CH24": {
+    "dir": "CH24_Enums_Metaclasses",
+    "title": "枚举与元类初步",
+    "tiers": {
+      "E": [
+        {
+          "title": "Enum 成员的 name",
+          "body": "from enum import Enum\nclass Color(Enum):\n    RED = 1\n    BLUE = 2\nresult = ___",
+          "answer": "Color.RED.name",
+          "hint": "Enum 成员提供 name 和 value"
+        },
+        {
+          "title": "枚举成员 value",
+          "body": "from enum import Enum\nclass Level(Enum):\n    LOW = n\n    HIGH = a\nresult = ___",
+          "answer": "Level.HIGH.value",
+          "hint": "value 是声明枚举时绑定的值"
+        },
+        {
+          "title": "遍历枚举",
+          "body": "from enum import Enum\nclass State(Enum):\n    START = 1\n    DONE = 2\nresult = ___",
+          "answer": "[item.name for item in State]",
+          "hint": "枚举类可被 for 遍历"
+        },
+        {
+          "title": "枚举按数值取成员",
+          "body": "from enum import Enum\nclass Priority(Enum):\n    LOW = 1\n    HIGH = 2\nresult = ___",
+          "answer": "Priority(2).name",
+          "hint": "可以根据 value 创建相应枚举成员"
+        },
+        {
+          "title": "type 观察对象类型",
+          "body": "class Record: pass\nobj = Record()\nresult = ___",
+          "answer": "type(obj).__name__",
+          "hint": "type(obj) 返回对象所属的类"
+        }
+      ],
+      "M": [
+        {
+          "title": "IntEnum 整数比较",
+          "body": "from enum import IntEnum\nclass Rank(IntEnum):\n    JUNIOR = 1\n    SENIOR = 2\nresult = ___",
+          "answer": "Rank.SENIOR > Rank.JUNIOR",
+          "hint": "IntEnum 允许整数方式的比较"
+        },
+        {
+          "title": "auto 自动赋值",
+          "body": "from enum import Enum, auto\nclass Code(Enum):\n    FIRST = auto()\n    SECOND = auto()\nresult = ___",
+          "answer": "[x.value for x in Code]",
+          "hint": "auto 为 Enum 成员产生默认递增值"
+        },
+        {
+          "title": "枚举成员列表过滤",
+          "body": "from enum import Enum\nclass Stage(Enum):\n    A = 1\n    B = 2\n    C = 3\nresult = ___",
+          "answer": "[x.name for x in Stage if x.value >= 2]",
+          "hint": "可以按成员 value 过滤"
+        },
+        {
+          "title": "动态创建类 type",
+          "body": "Point = type('Point', (), {'x': a, 'y': b})\nresult = ___",
+          "answer": "(Point.__name__, Point.x + Point.y)",
+          "hint": "type(name, bases, attrs) 能动态定义一个类"
+        },
+        {
+          "title": "枚举名称取成员",
+          "body": "from enum import Enum\nclass Mood(Enum):\n    HAPPY = n\n    CALM = b\nresult = ___",
+          "answer": "Mood['CALM'].value",
+          "hint": "枚举类支持方括号按名称查找"
+        }
+      ],
+      "H": [
+        {
+          "title": "Flag 按位组合",
+          "body": "from enum import Flag, auto\nclass Access(Flag):\n    READ = auto()\n    WRITE = auto()\n    EXEC = auto()\npermissions = Access.READ | Access.WRITE\nresult = ___",
+          "answer": "(Access.READ in permissions, Access.EXEC in permissions)",
+          "hint": "Flag 可以组合并测试成员是否包含"
+        },
+        {
+          "title": "使用 type 批量定义方法",
+          "body": "def describe(self): return self.value * b\nDynamic = type('Dynamic', (), {'__init__': lambda self, v: setattr(self, 'value', v), 'describe': describe})\nresult = ___",
+          "answer": "Dynamic(a).describe()",
+          "hint": "动态属性字典可包含方法"
+        },
+        {
+          "title": "Enum 枚举携带元组",
+          "body": "from enum import Enum\nclass Pair(Enum):\n    FIRST = (n, b)\n    SECOND = (a, b)\nresult = ___",
+          "answer": "[sum(entry.value) for entry in Pair]",
+          "hint": "枚举成员可以存放元组"
+        },
+        {
+          "title": "自定义枚举方法",
+          "body": "from enum import Enum\nclass Status(Enum):\n    OK = 200\n    ERROR = 500\n    def is_error(self): return self.value >= 400\nresult = ___",
+          "answer": "[item.name for item in Status if item.is_error()]",
+          "hint": "枚举成员也支持自定义方法"
+        },
+        {
+          "title": "动态子类与 isinstance",
+          "body": "Base = type('Base', (), {})\nChild = type('Child', (Base,), {})\nobj = Child()\nresult = ___",
+          "answer": "(isinstance(obj, Base), issubclass(Child, Base))",
+          "hint": "动态创建类的第二参数指定父类元组"
+        }
+      ],
+      "X": [
+        {
+          "title": "元类给类添加默认标签",
+          "body": "class TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___",
+          "answer": "Item.tag",
+          "hint": "元类的 __new__ 可以修改待创建类的字典"
+        },
+        {
+          "title": "元类注册创建的类",
+          "body": "registry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___",
+          "answer": "registry",
+          "hint": "元类创建类时可执行注册逻辑"
+        },
+        {
+          "title": "枚举自定义方法和筛选",
+          "body": "from enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___",
+          "answer": "[x.name for x in Severity if x.needs_action()]",
+          "hint": "对枚举封装领域规则并过滤"
+        },
+        {
+          "title": "枚举结合字典映射",
+          "body": "from enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___",
+          "answer": "[operations[op](a, b) for op in Op]",
+          "hint": "Enum 成员可作为字典键"
+        },
+        {
+          "title": "元类检查必需属性",
+          "body": "class Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___",
+          "answer": "Worker().execute(a)",
+          "hint": "元类可在类创建时检查方法是否存在"
+        }
+      ]
+    }
+  }
+}
