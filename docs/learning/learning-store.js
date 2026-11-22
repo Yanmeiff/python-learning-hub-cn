@@ -77,10 +77,14 @@
       if (data.attempts.length > MAX_ATTEMPTS) data.attempts = data.attempts.slice(-MAX_ATTEMPTS);
       const meta = data.reviewMeta[item.qid] || { stage: 0, dueAt: null, note: "", starred: false };
       if (!item.passed) {
+        meta.hasMistake = true;
         meta.stage = 0;
         meta.dueAt = addDays(timestamp, REVIEW_INTERVALS[0]);
         meta.lastResult = "wrong";
-      } else if (data.reviewMeta[item.qid]) {
+      } else if (meta.hasMistake === true || meta.lastResult === "wrong" || meta.dueAt) {
+        // Only questions that were ever wrong belong to spaced review.
+        // A correct-first question must not acquire a review schedule.
+        meta.hasMistake = true;
         meta.stage = meta.lastResult === "wrong" ? 0 :
           Math.min((Number(meta.stage) || 0) + 1, REVIEW_INTERVALS.length - 1);
         meta.dueAt = addDays(timestamp, REVIEW_INTERVALS[meta.stage]);
@@ -103,18 +107,51 @@
       }).filter((item) => item.passed === false)
         .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
     }
+    function getReviewPlan() {
+      const latest = latestAttempts();
+      const wrongHistory = Object.create(null);
+      data.attempts.forEach((attempt) => {
+        if (!attempt.passed) {
+          const entry = wrongHistory[attempt.qid] || { count: 0, firstWrongAt: attempt.timestamp };
+          entry.count += 1;
+          entry.lastWrongAt = attempt.timestamp;
+          wrongHistory[attempt.qid] = entry;
+        }
+      });
+      const now = nowDate().getTime();
+      const priority = { unresolved: 0, due: 1, scheduled: 2 };
+      return Object.keys(latest).filter((qid) => {
+        const meta = data.reviewMeta[qid] || {};
+        // Old V1 records had no hasMistake field, but kept dueAt after
+        // an incorrect answer. Their existing review dates remain valid.
+        return !!wrongHistory[qid] || meta.hasMistake === true ||
+          (!!meta.dueAt && (meta.lastResult === "wrong" || meta.lastResult === "passed"));
+      }).map((qid) => {
+        const attempt = latest[qid];
+        const meta = data.reviewMeta[qid] || {};
+        const dueAt = meta.dueAt || null;
+        const overdue = !!dueAt && new Date(dueAt).getTime() <= now;
+        const status = !attempt.passed ? "unresolved" : overdue ? "due" : "scheduled";
+        const history = wrongHistory[qid] || {};
+        return {
+          qid, topic: attempt.topic, chapter: attempt.chapter,
+          timestamp: attempt.timestamp, passed: attempt.passed,
+          status, dueAt,
+          note: meta.note || "", starred: meta.starred === true,
+          reviewStage: Number(meta.stage) || 0, lastAttempt: attempt,
+          wrongCount: history.count || 0, lastWrongAt: history.lastWrongAt || null
+        };
+      }).sort((a, b) => {
+        if (priority[a.status] !== priority[b.status]) return priority[a.status] - priority[b.status];
+        if (a.dueAt && b.dueAt) return new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime();
+        return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+      });
+    }
     function getDueReviews() {
       const now = nowDate().getTime();
-      const latest = latestAttempts();
-      return Object.keys(data.reviewMeta).map((qid) => {
-        const meta = data.reviewMeta[qid] || {};
-        return {
-          qid: qid, dueAt: meta.dueAt || null, note: meta.note || "",
-          starred: meta.starred === true, reviewStage: Number(meta.stage) || 0,
-          lastAttempt: latest[qid] || null
-        };
-      }).filter((item) => item.dueAt && new Date(item.dueAt).getTime() <= now && item.lastAttempt)
-        .sort((a, b) => new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime());
+      return getReviewPlan().filter((item) =>
+        !!item.dueAt && new Date(item.dueAt).getTime() <= now
+      ).sort((a, b) => new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime());
     }
     function setNote(qid, note) {
       if (!qid) return false;
@@ -200,6 +237,8 @@
         attempts: attempts, passedAttempts: passedAttempts, failedAttempts: attempts - passedAttempts,
         completed: progress && typeof progress === "object" ? Object.keys(progress).filter((qid) => progress[qid]).length : 0,
         totalQuestions: Number(totalQuestions) || 0, activeMistakes: getMistakes().length,
+        scheduledReviews: getReviewPlan().filter((item) => item.status === "scheduled").length,
+        reviewTotal: getReviewPlan().length,
         uniqueAttempted: Object.keys(latest).length, streak: getStreak()
       };
     }
@@ -248,7 +287,7 @@
       return data.attempts.filter((item) => item.qid === qid);
     }
     return {
-      recordAttempt, getMistakes, getDueReviews, setNote, toggleStar,
+      recordAttempt, getMistakes, getReviewPlan, getDueReviews, setNote, toggleStar,
       getHeatmap, getStreak, getMastery, getStats, getAttemptHistory,
       exportBackup, importBackup, getData: () => JSON.parse(JSON.stringify(data))
     };

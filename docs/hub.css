@@ -82,3 +82,14 @@ button.heat-cell:hover { outline: 1px solid #e2e8f0; outline-offset: 1px; }
   .hub-actions .btn, .import-label { font-size: 12px; padding: 7px 10px; }
   .mistake-preview-row { align-items: flex-start; }
 }
+
+
+/* Wrong answers stay in the review plan even after a successful retry. */
+.review-summary { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.review-status { display: inline-flex; margin: 3px 0 6px; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.review-status-unresolved { color: #fecaca; background: rgba(239, 68, 68, 0.14); }
+.review-status-due { color: #fde68a; background: rgba(245, 158, 11, 0.15); }
+.review-status-scheduled { color: #bbf7d0; background: rgba(34, 197, 94, 0.14); }
+.review-schedule { color: #93c5fd; font-size: 12px; margin: 8px 0 0; }
+.mistake-card[data-review-status="scheduled"] { border-color: rgba(34, 197, 94, 0.22); }
+.mistake-card[data-review-status="due"] { border-color: rgba(245, 158, 11, 0.4); }

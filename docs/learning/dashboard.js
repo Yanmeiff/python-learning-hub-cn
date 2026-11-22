@@ -76,26 +76,40 @@
       target.appendChild(row);
     });
   }
+  function formatReviewDate(date) {
+    if (!date) return "待安排";
+    const value = new Date(date);
+    if (Number.isNaN(value.getTime())) return "日期无效";
+    return value.toLocaleString("zh-CN", {
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hour12: false
+    });
+  }
+  function statusLabel(item) {
+    if (item.status === "unresolved") return "待解决";
+    if (item.status === "due") return "已到期 · 请复习";
+    return "已答对 · 按计划复习";
+  }
   function renderMistakePreview(store) {
     const target = $("mistake-preview");
     if (!target) return;
     target.innerHTML = "";
-    const mistakes = store.getMistakes().slice(0, 5);
-    if (!mistakes.length) {
+    const reviews = store.getReviewPlan().slice(0, 5);
+    if (!reviews.length) {
       const empty = document.createElement("p");
       empty.className = "muted";
-      empty.textContent = "暂时没有待解决的错题。答错的题目会自动收录在这里。";
+      empty.textContent = "暂时没有错题。出现错误后，这道题即使重新答对，也会保留在复习计划中。";
       target.appendChild(empty);
       return;
     }
-    mistakes.forEach((item) => {
+    reviews.forEach((item) => {
       const row = document.createElement("div");
       row.className = "mistake-preview-row";
       const text = document.createElement("div");
       const title = document.createElement("strong");
       title.textContent = item.qid + " · " + item.topic;
       const detail = document.createElement("small");
-      detail.textContent = "最近一次作答：" + new Date(item.timestamp).toLocaleString();
+      detail.textContent = statusLabel(item) + " · 下次复习：" + formatReviewDate(item.dueAt);
       text.appendChild(title);
       text.appendChild(detail);
       const button = document.createElement("button");
@@ -114,52 +128,53 @@
     const target = $("mistake-list");
     if (!target || !store) return;
     target.innerHTML = "";
-    const mistakes = store.getMistakes();
-    const due = store.getDueReviews();
-    const dueIds = new Set(due.map((item) => item.qid));
-    const all = mistakes.slice();
-    due.forEach((item) => {
-      if (!all.some((mistake) => mistake.qid === item.qid)) {
-        all.push({
-          qid: item.qid, topic: item.lastAttempt ? item.lastAttempt.topic : "复习题目",
-          timestamp: item.lastAttempt ? item.lastAttempt.timestamp : item.dueAt,
-          note: item.note, starred: item.starred, dueAt: item.dueAt,
-          reviewStage: item.reviewStage, passed: true
-        });
-      }
-    });
+    const all = store.getReviewPlan();
+    const unresolved = all.filter((item) => item.status === "unresolved");
+    const scheduled = all.filter((item) => item.status === "scheduled");
+    const due = all.filter((item) => item.dueAt && new Date(item.dueAt).getTime() <= Date.now());
     const count = $("mistake-count");
-    if (count) count.textContent = String(mistakes.length);
+    if (count) count.textContent = String(unresolved.length);
+    const planCount = $("planned-review-count");
+    if (planCount) planCount.textContent = String(scheduled.length);
+    const total = $("total-review-count");
+    if (total) total.textContent = String(all.length);
     const dueCount = $("due-review-count");
     if (dueCount) dueCount.textContent = String(due.length);
     const navCount = $("nav-mistake-count");
-    if (navCount) navCount.textContent = String(mistakes.length);
+    if (navCount) navCount.textContent = String(all.length);
+
     if (!all.length) {
       const empty = document.createElement("div");
       empty.className = "mistake-empty";
-      empty.textContent = "还没有错题记录。开始练习后，系统会自动记录答错的题目，并安排复习。";
+      empty.textContent = "还没有错题记录。第一次答错后，系统会保存该题并建立复习计划。";
       target.appendChild(empty);
       return;
     }
-    all.sort((a, b) => {
-      if (dueIds.has(a.qid) !== dueIds.has(b.qid)) return dueIds.has(a.qid) ? -1 : 1;
-      return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
-    });
     all.forEach((item) => {
       const card = document.createElement("article");
       card.className = "mistake-card";
+      card.dataset.reviewStatus = item.status;
+      card.dataset.qid = item.qid;
       const head = document.createElement("div");
       head.className = "mistake-card-head";
       const heading = document.createElement("div");
       const title = document.createElement("h3");
       title.textContent = item.qid + " · " + item.topic;
+      const status = document.createElement("span");
+      status.className = "review-status review-status-" + item.status;
+      status.textContent = statusLabel(item);
       const meta = document.createElement("p");
       meta.className = "muted";
-      meta.textContent = (item.passed ? "已答对，待间隔复习" : "待解决") +
-        (dueIds.has(item.qid) ? " · 今日到期" : "") +
-        " · 最近作答 " + new Date(item.timestamp).toLocaleString();
+      meta.textContent = "最近作答：" + new Date(item.timestamp).toLocaleString("zh-CN") +
+        " · 历史答错 " + item.wrongCount + " 次";
+      const review = document.createElement("p");
+      review.className = "review-schedule";
+      review.textContent = "下次复习：" + formatReviewDate(item.dueAt) +
+        " · 复习阶段 " + (item.reviewStage + 1) + "/5";
       heading.appendChild(title);
+      heading.appendChild(status);
       heading.appendChild(meta);
+      heading.appendChild(review);
       const star = document.createElement("button");
       star.type = "button";
       star.className = "btn ghost";
@@ -168,13 +183,15 @@
       star.textContent = item.starred ? "★ 已收藏" : "☆ 收藏";
       head.appendChild(heading);
       head.appendChild(star);
+
       const note = document.createElement("textarea");
       note.className = "mistake-note";
       note.rows = 2;
       note.maxLength = 2000;
-      note.placeholder = "记录这道题的错误原因或解题思路…";
+      note.placeholder = "记录错误原因、易错知识点或解题思路…";
       note.value = item.note || "";
       note.dataset.noteQid = item.qid;
+
       const actions = document.createElement("div");
       actions.className = "mistake-actions";
       const save = document.createElement("button");
@@ -183,14 +200,14 @@
       save.dataset.action = "save-note";
       save.dataset.qid = item.qid;
       save.textContent = "保存笔记";
-      const review = document.createElement("button");
-      review.type = "button";
-      review.className = "btn primary";
-      review.dataset.action = "review";
-      review.dataset.qid = item.qid;
-      review.textContent = "重新练习";
+      const retry = document.createElement("button");
+      retry.type = "button";
+      retry.className = "btn primary";
+      retry.dataset.action = "review";
+      retry.dataset.qid = item.qid;
+      retry.textContent = "重新练习";
       actions.appendChild(save);
-      actions.appendChild(review);
+      actions.appendChild(retry);
       card.appendChild(head);
       card.appendChild(note);
       card.appendChild(actions);
@@ -209,6 +226,7 @@
     setText("hub-streak", stats.streak);
     setText("hub-mistake-total", stats.activeMistakes);
     setText("hub-due-total", store.getDueReviews().length);
+    setText("hub-planned-total", stats.scheduledReviews);
     const completion = stats.totalQuestions ? Math.round(stats.completed / stats.totalQuestions * 100) : 0;
     const fill = $("hub-completion-fill");
     if (fill) fill.style.width = completion + "%";
