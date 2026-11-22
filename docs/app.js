@@ -188,35 +188,11 @@ async function openQuestion(id) {
 let runSeq = 0;
 
 function captureRun(pyodide, code) {
-  let out = "";
-  pyodide.setStdout({ batched: (s) => { out += s; } });
-  try {
-    pyodide.runPython(code);
-  } finally {
-    pyodide.setStdout({ batched: () => {} });
-  }
-  return out;
+  return window.PyQuestJudge.captureRun(pyodide, code);
 }
 
 function judge(q, actual) {
-  const tests = Array.isArray(q.test_cases) ? q.test_cases.filter((item) => typeof item === "string" && item.trim()) : [];
-  if (tests.length && state.pyodide) {
-    try {
-      state.pyodide.globals.set("captured_output", actual);
-      for (const testCase of tests) state.pyodide.runPython(testCase);
-      return { pass: true, method: "test_cases" };
-    } catch (err) {
-      return { pass: false, method: "test_cases", reason: String(err) };
-    } finally {
-      try { state.pyodide.globals.delete("captured_output"); } catch (e) {}
-    }
-  }
-  const expected = q.expected_output || "";
-  if (actual === expected) return { pass: true };
-  if (expected.trim() !== "" && actual.replace(/\s+$/, "") === expected.replace(/\s+$/, "")) {
-    return { pass: true, soft: true };
-  }
-  return { pass: false };
+  return window.PyQuestJudge.judge(q, actual, state.pyodide);
 }
 
 function recordLearningAttempt(qid, q, passed, code, output, error, startedAt) {
