@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PyQuest — 互动式 Python 练习平台</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Python Learning Hub — 我的 Python 学习中心</title>
+  <link rel="stylesheet" href="styles.css?v=hub-20261123-5">
+  <link rel="stylesheet" href="hub.css?v=hub-20261123-5">
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <h1 class="logo">Py<span>Quest</span></h1>
+      <h1 class="logo">Python<span> Hub</span></h1>
       <nav class="topnav">
-        <a href="https://github.com/pystay/python-pyquest" target="_blank" rel="noopener">GitHub 仓库</a>
-        <a href="https://learn-py.org/" target="_blank" rel="noopener">learn-py.org</a>
+        <button id="btn-dashboard" class="nav-button active" data-panel="hub-dashboard">学习看板</button>
+        <button id="btn-mistakes" class="nav-button" data-panel="mistake-panel">错题本 / 复习计划 <span id="nav-mistake-count">0</span></button>
+        <a href="https://github.com/Yanmeiff/python-learning-hub-cn" target="_blank" rel="noopener">我的 GitHub</a>
+        <a href="https://github.com/pystay/python-pyquest" target="_blank" rel="noopener">上游项目</a>
+        <a class="nav-button tutorial-external-link" href="https://learn-py.org/" target="_blank" rel="noopener noreferrer" aria-label="打开小白学 Python 官方网站（新标签页）">小白学 Python ↗</a>
       </nav>
       <div id="engine-status" class="engine-status">Python 引擎加载中…</div>
     </div>
@@ -23,13 +27,36 @@
       <div class="progress-card">
         <div class="progress-label">已完成 <span id="progress-count">0</span> / <span id="progress-total">0</span></div>
         <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
-        <button id="btn-clear-progress" class="btn ghost clear-btn">清空进度</button>
+        <button id="btn-clear-progress" class="btn ghost clear-btn">清空完成标记</button>
       </div>
       <div id="chapter-list" class="chapter-list"></div>
     </aside>
 
     <main class="workspace">
-      <section id="welcome" class="welcome">
+      <section id="hub-dashboard" class="hub-page">
+        <div class="hub-hero"><div><p class="eyebrow">YOUR PYTHON JOURNEY</p><h2>欢迎回来，继续积累你的 Python 能力。</h2><p class="muted">先在「小白学 Python」学习知识，再回到这里练习、查看掌握度和复习错题。</p></div>
+          <div class="hub-actions"><a id="btn-learn-python" class="btn ghost tutorial-learning-link" href="https://learn-py.org/" target="_blank" rel="noopener noreferrer">去小白学 Python 学教程 ↗</a><button id="btn-hub-start" class="btn primary">继续刷题</button><button id="btn-export-data" class="btn ghost">导出备份</button><label class="btn ghost import-label" for="import-data-file">导入备份</label><input id="import-data-file" type="file" accept="application/json,.json" hidden></div>
+        </div>
+        <div class="hub-stats">
+          <div class="hub-stat"><span>已完成题目</span><strong><b id="hub-completed">0</b><small> / <span id="hub-total">0</span></small></strong><div class="mini-progress"><i id="hub-completion-fill"></i></div><small id="hub-completion-label">0% 已完成</small></div>
+          <div class="hub-stat"><span>累计提交</span><strong id="hub-attempts">0</strong><small>每次运行都会记录</small></div>
+          <div class="hub-stat"><span>连续学习</span><strong><b id="hub-streak">0</b><small> 天</small></strong><small>按有提交记录的日期计算</small></div>
+          <div class="hub-stat"><span>待解决错题</span><strong id="hub-mistake-total">0</strong><small>待复习 <b id="hub-planned-total">0</b> 道 · 已到期 <b id="hub-due-total">0</b> 道</small></div>
+        </div>
+        <div class="hub-panel"><div class="hub-panel-head"><div><h3>学习热力图</h3><p class="muted">每天提交的代码练习次数 · 过去 365 天</p></div></div>
+          <div class="heatmap-wrap"><div class="heatmap-weekdays"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div id="heatmap-grid" class="heatmap-grid" aria-label="过去 365 天学习活动"></div></div>
+          <div class="heatmap-footer"><span id="heatmap-detail" class="muted">点击任意日期查看当天练习记录。</span><div class="heatmap-legend"><span>少</span><i class="level-0"></i><i class="level-1"></i><i class="level-2"></i><i class="level-3"></i><i class="level-4"></i><span>多</span></div></div>
+        </div>
+        <div class="hub-panel"><div class="hub-panel-head"><div><h3>知识掌握能力</h3><p class="muted">根据每道题最近一次作答估算；未练习的知识领域不会记为 0 分。</p></div><div class="hub-mastery-total"><strong id="hub-mastery">—</strong><span>已评估领域平均正确率</span></div></div><div id="mastery-list" class="mastery-list"><p class="muted">正在加载知识点映射…</p></div></div>
+        <div class="hub-panel"><div class="hub-panel-head"><div><h3>最近需要加强的题目</h3><p class="muted">答错过的题目会一直保留，答对后按计划复习，不会立即消失。</p></div><button id="btn-hub-mistakes" class="btn ghost">打开错题本</button></div><div id="mistake-preview" class="mistake-preview"><p class="muted">还没有错题记录。</p></div></div>
+        <p class="hub-footnote">学习记录仅保存在当前浏览器。更换设备或清理浏览器数据前，请先导出 JSON 备份。</p>
+      </section>
+      <section id="mistake-panel" class="hub-page hidden">
+        <div class="hub-page-title"><div><p class="eyebrow">REVIEW CENTER</p><h2>错题本与间隔复习</h2><p class="muted">答错后永久保留错题记录；答对后仍在这里显示，并安排下一次复习。</p></div><button class="btn ghost" id="btn-back-dashboard" type="button">返回学习看板</button></div>
+        <div class="review-summary"><span>累计错题 <strong id="total-review-count">0</strong> 道</span><span>待解决 <strong id="mistake-count">0</strong> 道</span><span>已安排复习 <strong id="planned-review-count">0</strong> 道</span><span>已到期 <strong id="due-review-count">0</strong> 道</span></div>
+        <div id="mistake-list" class="mistake-list"><div class="mistake-empty">还没有错题记录。</div></div>
+      </section>
+      <section id="welcome" class="welcome hidden">
         <h2>欢迎来到 PyQuest 🎉</h2>
         <p>闯关式 Python 刷题平台。从 <strong>CH01 Hello, World!</strong> 开始，完成一题解锁下一题。</p>
         <p class="muted">代码区初始为空白，请从零开始编写完整 Python 代码；点「运行」由 Pyodide 实时判分。</p>
@@ -82,6 +109,9 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
-  <script src="app.js"></script>
+  <script src="learning/learning-store.js?v=hub-20261123-5"></script>
+  <script src="learning/pyodide-judge.js?v=hub-20261123-5"></script>
+  <script src="learning/dashboard.js?v=hub-20261123-5"></script>
+  <script src="app.js?v=hub-20261123-5"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+name: Learning Hub tests
+
+on:
+  push:
+    branches:
+      - master
+      - "feat/**"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test-learning-store:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: node --check docs/app.js && node --check docs/learning/learning-store.js && node --check docs/learning/pyodide-judge.js && node --check docs/learning/dashboard.js
+      - name: Run learning data tests
+        run: node --test tests/*.test.js
+
+  browser-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser test dependency
+        run: npm install --no-save --ignore-scripts playwright@1.56.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run real Pyodide browser smoke checks
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory docs >/tmp/hub-serve.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          node tests/browser-smoke.cjs
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: learning-hub-browser-screenshots
+          path: hub-*.png
+          if-no-files-found: ignore

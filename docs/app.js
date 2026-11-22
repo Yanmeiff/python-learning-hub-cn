@@ -14,6 +14,10 @@ const state = {
 
 const KEY_PROGRESS = "pyquest-progress-v1";
 const KEY_CODE = "pyquest-code-";
+let learningStorage = null;
+try { learningStorage = window.localStorage; } catch (e) { learningStorage = null; }
+const learningStore = window.PyQuestLearningStore.createStore(learningStorage);
+window.learningStore = learningStore;
 
 /* ---------- DOM 快捷引用 ---------- */
 const $ = (id) => document.getElementById(id);
@@ -144,6 +148,9 @@ async function openQuestion(id) {
   const idx = state.order.indexOf(id);
   if (idx >= 0) state.pos = idx;
 
+  $("hub-dashboard").classList.add("hidden");
+  $("mistake-panel").classList.add("hidden");
+  document.querySelectorAll(".nav-button").forEach((button) => button.classList.remove("active"));
   $("welcome").classList.add("hidden");
   $("quiz").classList.remove("hidden");
   $("q-id").textContent = q.id;
@@ -181,24 +188,24 @@ async function openQuestion(id) {
 let runSeq = 0;
 
 function captureRun(pyodide, code) {
-  let out = "";
-  pyodide.setStdout({ batched: (s) => { out += s; } });
-  try {
-    pyodide.runPython(code);
-  } finally {
-    pyodide.setStdout({ batched: () => {} });
-  }
-  return out;
+  return window.PyQuestJudge.captureRun(pyodide, code);
 }
 
 function judge(q, actual) {
-  const expected = q.expected_output || "";
-  if (actual === expected) return { pass: true };
-  // 仅当期望输出本身不是空白时，才允许“尾部空白差异”容差（如缺末尾换行）
-  if (expected.trim() !== "" && actual.replace(/\s+$/, "") === expected.replace(/\s+$/, "")) {
-    return { pass: true, soft: true };
+  return window.PyQuestJudge.judge(q, actual, state.pyodide);
+}
+
+function recordLearningAttempt(qid, q, passed, code, output, error, startedAt) {
+  try {
+    learningStore.recordAttempt({
+      qid: qid, chapter: qid.slice(0, 4), topic: q.topic || "未分类",
+      difficulty: qid.split("-")[1], passed: passed, code: code,
+      output: output, error: error || "", durationMs: Date.now() - startedAt
+    });
+    if (window.renderLearningHub) window.renderLearningHub(state);
+  } catch (err) {
+    console.warn("学习记录保存失败：", err);
   }
-  return { pass: false };
 }
 
 async function runCode() {
@@ -211,6 +218,7 @@ async function runCode() {
   if (!q) return;
   const seq = ++runSeq;
   const code = $("editor").value;
+  const startedAt = Date.now();
   saveCode(qid, code);
 
   const btn = $("btn-run");
@@ -221,11 +229,10 @@ async function runCode() {
 
   try {
     const actual = captureRun(state.pyodide, code);
-    // 运行期间若已切题，丢弃本次结果，不显示任何判定
     if (seq !== runSeq) return;
     $("output").textContent = actual === "" ? "（无输出）" : actual;
-
     const v = judge(q, actual);
+    recordLearningAttempt(qid, q, v.pass, code, actual, v.reason || "", startedAt);
     const box = $("verdict");
     box.classList.remove("hidden");
     if (v.pass) {
@@ -237,17 +244,18 @@ async function runCode() {
         refreshProgressBar();
         markLinkDone(qid);
       }
-      // 题目头部立即点亮“已完成”徽章
       $("q-done").classList.remove("hidden");
     } else {
       box.className = "verdict fail";
-      box.innerHTML =
-        "❌ 输出与期望不一致。<pre>期望输出：\n" + escapeHtml(q.expected_output || "") +
+      const reason = v.reason ? "<p>测试断言未通过：" + escapeHtml(String(v.reason).slice(0, 600)) + "</p>" : "";
+      box.innerHTML = "❌ 未通过。" + reason +
+        "<pre>期望输出：\n" + escapeHtml(q.expected_output || "") +
         "\n实际输出：\n" + escapeHtml(actual) + "</pre>";
     }
   } catch (err) {
     if (seq !== runSeq) return;
     $("output").textContent = "";
+    recordLearningAttempt(qid, q, false, code, "", String(err), startedAt);
     const box = $("verdict");
     box.classList.remove("hidden");
     box.className = "verdict fail";
@@ -269,11 +277,12 @@ function escapeHtml(s) {
 
 /* ---------- 进度 UI ---------- */
 function refreshProgressBar() {
-  const done = Object.keys(state.progress).length;
+  const done = state.order.filter((id) => !!state.progress[id]).length;
   const total = state.order.length;
   $("progress-count").textContent = done;
   $("progress-total").textContent = total;
   $("progress-fill").style.width = total ? (done / total * 100).toFixed(1) + "%" : "0%";
+  if (window.renderLearningHub) window.renderLearningHub(state);
 }
 
 function markLinkDone(id) {
@@ -304,12 +313,24 @@ $("btn-reset").addEventListener("click", () => {
   $("verdict").innerHTML = "";
 });
 $("btn-hint").addEventListener("click", () => $("q-hints").classList.remove("hidden"));
-$("btn-start").addEventListener("click", () => {
-  if (state.order.length) openQuestion(state.order[0]);
-});
+function startPractice() {
+  if (!state.order.length) return;
+  const next = state.order.find((id) => !state.progress[id]) || state.order[0];
+  openQuestion(next);
+}
+window.startPractice = startPractice;
+$("btn-start").addEventListener("click", startPractice);
 $("btn-clear-progress").addEventListener("click", () => {
-  if (!confirm("确定清空全部进度与已保存的代码？此操作不可恢复。")) return;
-  try { localStorage.removeItem(KEY_PROGRESS); } catch (e) {}
+  if (!confirm("确定清空已完成标记与保存的代码？作答历史、错题本和热力图会保留。")) return;
+  try {
+    localStorage.removeItem(KEY_PROGRESS);
+    const codeKeys = [];
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (key && key.indexOf(KEY_CODE) === 0) codeKeys.push(key);
+    }
+    codeKeys.forEach((key) => localStorage.removeItem(key));
+  } catch (e) {}
   state.progress = {};
   refreshProgressBar();
   document.querySelectorAll(".qlink").forEach((b) => b.classList.remove("done"));
@@ -318,6 +339,7 @@ $("btn-clear-progress").addEventListener("click", () => {
   $("output").textContent = "点击「运行」查看结果…";
   $("verdict").classList.add("hidden");
   $("verdict").innerHTML = "";
+  if (window.renderLearningHub) window.renderLearningHub(state);
 });
 $("editor").addEventListener("keydown", (e) => {
   if (e.key === "Tab") {
@@ -331,7 +353,10 @@ $("editor").addEventListener("keydown", (e) => {
 
 /* ---------- 启动 ---------- */
 loadProgress();
-loadIndex().catch((err) => {
+loadIndex().then(() => {
+  if (window.showHubDashboard) window.showHubDashboard();
+  if (window.renderLearningHub) window.renderLearningHub(state);
+}).catch((err) => {
   $("chapter-list").innerHTML = "<p style='color:#ef4444'>索引加载失败: " + escapeHtml(err.message) + "</p>";
 });
 initPyodide();
