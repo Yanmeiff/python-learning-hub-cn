@@ -59,7 +59,7 @@ async function run() {
 
     await page.locator("#btn-dashboard").click();
     await page.waitForFunction(() => document.getElementById("hub-mistake-total").textContent === "1");
-    const activity = await page.locator("#heatmap-grid .heat-cell.level-2").count();
+    const activity = await page.locator("#heatmap-grid .heat-cell.level-3").count();
     assert.ok(activity >= 1, "at least one heatmap square should reflect the four submissions");
     await page.locator("#btn-mistakes").click();
     await page.waitForFunction(() => document.querySelectorAll(".mistake-card").length >= 1);
