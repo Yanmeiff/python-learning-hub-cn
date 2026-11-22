@@ -1,0 +1,427 @@
+{
+  "chapter": "CH17",
+  "title": "面向对象基础",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH17-X-001",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17401\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17401 [4, 16, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17401 [4, 16, None]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 17401\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-002",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17402\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17402 [5, 19, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17402 [5, 19, None]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 17402\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-003",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17403\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17403 [6, 22, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17403 [6, 22, None]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 17403\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-004",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17404\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17404 [7, 25, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17404 [7, 25, None]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 17404\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-005",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17405\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17405 [8, 28, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17405 [8, 28, None]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 17405\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-006",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类实现有边界的栈：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17406\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return ___\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)",
+      "expected_output": "17406 [9, 31, None]\n",
+      "hints": "空栈需要返回 None",
+      "test_cases": [
+        "assert captured_output == '17406 [9, 31, None]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 17406\nclass Stack:\n    def __init__(self, capacity):\n        self.capacity, self.items = capacity, []\n    def push(self, value):\n        if len(self.items) >= self.capacity:\n            return False\n        self.items.append(value)\n        return True\n    def pop(self):\n        return self.items.pop() if self.items else None\ns = Stack(2)\ns.push(a)\ns.push(b)\nresult = [s.pop(), s.pop(), s.pop()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-007",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17407\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17407 ['green', 'yellow', 'red']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17407 ['green', 'yellow', 'red']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 17407\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-008",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17408\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17408 ['green', 'yellow', 'red', 'green']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17408 ['green', 'yellow', 'red', 'green']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 17408\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-009",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17409\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17409 ['green', 'yellow', 'red', 'green', 'yellow']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17409 ['green', 'yellow', 'red', 'green', 'yellow']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 17409\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-010",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17410\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17410 ['green', 'yellow', 'red', 'green', 'yellow', 'red']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17410 ['green', 'yellow', 'red', 'green', 'yellow', 'red']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 17410\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-011",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17411\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17411 ['green', 'yellow', 'red', 'green', 'yellow', 'red', 'green']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17411 ['green', 'yellow', 'red', 'green', 'yellow', 'red', 'green']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 17411\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-012",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "对象状态机切换：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17412\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = ___\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)",
+      "expected_output": "17412 ['green', 'yellow', 'red', 'green', 'yellow', 'red', 'green', 'yellow']\n",
+      "hints": "使用模运算构成循环状态",
+      "test_cases": [
+        "assert captured_output == \"17412 ['green', 'yellow', 'red', 'green', 'yellow', 'red', 'green', 'yellow']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 17412\nclass TrafficLight:\n    states = ('red', 'green', 'yellow')\n    def __init__(self):\n        self.index = 0\n    def advance(self):\n        self.index = (self.index + 1) % len(self.states)\n        return self.states[self.index]\nlight = TrafficLight()\nresult = [light.advance() for _ in range(n + 2)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-013",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17413\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17413 [5, 16]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17413 [5, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 17413\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-014",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17414\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17414 [7, 19]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17414 [7, 19]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 17414\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-015",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17415\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17415 [9, 22]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17415 [9, 22]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 17415\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-016",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17416\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17416 [11, 25]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17416 [11, 25]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 17416\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-017",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17417\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17417 [13, 28]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17417 [13, 28]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 17417\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-018",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "有界计数器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17418\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = ___\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)",
+      "expected_output": "17418 [15, 31]\n",
+      "hints": "先将增量结果限制在允许的区间内",
+      "test_cases": [
+        "assert captured_output == '17418 [15, 31]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 17418\nclass BoundedCounter:\n    def __init__(self, minimum, maximum, value):\n        self.minimum, self.maximum = minimum, maximum\n        self.value = value\n    def add(self, delta):\n        self.value = max(self.minimum, min(self.maximum, self.value + delta))\n        return self.value\nc = BoundedCounter(0, a, b)\nresult = [c.add(n), c.add(a)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-019",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17419\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17419 [64, 16, 68, 24, 60]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17419 [64, 16, 68, 24, 60]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 17419\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-020",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17420\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17420 [95, 25, 100, 35, 90]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17420 [95, 25, 100, 35, 90]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 17420\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-021",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17421\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17421 [132, 36, 138, 48, 126]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17421 [132, 36, 138, 48, 126]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 17421\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-022",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17422\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17422 [175, 49, 182, 63, 168]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17422 [175, 49, 182, 63, 168]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 17422\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-023",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17423\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17423 [224, 64, 232, 80, 216]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17423 [224, 64, 232, 80, 216]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 17423\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-024",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "类作为可调用对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17424\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return ___\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)",
+      "expected_output": "17424 [279, 81, 288, 99, 270]\n",
+      "hints": "__call__ 使实例能像函数一样调用",
+      "test_cases": [
+        "assert captured_output == '17424 [279, 81, 288, 99, 270]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 17424\nclass Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    def __call__(self, x):\n        return self.factor * x\nm = Multiplier(b)\nresult = [m(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-025",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17425\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17425 [20, 1]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17425 [20, 1]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 17425\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-026",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17426\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17426 [24, 2]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17426 [24, 2]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 17426\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-027",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17427\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17427 [28, 3]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17427 [28, 3]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 17427\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-028",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17428\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17428 [32, 4]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17428 [32, 4]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 17428\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-029",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17429\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17429 [36, 5]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17429 [36, 5]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 17429\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH17-X-030",
+      "topic": "面向对象基础",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多实例状态隔离：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17430\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = ___\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)",
+      "expected_output": "17430 [40, 6]\n",
+      "hints": "字典 get 提供不存在键时的默认库存",
+      "test_cases": [
+        "assert captured_output == '17430 [40, 6]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 17430\nclass Inventory:\n    def __init__(self):\n        self.stock = {}\n    def add(self, key, qty):\n        self.stock[key] = self.stock.get(key, 0) + qty\n        return self.stock[key]\na_store, b_store = Inventory(), Inventory()\na_store.add(word, a)\na_store.add(word, b)\nb_store.add(word, n)\nresult = [a_store.stock[word], b_store.stock[word]]\nprint(case_tag, result)"
+    }
+  ]
+}

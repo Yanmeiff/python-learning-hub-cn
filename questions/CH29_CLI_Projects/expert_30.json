@@ -1,0 +1,427 @@
+{
+  "chapter": "CH29",
+  "title": "命令行工具与综合项目",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH29-X-001",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29401\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29401 20\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29401 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 29401\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-002",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29402\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29402 24\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29402 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 29402\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-003",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29403\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29403 28\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29403 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 29403\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-004",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29404\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29404 32\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29404 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 29404\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-005",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29405\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29405 36\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29405 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 29405\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-006",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "内存数据导入导出：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29406\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29406 40\n",
+      "hints": "导出的 CSV 可以重新读取做校验",
+      "test_cases": [
+        "assert captured_output == '29406 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 29406\nimport csv\nfrom io import StringIO\nrows = [{'name':word,'score':a}, {'name':'second','score':b}]\nstream = StringIO()\nwriter = csv.DictWriter(stream, fieldnames=['name','score'],lineterminator='\\n')\nwriter.writeheader()\nwriter.writerows(rows)\nstream.seek(0)\nresult = sum(int(x['score']) for x in csv.DictReader(stream))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-007",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29407\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29407 (4, 26)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29407 (4, 26)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 29407\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-008",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29408\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29408 (3, 38)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29408 (3, 38)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 29408\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-009",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29409\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29409 (4, 36)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29409 (4, 36)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 29409\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-010",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29410\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29410 (3, 50)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29410 (3, 50)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 29410\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-011",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29411\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29411 (4, 46)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29411 (4, 46)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 29411\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-012",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "多步骤数据管道：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29412\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29412 (3, 62)\n",
+      "hints": "按规范化、筛选、汇总顺序执行",
+      "test_cases": [
+        "assert captured_output == '29412 (3, 62)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 29412\ndef normalize(items):\n    return [x if x >= 0 else 0 for x in items]\ndef select_even(items):\n    return [x for x in items if x % 2 == 0]\ndef summarize(items):\n    return (len(items), sum(items))\nresult = summarize(select_even(normalize(nums + [-n])))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-013",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29413\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29413 20\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29413 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 29413\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-014",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29414\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29414 24\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29414 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 29414\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-015",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29415\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29415 28\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29415 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 29415\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-016",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29416\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29416 32\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29416 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 29416\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-017",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29417\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29417 36\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29417 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 29417\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-018",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "命令行与数据报告整合：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29418\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29418 40\n",
+      "hints": "先解析阈值再应用于记录",
+      "test_cases": [
+        "assert captured_output == '29418 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 29418\nimport argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--threshold', type=int, default=0)\nargs = parser.parse_args(['--threshold', str(b)])\nrecords = [{'v':a}, {'v':b}, {'v':n}]\nresult = sum(r['v'] for r in records if r['v'] >= args.threshold)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-019",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29419\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29419 {\"project\": \"coding\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29419 {\"project\": \"coding\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 29419\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-020",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29420\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29420 {\"project\": \"vector\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29420 {\"project\": \"vector\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 29420\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-021",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29421\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29421 {\"project\": \"lambda\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29421 {\"project\": \"lambda\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 29421\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-022",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29422\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29422 {\"project\": \"alpha\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29422 {\"project\": \"alpha\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 29422\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-023",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29423\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29423 {\"project\": \"beta\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29423 {\"project\": \"beta\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 29423\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-024",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "轻量发布清单生成：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29424\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29424 {\"project\": \"gamma\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\n",
+      "hints": "根据路径后缀找出源代码文件",
+      "test_cases": [
+        "assert captured_output == '29424 {\"project\": \"gamma\", \"sources\": [\"src/main.py\", \"tests/test_main.py\"]}\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 29424\nimport json\nfrom pathlib import PurePosixPath\nproject = {'name':word,'version':f'1.{n}.0','files':['src/main.py','README.md','tests/test_main.py']}\nresult = json.dumps({'project':project['name'],'sources':[p for p in project['files'] if PurePosixPath(p).suffix=='.py']},sort_keys=True)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-025",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29425\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29425 {'orders': 3, 'total': 25}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29425 {'orders': 3, 'total': 25}\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 29425\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-026",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29426\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29426 {'orders': 3, 'total': 50}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29426 {'orders': 3, 'total': 50}\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 29426\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-027",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29427\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29427 {'orders': 3, 'total': 81}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29427 {'orders': 3, 'total': 81}\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 29427\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-028",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29428\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29428 {'orders': 3, 'total': 118}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29428 {'orders': 3, 'total': 118}\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 29428\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-029",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29429\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29429 {'orders': 3, 'total': 161}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29429 {'orders': 3, 'total': 161}\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 29429\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH29-X-030",
+      "topic": "命令行工具与综合项目",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "综合校验与输出报告：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29430\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "29430 {'orders': 3, 'total': 210}\n",
+      "hints": "先封装订单再聚合数量和金额",
+      "test_cases": [
+        "assert captured_output == \"29430 {'orders': 3, 'total': 210}\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 29430\nfrom dataclasses import dataclass\n@dataclass\nclass Order:\n    qty: int\n    unit: int\n    def total(self): return self.qty * self.unit\norders = [Order(n,a),Order(2,b),Order(1,n)]\nresult = {'orders':len(orders),'total':sum(item.total() for item in orders)}\nprint(case_tag, result)"
+    }
+  ]
+}

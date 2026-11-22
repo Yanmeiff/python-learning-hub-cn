@@ -1,0 +1,427 @@
+{
+  "chapter": "CH18",
+  "title": "继承、组合与多态",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH18-E-001",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18101\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18101 beta\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18101 beta\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18101\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-002",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18102\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18102 gamma\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18102 gamma\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18102\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-003",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18103\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18103 delta\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18103 delta\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18103\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-004",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18104\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18104 omega\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18104 omega\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18104\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-005",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18105\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18105 python\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18105 python\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18105\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-006",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "继承父类属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18106\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18106 coding\n",
+      "hints": "子类继承父类初始化方法",
+      "test_cases": [
+        "assert captured_output == '18106 coding\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18106\nclass Animal:\n    def __init__(self, name):\n        self.name = name\nclass Dog(Animal):\n    pass\nd = Dog(word)\nresult = d.name\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-007",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18107\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18107 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18107 True\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18107\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-008",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18108\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18108 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18108 True\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18108\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-009",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18109\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18109 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18109 True\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18109\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-010",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18110\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18110 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18110 True\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18110\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-011",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18111\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18111 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18111 True\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18111\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-012",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "isinstance 检查继承：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18112\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18112 True\n",
+      "hints": "isinstance 会考虑继承关系",
+      "test_cases": [
+        "assert captured_output == '18112 True\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18112\nclass Parent: pass\nclass Child(Parent): pass\nitem = Child()\nresult = isinstance(item, Parent)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-013",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18113\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18113 delta\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18113 delta\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18113\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-014",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18114\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18114 omega\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18114 omega\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18114\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-015",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18115\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18115 python\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18115 python\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18115\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-016",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18116\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18116 coding\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18116 coding\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18116\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-017",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18117\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18117 vector\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18117 vector\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18117\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-018",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "覆盖父类方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18118\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18118 lambda\n",
+      "hints": "实例方法按对象实际类型分派",
+      "test_cases": [
+        "assert captured_output == '18118 lambda\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18118\nclass Base:\n    def speak(self):\n        return 'base'\nclass Derived(Base):\n    def speak(self):\n        return word\nobj = Derived()\nresult = obj.speak()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-019",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18119\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18119 ('omega', 1)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18119 ('omega', 1)\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18119\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-020",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18120\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18120 ('python', 2)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18120 ('python', 2)\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18120\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-021",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18121\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18121 ('coding', 3)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18121 ('coding', 3)\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18121\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-022",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18122\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18122 ('vector', 4)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18122 ('vector', 4)\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18122\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-023",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18123\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18123 ('lambda', 5)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18123 ('lambda', 5)\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18123\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-024",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "super 初始化：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18124\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18124 ('alpha', 6)\n",
+      "hints": "super 调用父类构造方法",
+      "test_cases": [
+        "assert captured_output == \"18124 ('alpha', 6)\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18124\nclass User:\n    def __init__(self, name):\n        self.name = name\nclass Admin(User):\n    def __init__(self, name, level):\n        super().__init__(name)\n        self.level = level\nuser = Admin(word, n)\nresult = (user.name, user.level)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-025",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18125\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18125 16\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18125 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18125\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-026",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18126\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18126 19\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18126 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18126\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-027",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18127\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18127 22\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18127 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18127\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-028",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18128\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18128 25\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18128 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18128\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-029",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18129\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18129 28\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18129 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18129\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-E-030",
+      "topic": "继承、组合与多态",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "组合两个对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18130\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18130 31\n",
+      "hints": "组合关系是对象持有另一个对象",
+      "test_cases": [
+        "assert captured_output == '18130 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18130\nclass Sensor:\n    def __init__(self, value):\n        self.value = value\nclass Station:\n    def __init__(self, sensor):\n        self.sensor = sensor\nstation = Station(Sensor(a))\nresult = station.sensor.value\nprint(case_tag, result)"
+    }
+  ]
+}

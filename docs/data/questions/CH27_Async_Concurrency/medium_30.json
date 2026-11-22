@@ -1,0 +1,427 @@
+{
+  "chapter": "CH27",
+  "title": "异步与并发基础",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH27-M-001",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 27201\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27201 68\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27201 68\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 27201\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-002",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 27202\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27202 105\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27202 105\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 27202\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-003",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 27203\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27203 150\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27203 150\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 27203\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-004",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 27204\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27204 203\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27204 203\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 27204\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-005",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 27205\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27205 264\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27205 264\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 27205\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-006",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异步任务包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 27206\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27206 333\n",
+      "hints": "await 的返回值参与后续计算",
+      "test_cases": [
+        "assert captured_output == '27206 333\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 27206\nasync def first(x): return x + n\nasync def second(x): return await first(x) * b\ncoro = second(a)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-007",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 27207\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27207 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27207 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 27207\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-008",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 27208\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27208 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27208 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 27208\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-009",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 27209\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27209 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27209 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 27209\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-010",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 27210\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27210 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27210 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 27210\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-011",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 27211\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27211 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27211 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 27211\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-012",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "关闭未执行的协程：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 27212\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27212 CORO_CLOSED\n",
+      "hints": "close 可以关闭尚未运行的协程",
+      "test_cases": [
+        "assert captured_output == '27212 CORO_CLOSED\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 27212\nimport inspect\nasync def job(): return a\ncoro = job()\ncoro.close()\nresult = inspect.getcoroutinestate(coro)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-013",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 27213\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27213 [16, 4, 17, 6, 15]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27213 [16, 4, 17, 6, 15]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 27213\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-014",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 27214\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27214 [38, 10, 40, 14, 36]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27214 [38, 10, 40, 14, 36]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 27214\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-015",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 27215\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27215 [66, 18, 69, 24, 63]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27215 [66, 18, 69, 24, 63]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 27215\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-016",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 27216\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27216 [100, 28, 104, 36, 96]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27216 [100, 28, 104, 36, 96]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 27216\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-017",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 27217\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27217 [140, 40, 145, 50, 135]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27217 [140, 40, 145, 50, 135]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 27217\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-018",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "协程返回列表：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 27218\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27218 [186, 54, 192, 66, 180]\n",
+      "hints": "协程可以返回普通 Python 列表",
+      "test_cases": [
+        "assert captured_output == '27218 [186, 54, 192, 66, 180]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 27218\nasync def values(seq): return [x * n for x in seq]\ncoro = values(nums)\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-019",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 27219\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27219 16\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27219 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 27219\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-020",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 27220\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27220 19\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27220 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 27220\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-021",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 27221\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27221 22\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27221 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 27221\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-022",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 27222\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27222 25\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27222 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 27222\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-023",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 27223\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27223 28\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27223 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 27223\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-024",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "async 内的同步校验：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 27224\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27224 31\n",
+      "hints": "协程函数体仍能使用常规条件表达式",
+      "test_cases": [
+        "assert captured_output == '27224 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 27224\nasync def parse(value):\n    return int(value) if value.isdigit() else -1\ncoro = parse(str(a))\ntry: coro.send(None)\nexcept StopIteration as done: value = done.value\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-025",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 27225\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27225 [17, 5, 18, 7, 16]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27225 [17, 5, 18, 7, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 27225\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-026",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 27226\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27226 [21, 7, 22, 9, 20]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27226 [21, 7, 22, 9, 20]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 27226\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-027",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 27227\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27227 [25, 9, 26, 11, 24]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27227 [25, 9, 26, 11, 24]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 27227\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-028",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 27228\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27228 [29, 11, 30, 13, 28]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27228 [29, 11, 30, 13, 28]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 27228\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-029",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 27229\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27229 [33, 13, 34, 15, 32]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27229 [33, 13, 34, 15, 32]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 27229\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH27-M-030",
+      "topic": "异步与并发基础",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "同步生成器模拟协作：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 27230\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "27230 [37, 15, 38, 17, 36]\n",
+      "hints": "生成器使用 yield 在每步之间保存状态",
+      "test_cases": [
+        "assert captured_output == '27230 [37, 15, 38, 17, 36]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 27230\ndef steps(items):\n    for item in items:\n        yield item + n\nresult = list(steps(nums))\nprint(case_tag, result)"
+    }
+  ]
+}

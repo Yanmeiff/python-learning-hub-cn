@@ -1,0 +1,427 @@
+{
+  "chapter": "CH21",
+  "title": "闭包与装饰器",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH21-E-001",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 21101\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21101 17\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21101 17\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 21101\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-002",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 21102\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21102 20\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21102 20\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 21102\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-003",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 21103\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21103 23\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21103 23\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 21103\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-004",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 21104\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21104 26\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21104 26\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 21104\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-005",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 21105\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21105 29\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21105 29\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 21105\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-006",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "闭包读取外层值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 21106\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21106 32\n",
+      "hints": "闭包保留创建函数时的局部变量",
+      "test_cases": [
+        "assert captured_output == '21106 32\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 21106\ndef outer(x):\n    def inner():\n        return x + 1\n    return inner\nf = outer(a)\nresult = f()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-007",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 21107\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21107 4\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21107 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 21107\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-008",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 21108\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21108 10\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21108 10\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 21108\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-009",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 21109\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21109 18\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21109 18\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 21109\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-010",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 21110\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21110 28\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21110 28\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 21110\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-011",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 21111\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21111 40\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21111 40\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 21111\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-012",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "函数作为返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 21112\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21112 54\n",
+      "hints": "高阶函数可返回一个新函数",
+      "test_cases": [
+        "assert captured_output == '21112 54\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 21112\ndef scale(factor):\n    return lambda x: x * factor\nfn = scale(n)\nresult = fn(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-013",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 21113\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21113 20\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21113 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 21113\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-014",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 21114\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21114 24\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21114 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 21114\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-015",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 21115\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21115 28\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21115 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 21115\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-016",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 21116\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21116 32\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21116 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 21116\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-017",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 21117\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21117 36\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21117 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 21117\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-018",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "lambda 闭包：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 21118\nbase = b\nf = lambda x: x + base\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21118 40\n",
+      "hints": "lambda 可访问外层变量",
+      "test_cases": [
+        "assert captured_output == '21118 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 21118\nbase = b\nf = lambda x: x + base\nresult = f(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-019",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 21119\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21119 vector\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21119 vector\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 21119\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-020",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 21120\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21120 lambda\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21120 lambda\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 21120\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-021",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 21121\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21121 alpha\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21121 alpha\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 21121\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-022",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 21122\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21122 beta\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21122 beta\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 21122\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-023",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 21123\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21123 gamma\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21123 gamma\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 21123\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-024",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "检查自由变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 21124\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21124 delta\n",
+      "hints": "嵌套函数可以捕获定义作用域中的变量",
+      "test_cases": [
+        "assert captured_output == '21124 delta\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 21124\ndef maker(value):\n    def read(): return value\n    return read\nfn = maker(word)\nresult = fn()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-025",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 21125\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21125 32\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21125 32\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 21125\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-026",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 21126\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21126 38\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21126 38\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 21126\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-027",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 21127\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21127 44\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21127 44\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 21127\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-028",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 21128\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21128 50\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21128 50\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 21128\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-029",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 21129\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21129 56\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21129 56\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 21129\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH21-E-030",
+      "topic": "闭包与装饰器",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "装饰器包装结果：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 21130\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "21130 62\n",
+      "hints": "装饰器返回的函数取代原函数",
+      "test_cases": [
+        "assert captured_output == '21130 62\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 21130\ndef double(func):\n    def wrapper(x):\n        return func(x) * 2\n    return wrapper\n@double\ndef identity(x): return x\nresult = identity(a)\nprint(case_tag, result)"
+    }
+  ]
+}

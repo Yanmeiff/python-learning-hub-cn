@@ -1,0 +1,427 @@
+{
+  "chapter": "CH24",
+  "title": "枚举与元类初步",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH24-X-001",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24401\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24401 vector\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24401 vector\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 24401\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-002",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24402\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24402 lambda\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24402 lambda\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 24402\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-003",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24403\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24403 alpha\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24403 alpha\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 24403\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-004",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24404\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24404 beta\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24404 beta\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 24404\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-005",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24405\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24405 gamma\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24405 gamma\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 24405\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-006",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类给类添加默认标签：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24406\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24406 delta\n",
+      "hints": "元类的 __new__ 可以修改待创建类的字典",
+      "test_cases": [
+        "assert captured_output == '24406 delta\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 24406\nclass TagMeta(type):\n    def __new__(mcls, name, bases, attrs):\n        attrs.setdefault('tag', word)\n        return super().__new__(mcls, name, bases, attrs)\nclass Item(metaclass=TagMeta): pass\nresult = Item.tag\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-007",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24407\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24407 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24407 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 24407\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-008",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24408\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24408 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24408 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 24408\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-009",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24409\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24409 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24409 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 24409\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-010",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24410\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24410 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24410 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 24410\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-011",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24411\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24411 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24411 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 24411\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-012",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类注册创建的类：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24412\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24412 ['Task', 'Job']\n",
+      "hints": "元类创建类时可执行注册逻辑",
+      "test_cases": [
+        "assert captured_output == \"24412 ['Task', 'Job']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 24412\nregistry = []\nclass Register(type):\n    def __new__(mcls, name, bases, attrs):\n        cls = super().__new__(mcls, name, bases, attrs)\n        registry.append(name)\n        return cls\nclass Task(metaclass=Register): pass\nclass Job(metaclass=Register): pass\nresult = registry\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-013",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24413\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24413 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24413 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 24413\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-014",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24414\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24414 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24414 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 24414\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-015",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24415\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24415 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24415 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 24415\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-016",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24416\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24416 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24416 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 24416\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-017",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24417\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24417 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24417 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 24417\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-018",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举自定义方法和筛选：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24418\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24418 ['WARN', 'ERROR']\n",
+      "hints": "对枚举封装领域规则并过滤",
+      "test_cases": [
+        "assert captured_output == \"24418 ['WARN', 'ERROR']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 24418\nfrom enum import IntEnum\nclass Severity(IntEnum):\n    INFO = 1\n    WARN = 2\n    ERROR = 3\n    def needs_action(self): return self.value >= 2\nresult = [x.name for x in Severity if x.needs_action()]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-019",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24419\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24419 [20, 64]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24419 [20, 64]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 24419\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-020",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24420\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24420 [24, 95]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24420 [24, 95]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 24420\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-021",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24421\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24421 [28, 132]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24421 [28, 132]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 24421\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-022",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24422\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24422 [32, 175]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24422 [32, 175]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 24422\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-023",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24423\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24423 [36, 224]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24423 [36, 224]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 24423\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-024",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "枚举结合字典映射：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24424\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24424 [40, 279]\n",
+      "hints": "Enum 成员可作为字典键",
+      "test_cases": [
+        "assert captured_output == '24424 [40, 279]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 24424\nfrom enum import Enum\nclass Op(Enum):\n    ADD = 'add'\n    MUL = 'mul'\noperations = {Op.ADD: lambda x, y: x + y, Op.MUL: lambda x, y: x * y}\nresult = [operations[op](a, b) for op in Op]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-025",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24425\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24425 17\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24425 17\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 24425\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-026",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24426\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24426 21\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24426 21\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 24426\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-027",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24427\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24427 25\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24427 25\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 24427\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-028",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24428\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24428 29\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24428 29\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 24428\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-029",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24429\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24429 33\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24429 33\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 24429\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH24-X-030",
+      "topic": "枚举与元类初步",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "元类检查必需属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24430\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "24430 37\n",
+      "hints": "元类可在类创建时检查方法是否存在",
+      "test_cases": [
+        "assert captured_output == '24430 37\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 24430\nclass Required(type):\n    def __new__(mcls, name, bases, attrs):\n        if name != 'Base' and 'execute' not in attrs:\n            raise TypeError('missing execute')\n        return super().__new__(mcls, name, bases, attrs)\nclass Base(metaclass=Required): pass\nclass Worker(Base):\n    def execute(self, x): return x + n\nresult = Worker().execute(a)\nprint(case_tag, result)"
+    }
+  ]
+}

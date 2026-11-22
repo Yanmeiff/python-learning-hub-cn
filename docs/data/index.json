@@ -448,6 +448,370 @@
           "n": 30
         }
       ]
+    },
+    {
+      "id": "CH17",
+      "dir": "CH17_Classes_Objects",
+      "title": "CH17 面向对象基础",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH18",
+      "dir": "CH18_Inheritance_Polymorphism",
+      "title": "CH18 继承、组合与多态",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH19",
+      "dir": "CH19_Modules_Imports",
+      "title": "CH19 模块、包与导入",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH20",
+      "dir": "CH20_Magic_Methods",
+      "title": "CH20 魔术方法与容器协议",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH21",
+      "dir": "CH21_Closures_Decorators",
+      "title": "CH21 闭包与装饰器",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH22",
+      "dir": "CH22_Exceptions_Context",
+      "title": "CH22 异常与上下文管理器",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH23",
+      "dir": "CH23_Regex",
+      "title": "CH23 正则表达式",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH24",
+      "dir": "CH24_Enums_Metaclasses",
+      "title": "CH24 枚举与元类初步",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH25",
+      "dir": "CH25_Pathlib_Files",
+      "title": "CH25 pathlib 与文件处理",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH26",
+      "dir": "CH26_Typing_Dataclasses",
+      "title": "CH26 类型注解与数据类",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH27",
+      "dir": "CH27_Async_Concurrency",
+      "title": "CH27 异步与并发基础",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH28",
+      "dir": "CH28_Testing_Logging_Quality",
+      "title": "CH28 测试、日志与工程规范",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
+    },
+    {
+      "id": "CH29",
+      "dir": "CH29_CLI_Projects",
+      "title": "CH29 命令行工具与综合项目",
+      "count": 120,
+      "files": [
+        {
+          "diff": "E",
+          "file": "easy_30.json",
+          "n": 30
+        },
+        {
+          "diff": "X",
+          "file": "expert_30.json",
+          "n": 30
+        },
+        {
+          "diff": "H",
+          "file": "hard_30.json",
+          "n": 30
+        },
+        {
+          "diff": "M",
+          "file": "medium_30.json",
+          "n": 30
+        }
+      ]
     }
   ]
 }

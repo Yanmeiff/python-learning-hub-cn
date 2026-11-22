@@ -1,0 +1,427 @@
+{
+  "chapter": "CH20",
+  "title": "魔术方法与容器协议",
+  "difficulty": "超简单",
+  "questions": [
+    {
+      "id": "CH20-E-001",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20101\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20101 Token(16)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20101 Token(16)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20101\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-002",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20102\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20102 Token(19)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20102 Token(19)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20102\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-003",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20103\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20103 Token(22)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20103 Token(22)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20103\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-004",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20104\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20104 Token(25)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20104 Token(25)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20104\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-005",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20105\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20105 Token(28)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20105 Token(28)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20105\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-006",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "对象 repr 展示：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20106\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20106 Token(31)\n",
+      "hints": "repr 调用 __repr__",
+      "test_cases": [
+        "assert captured_output == '20106 Token(31)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20106\nclass Token:\n    def __init__(self, value): self.value = value\n    def __repr__(self): return 'Token(' + str(self.value) + ')'\nresult = repr(Token(a))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-007",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20107\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20107 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20107 5\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20107\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-008",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20108\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20108 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20108 5\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20108\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-009",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20109\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20109 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20109 5\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20109\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-010",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20110\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20110 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20110 5\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20110\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-011",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20111\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20111 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20111 5\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20111\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-012",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "len 使用协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20112\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20112 5\n",
+      "hints": "len() 会查找 __len__",
+      "test_cases": [
+        "assert captured_output == '20112 5\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20112\nclass Bucket:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = len(Bucket(nums))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-013",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20113\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20113 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20113 True\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20113\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-014",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20114\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20114 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20114 True\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20114\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-015",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20115\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20115 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20115 True\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20115\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-016",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20116\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20116 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20116 True\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20116\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-017",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20117\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20117 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20117 True\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20117\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-018",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "bool 判断空容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20118\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20118 True\n",
+      "hints": "具有 __len__ 的对象可由 bool 判断",
+      "test_cases": [
+        "assert captured_output == '20118 True\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20118\nclass Queue:\n    def __init__(self, items): self.items = items\n    def __len__(self): return len(self.items)\nresult = bool(Queue(nums[:n]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-019",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20119\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20119 4\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20119 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20119\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-020",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20120\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20120 5\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20120 5\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20120\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-021",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20121\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20121 6\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20121 6\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20121\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-022",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20122\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20122 7\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20122 7\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20122\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-023",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20123\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20123 8\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20123 8\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20123\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-024",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "getitem 按索引读取：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20124\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20124 9\n",
+      "hints": "索引语法会调用 __getitem__",
+      "test_cases": [
+        "assert captured_output == '20124 9\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20124\nclass Values:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, index): return self.data[index]\nresult = Values(nums)[1]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-025",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20125\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20125 record:vector\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20125 record:vector\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20125\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-026",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20126\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20126 record:lambda\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20126 record:lambda\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20126\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-027",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20127\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20127 record:alpha\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20127 record:alpha\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20127\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-028",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20128\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20128 record:beta\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20128 record:beta\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20128\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-029",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20129\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20129 record:gamma\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20129 record:gamma\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20129\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-E-030",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "超简单",
+      "stars": "⭐",
+      "description": "str 格式化对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20130\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "20130 record:delta\n",
+      "hints": "str 使用 __str__",
+      "test_cases": [
+        "assert captured_output == '20130 record:delta\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20130\nclass Record:\n    def __init__(self, text): self.text = text\n    def __str__(self): return 'record:' + self.text\nresult = str(Record(word))\nprint(case_tag, result)"
+    }
+  ]
+}

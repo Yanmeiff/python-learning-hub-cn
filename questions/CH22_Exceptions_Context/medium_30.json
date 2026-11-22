@@ -1,0 +1,427 @@
+{
+  "chapter": "CH22",
+  "title": "异常与上下文管理器",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH22-M-001",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 22201\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22201 4\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22201 4\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 22201\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-002",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 22202\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22202 5\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22202 5\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 22202\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-003",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 22203\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22203 6\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22203 6\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 22203\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-004",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 22204\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22204 7\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22204 7\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 22204\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-005",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 22205\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22205 8\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22205 8\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 22205\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-006",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义异常类型：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 22206\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = ___\nprint(case_tag, result)",
+      "expected_output": "22206 9\n",
+      "hints": "继承 ValueError 定义特定领域异常",
+      "test_cases": [
+        "assert captured_output == '22206 9\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 22206\nclass TooSmallError(ValueError): pass\ndef check(value):\n    if value < b: raise TooSmallError('small')\n    return value\ntry:\n    result = check(n)\nexcept TooSmallError:\n    result = b\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-007",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 22207\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22207 [16]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22207 [16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 22207\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-008",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 22208\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22208 [19]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22208 [19]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 22208\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-009",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 22209\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22209 [22]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22209 [22]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 22209\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-010",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 22210\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22210 [25]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22210 [25]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 22210\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-011",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 22211\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22211 [28]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22211 [28]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 22211\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-012",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "contextlib suppress：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 22212\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22212 [31]\n",
+      "hints": "suppress 忽略指定类型的异常",
+      "test_cases": [
+        "assert captured_output == '22212 [31]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 22212\nfrom contextlib import suppress\nvalues = [a]\nwith suppress(IndexError):\n    values.append(values[20])\nresult = values\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-013",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 22213\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22213 vector1\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22213 vector1\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 22213\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-014",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 22214\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22214 lambda2\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22214 lambda2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 22214\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-015",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 22215\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22215 alpha3\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22215 alpha3\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 22215\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-016",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 22216\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22216 beta4\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22216 beta4\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 22216\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-017",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 22217\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22217 gamma5\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22217 gamma5\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 22217\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-018",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "with StringIO 文本流：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 22218\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22218 delta6\n",
+      "hints": "StringIO 是可用 with 管理的内存文本流",
+      "test_cases": [
+        "assert captured_output == '22218 delta6\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 22218\nfrom io import StringIO\nwith StringIO() as stream:\n    stream.write(word)\n    stream.write(str(n))\n    value = stream.getvalue()\nresult = value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-019",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 22219\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22219 [16, 4]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22219 [16, 4]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 22219\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-020",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 22220\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22220 [19, 5]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22220 [19, 5]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 22220\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-021",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 22221\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22221 [22, 6]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22221 [22, 6]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 22221\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-022",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 22222\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22222 [25, 7]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22222 [25, 7]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 22222\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-023",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 22223\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22223 [28, 8]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22223 [28, 8]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 22223\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-024",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "异常分组统计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 22224\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22224 [31, 9]\n",
+      "hints": "失败项跳过并保留合法转换结果",
+      "test_cases": [
+        "assert captured_output == '22224 [31, 9]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 22224\nvalues = [str(a), word, str(b)]\ngood = []\nfor value in values:\n    try: good.append(int(value))\n    except ValueError: pass\nresult = good\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-025",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 22225\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22225 8\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22225 8\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 22225\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-026",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 22226\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22226 10\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22226 10\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 22226\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-027",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 22227\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22227 12\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22227 12\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 22227\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-028",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 22228\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22228 14\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22228 14\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 22228\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-029",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 22229\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22229 16\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22229 16\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 22229\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH22-M-030",
+      "topic": "异常与上下文管理器",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "assert 验证不变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 22230\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "22230 18\n",
+      "hints": "assert 为程序不变量提供断言",
+      "test_cases": [
+        "assert captured_output == '22230 18\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 22230\ndef require_positive(value):\n    assert value > 0, 'positive'\n    return value * 2\nresult = require_positive(b)\nprint(case_tag, result)"
+    }
+  ]
+}

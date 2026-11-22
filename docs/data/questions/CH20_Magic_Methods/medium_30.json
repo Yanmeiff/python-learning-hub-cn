@@ -1,0 +1,427 @@
+{
+  "chapter": "CH20",
+  "title": "魔术方法与容器协议",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH20-M-001",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20201\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20201 20\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20201 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20201\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-002",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20202\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20202 24\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20202 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20202\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-003",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20203\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20203 28\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20203 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20203\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-004",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20204\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20204 32\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20204 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20204\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-005",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20205\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20205 36\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20205 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20205\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-006",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义加法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20206\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return ___\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)",
+      "expected_output": "20206 40\n",
+      "hints": "__add__ 应返回新的 Score 对象",
+      "test_cases": [
+        "assert captured_output == '20206 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20206\nclass Score:\n    def __init__(self, value): self.value = value\n    def __add__(self, other): return Score(self.value + other.value)\nresult = (Score(a) + Score(b)).value\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-007",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20207\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20207 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20207 True\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20207\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-008",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20208\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20208 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20208 True\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20208\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-009",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20209\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20209 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20209 True\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20209\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-010",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20210\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20210 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20210 True\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20210\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-011",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20211\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20211 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20211 True\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20211\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-012",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "自定义比较：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20212\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return ___\nresult = Size(b) < Size(a)\nprint(case_tag, result)",
+      "expected_output": "20212 True\n",
+      "hints": "__lt__ 接受右操作数",
+      "test_cases": [
+        "assert captured_output == '20212 True\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20212\nclass Size:\n    def __init__(self, value): self.value = value\n    def __lt__(self, other): return self.value < other.value\nresult = Size(b) < Size(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-013",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20213\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20213 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20213 [True, False]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20213\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-014",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20214\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20214 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20214 [True, False]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20214\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-015",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20215\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20215 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20215 [True, False]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20215\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-016",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20216\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20216 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20216 [True, False]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20216\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-017",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20217\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20217 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20217 [True, False]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20217\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-018",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "包含判断协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20218\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return ___\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)",
+      "expected_output": "20218 [True, False]\n",
+      "hints": "in 会调用 __contains__",
+      "test_cases": [
+        "assert captured_output == '20218 [True, False]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20218\nclass Bag:\n    def __init__(self, values): self.values = values\n    def __contains__(self, x): return x in self.values\nresult = [a in Bag(nums), 0 in Bag(nums)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-019",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20219\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20219 [16, 4, 17]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20219 [16, 4, 17]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20219\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-020",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20220\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20220 [19, 5, 20]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20220 [19, 5, 20]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20220\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-021",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20221\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20221 [22, 6, 23]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20221 [22, 6, 23]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20221\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-022",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20222\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20222 [25, 7, 26]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20222 [25, 7, 26]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20222\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-023",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20223\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20223 [28, 8, 29]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20223 [28, 8, 29]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20223\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-024",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "迭代容器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20224\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return ___\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)",
+      "expected_output": "20224 [31, 9, 32]\n",
+      "hints": "__iter__ 需返回迭代器",
+      "test_cases": [
+        "assert captured_output == '20224 [31, 9, 32]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20224\nclass Collection:\n    def __init__(self, values): self.values = values\n    def __iter__(self): return iter(self.values)\nresult = list(Collection(nums[:3]))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-025",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20225\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20225 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20225 0\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20225\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-026",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20226\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20226 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20226 0\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20226\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-027",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20227\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20227 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20227 0\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20227\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-028",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20228\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20228 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20228 0\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20228\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-029",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20229\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20229 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20229 0\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20229\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-M-030",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "属性缺失兜底：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20230\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return ___\nresult = Defaults(a).missing\nprint(case_tag, result)",
+      "expected_output": "20230 0\n",
+      "hints": "__getattr__ 在正常属性找不到时运行",
+      "test_cases": [
+        "assert captured_output == '20230 0\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20230\nclass Defaults:\n    def __init__(self, value): self.value = value\n    def __getattr__(self, name): return 0 if name == 'missing' else None\nresult = Defaults(a).missing\nprint(case_tag, result)"
+    }
+  ]
+}

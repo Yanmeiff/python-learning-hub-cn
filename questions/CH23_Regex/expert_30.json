@@ -1,0 +1,427 @@
+{
+  "chapter": "CH23",
+  "title": "正则表达式",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH23-X-001",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 23401\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23401 04/01/2021\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23401 04/01/2021\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 23401\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-002",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 23402\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23402 05/01/2022\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23402 05/01/2022\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 23402\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-003",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 23403\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23403 06/01/2023\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23403 06/01/2023\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 23403\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-004",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 23404\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23404 07/01/2024\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23404 07/01/2024\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 23404\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-005",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 23405\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23405 08/01/2025\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23405 08/01/2025\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 23405\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-006",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "识别日期并重排：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 23406\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23406 09/01/2026\n",
+      "hints": "替换串可使用编号捕获组",
+      "test_cases": [
+        "assert captured_output == '23406 09/01/2026\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 23406\nimport re\ntext = str(2020 + n) + '-01-' + str(b).zfill(2)\nresult = re.sub(r'(\\d{4})-(\\d{2})-(\\d{2})', r'\\3/\\2/\\1', text)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-007",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 23407\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23407 {'level': 'INFO', 'key': 'vector', 'value': '16'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23407 {'level': 'INFO', 'key': 'vector', 'value': '16'}\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 23407\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-008",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 23408\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23408 {'level': 'INFO', 'key': 'lambda', 'value': '19'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23408 {'level': 'INFO', 'key': 'lambda', 'value': '19'}\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 23408\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-009",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 23409\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23409 {'level': 'INFO', 'key': 'alpha', 'value': '22'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23409 {'level': 'INFO', 'key': 'alpha', 'value': '22'}\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 23409\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-010",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 23410\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23410 {'level': 'INFO', 'key': 'beta', 'value': '25'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23410 {'level': 'INFO', 'key': 'beta', 'value': '25'}\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 23410\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-011",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 23411\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23411 {'level': 'INFO', 'key': 'gamma', 'value': '28'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23411 {'level': 'INFO', 'key': 'gamma', 'value': '28'}\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 23411\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-012",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "正则解析简易日志：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 23412\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23412 {'level': 'INFO', 'key': 'delta', 'value': '31'}\n",
+      "hints": "命名组能为日志字段赋予清晰名称",
+      "test_cases": [
+        "assert captured_output == \"23412 {'level': 'INFO', 'key': 'delta', 'value': '31'}\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 23412\nimport re\nline = 'INFO ' + word + '=' + str(a)\npattern = r'(?P<level>[A-Z]+)\\s+(?P<key>\\w+)=(?P<value>\\d+)'\nresult = re.fullmatch(pattern, line).groupdict()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-013",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 23413\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23413 ['1', '16']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23413 ['1', '16']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'lambda'\ncase_tag = 23413\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-014",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 23414\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23414 ['2', '19']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23414 ['2', '19']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'alpha'\ncase_tag = 23414\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-015",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 23415\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23415 ['3', '22']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23415 ['3', '22']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'beta'\ncase_tag = 23415\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-016",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 23416\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23416 ['4', '25']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23416 ['4', '25']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'gamma'\ncase_tag = 23416\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-017",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 23417\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23417 ['5', '28']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23417 ['5', '28']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'delta'\ncase_tag = 23417\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-018",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "提取重复数字串并去重：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 23418\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23418 ['6', '31']\n",
+      "hints": "dict.fromkeys 按首次出现顺序去重",
+      "test_cases": [
+        "assert captured_output == \"23418 ['6', '31']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'omega'\ncase_tag = 23418\nimport re\ntext = 'x=' + str(n) + ';y=' + str(n) + ';z=' + str(a)\nresult = list(dict.fromkeys(re.findall(r'\\d+', text)))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-019",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 23419\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23419 ['alpha@example.com', '1@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23419 ['alpha@example.com', '1@x.org']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'alpha'\ncase_tag = 23419\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-020",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 23420\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23420 ['beta@example.com', '2@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23420 ['beta@example.com', '2@x.org']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'beta'\ncase_tag = 23420\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-021",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 23421\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23421 ['gamma@example.com', '3@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23421 ['gamma@example.com', '3@x.org']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'gamma'\ncase_tag = 23421\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-022",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 23422\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23422 ['delta@example.com', '4@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23422 ['delta@example.com', '4@x.org']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'delta'\ncase_tag = 23422\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-023",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 23423\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23423 ['omega@example.com', '5@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23423 ['omega@example.com', '5@x.org']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'omega'\ncase_tag = 23423\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-024",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "只匹配完整邮件风格标识：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 23424\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23424 ['python@example.com', '6@x.org']\n",
+      "hints": "使用 fullmatch 验证完整字符串格式",
+      "test_cases": [
+        "assert captured_output == \"23424 ['python@example.com', '6@x.org']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'python'\ncase_tag = 23424\nimport re\nvalues = [word + '@example.com', 'invalid@', str(n) + '@x.org']\nresult = [x for x in values if re.fullmatch(r'[\\w.]+@[\\w.]+\\.[a-z]+', x)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-025",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 23425\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23425 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23425 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 23425\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-026",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 23426\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23426 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23426 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 23426\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-027",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 23427\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23427 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23427 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 23427\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-028",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 23428\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23428 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23428 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 23428\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-029",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 23429\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23429 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23429 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 23429\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH23-X-030",
+      "topic": "正则表达式",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "查找重叠位置的前瞻：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 23430\nimport re\ntext = 'aaaa' + str(n)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "23430 [0, 1, 2]\n",
+      "hints": "零宽度正向前瞻可找到重叠位置",
+      "test_cases": [
+        "assert captured_output == '23430 [0, 1, 2]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 23430\nimport re\ntext = 'aaaa' + str(n)\nresult = [match.start() for match in re.finditer(r'(?=aa)', text)]\nprint(case_tag, result)"
+    }
+  ]
+}

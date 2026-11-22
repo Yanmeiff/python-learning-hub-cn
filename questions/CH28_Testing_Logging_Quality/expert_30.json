@@ -1,0 +1,427 @@
+{
+  "chapter": "CH28",
+  "title": "测试、日志与工程规范",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH28-X-001",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 28401\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28401 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28401 3\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 28401\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-002",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 28402\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28402 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28402 3\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 28402\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-003",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 28403\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28403 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28403 3\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 28403\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-004",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 28404\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28404 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28404 3\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 28404\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-005",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 28405\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28405 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28405 3\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 28405\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-006",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "组合单元测试断言：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 28406\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28406 3\n",
+      "hints": "一个测试用例可以检查多个不变量",
+      "test_cases": [
+        "assert captured_output == '28406 3\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 28406\nimport unittest\ncase = unittest.TestCase()\nvalues = [a,b,n]\ncase.assertEqual(sum(values), a+b+n)\ncase.assertTrue(all(x>0 for x in values))\nresult = len(values)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-007",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 28407\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28407 ['WARNING:delta', 'ERROR:1']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28407 ['WARNING:delta', 'ERROR:1']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 28407\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-008",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 28408\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28408 ['WARNING:omega', 'ERROR:2']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28408 ['WARNING:omega', 'ERROR:2']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 28408\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-009",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 28409\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28409 ['WARNING:python', 'ERROR:3']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28409 ['WARNING:python', 'ERROR:3']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 28409\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-010",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 28410\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28410 ['WARNING:coding', 'ERROR:4']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28410 ['WARNING:coding', 'ERROR:4']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 28410\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-011",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 28411\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28411 ['WARNING:vector', 'ERROR:5']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28411 ['WARNING:vector', 'ERROR:5']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 28411\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-012",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "捕获标准日志并按级别过滤：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 28412\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28412 ['WARNING:lambda', 'ERROR:6']\n",
+      "hints": "日志器级别会过滤低于阈值的消息",
+      "test_cases": [
+        "assert captured_output == \"28412 ['WARNING:lambda', 'ERROR:6']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 28412\nimport logging\nfrom io import StringIO\nstream = StringIO()\nhandler = logging.StreamHandler(stream)\nhandler.setFormatter(logging.Formatter('%(levelname)s:%(message)s'))\nlogger = logging.getLogger('audit'+str(a))\nlogger.handlers = [handler]\nlogger.setLevel(logging.WARNING)\nlogger.info('skip')\nlogger.warning(word)\nlogger.error(str(n))\nlogger.removeHandler(handler)\nresult = stream.getvalue().splitlines()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-013",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 28413\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28413 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28413 value mismatch\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 28413\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-014",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 28414\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28414 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28414 value mismatch\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 28414\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-015",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 28415\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28415 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28415 value mismatch\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 28415\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-016",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 28416\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28416 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28416 value mismatch\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 28416\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-017",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 28417\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28417 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28417 value mismatch\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 28417\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-018",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "断言失败信息检查：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 28418\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28418 value mismatch\n",
+      "hints": "失败的 assert 会抛出 AssertionError",
+      "test_cases": [
+        "assert captured_output == '28418 value mismatch\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 28418\ntry:\n    assert a == b, 'value mismatch'\nexcept AssertionError as exc:\n    message = str(exc)\nresult = message\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-019",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 28419\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28419 (1, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28419 (1, True)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 28419\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-020",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 28420\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28420 (2, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28420 (2, True)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 28420\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-021",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 28421\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28421 (3, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28421 (3, True)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 28421\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-022",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 28422\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28422 (4, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28422 (4, True)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 28422\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-023",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 28423\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28423 (5, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28423 (5, True)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 28423\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-024",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "测试替身的调用参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 28424\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28424 (6, True)\n",
+      "hints": "Mock.call_args 保留最后一次调用参数",
+      "test_cases": [
+        "assert captured_output == '28424 (6, True)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 28424\nfrom unittest.mock import Mock\nservice = Mock(return_value=a+b)\nservice(n, flag=True)\nresult = (service.call_args.args[0], service.call_args.kwargs['flag'])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-025",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 28425\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28425 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28425 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 28425\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-026",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 28426\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28426 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28426 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 28426\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-027",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 28427\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28427 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28427 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 28427\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-028",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 28428\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28428 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28428 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 28428\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-029",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 28429\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28429 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28429 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 28429\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH28-X-030",
+      "topic": "测试、日志与工程规范",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "软件配置结构验证：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 28430\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "28430 ('f', 1, True)\n",
+      "hints": "AST 可检验函数命名、参数与返回语句",
+      "test_cases": [
+        "assert captured_output == \"28430 ('f', 1, True)\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 28430\nimport ast\nsource = 'def f(x):\\n    return x * ' + str(n)\ntree = ast.parse(source)\nfn = tree.body[0]\nresult = (fn.name, len(fn.args.args), isinstance(fn.body[0], ast.Return))\nprint(case_tag, result)"
+    }
+  ]
+}

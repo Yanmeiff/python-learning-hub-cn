@@ -1,0 +1,427 @@
+{
+  "chapter": "CH19",
+  "title": "模块、包与导入",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH19-M-001",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19201\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19201 16\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19201 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19201\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-002",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19202\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19202 19\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19202 19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19202\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-003",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19203\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19203 22\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19203 22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19203\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-004",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19204\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19204 25\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19204 25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19204\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-005",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19205\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19205 28\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19205 28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19205\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-006",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "math gcd 最大公约数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19206\nfrom math import gcd\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19206 31\n",
+      "hints": "gcd 接收两个整数",
+      "test_cases": [
+        "assert captured_output == '19206 31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19206\nfrom math import gcd\nresult = gcd(a * b, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-007",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19207\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19207 8\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19207 8\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19207\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-008",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19208\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19208 20\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19208 20\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19208\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-009",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19209\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19209 36\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19209 36\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19209\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-010",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19210\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19210 56\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19210 56\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19210\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-011",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19211\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19211 80\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19211 80\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19211\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-012",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "functools reduce 归约：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19212\nfrom functools import reduce\nfrom operator import mul\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19212 108\n",
+      "hints": "reduce 会从左到右组合元素",
+      "test_cases": [
+        "assert captured_output == '19212 108\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19212\nfrom functools import reduce\nfrom operator import mul\nresult = reduce(mul, [n, b, 2], 1)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-013",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19213\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19213 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19213 3\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19213\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-014",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19214\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19214 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19214 3\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19214\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-015",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19215\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19215 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19215 3\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19215\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-016",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19216\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19216 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19216 3\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19216\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-017",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19217\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19217 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19217 3\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19217\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-018",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "bisect 插入位置：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19218\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19218 3\n",
+      "hints": "返回保持排序的最左插入索引",
+      "test_cases": [
+        "assert captured_output == '19218 3\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19218\nfrom bisect import bisect_left\nitems = sorted(nums)\nresult = bisect_left(items, a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-019",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19219\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19219 ['python']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19219 ['python']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19219\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-020",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19220\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19220 ['coding', 'coding']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19220 ['coding', 'coding']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19220\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-021",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19221\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19221 ['vector', 'vector', 'vector']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19221 ['vector', 'vector', 'vector']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19221\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-022",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19222\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19222 ['lambda', 'lambda', 'lambda', 'lambda']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19222 ['lambda', 'lambda', 'lambda', 'lambda']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19222\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-023",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19223\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19223 ['alpha', 'alpha', 'alpha', 'alpha', 'alpha']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19223 ['alpha', 'alpha', 'alpha', 'alpha', 'alpha']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19223\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-024",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "itertools repeat：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19224\nfrom itertools import repeat\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19224 ['beta', 'beta', 'beta', 'beta', 'beta', 'beta']\n",
+      "hints": "repeat 按次数生成重复值",
+      "test_cases": [
+        "assert captured_output == \"19224 ['beta', 'beta', 'beta', 'beta', 'beta', 'beta']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19224\nfrom itertools import repeat\nresult = list(repeat(word, n))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-025",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19225\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19225 a\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19225 a\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19225\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-026",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19226\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19226 ab\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19226 ab\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19226\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-027",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19227\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19227 abc\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19227 abc\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19227\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-028",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19228\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19228 abcd\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19228 abcd\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19228\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-029",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19229\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19229 abcde\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19229 abcde\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19229\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-M-030",
+      "topic": "模块、包与导入",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "string 模块常量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19230\nimport string\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19230 abcdef\n",
+      "hints": "string.ascii_lowercase 是英文字母序列",
+      "test_cases": [
+        "assert captured_output == '19230 abcdef\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19230\nimport string\nresult = string.ascii_lowercase[:n]\nprint(case_tag, result)"
+    }
+  ]
+}

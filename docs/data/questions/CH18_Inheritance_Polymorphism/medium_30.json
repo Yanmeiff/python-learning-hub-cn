@@ -1,0 +1,427 @@
+{
+  "chapter": "CH18",
+  "title": "继承、组合与多态",
+  "difficulty": "简单",
+  "questions": [
+    {
+      "id": "CH18-M-001",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18201\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18201 16\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18201 16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18201\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-002",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18202\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18202 25\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18202 25\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18202\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-003",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18203\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18203 36\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18203 36\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18203\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-004",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18204\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18204 49\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18204 49\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18204\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-005",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18205\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18205 64\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18205 64\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18205\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-006",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "子类扩展返回值：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18206\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return ___\nresult = Square(b).area()\nprint(case_tag, result)",
+      "expected_output": "18206 81\n",
+      "hints": "正方形面积由边长计算",
+      "test_cases": [
+        "assert captured_output == '18206 81\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18206\nclass Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nresult = Square(b).area()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-007",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18207\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18207 report:gamma\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18207 report:gamma\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18207\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-008",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18208\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18208 report:delta\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18208 report:delta\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18208\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-009",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18209\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18209 report:omega\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18209 report:omega\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18209\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-010",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18210\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18210 report:python\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18210 report:python\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18210\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-011",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18211\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18211 report:coding\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18211 report:coding\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18211\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-012",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "super 扩展方法：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18212\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return ___\nresult = DailyReport().label()\nprint(case_tag, result)",
+      "expected_output": "18212 report:vector\n",
+      "hints": "调用父类方法并追加标记",
+      "test_cases": [
+        "assert captured_output == '18212 report:vector\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18212\nclass Report:\n    def label(self):\n        return 'report'\nclass DailyReport(Report):\n    def label(self):\n        return super().label() + ':' + word\nresult = DailyReport().label()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-013",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18213\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18213 [32, 16]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18213 [32, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18213\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-014",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18214\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18214 [38, 25]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18214 [38, 25]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18214\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-015",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18215\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18215 [44, 36]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18215 [44, 36]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18215\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-016",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18216\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18216 [50, 49]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18216 [50, 49]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18216\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-017",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18217\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18217 [56, 64]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18217 [56, 64]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18217\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-018",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "覆盖多态求面积：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18218\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18218 [62, 81]\n",
+      "hints": "统一调用同名方法",
+      "test_cases": [
+        "assert captured_output == '18218 [62, 81]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18218\nclass Rectangle:\n    def __init__(self, x): self.x = x\n    def area(self): return self.x * 2\nclass Circle:\n    def __init__(self, r): self.r = r\n    def area(self): return self.r * self.r\nshapes = [Rectangle(a), Circle(b)]\nresult = [shape.area() for shape in shapes]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-019",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18219\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18219 (1, 1)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18219 (1, 1)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18219\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-020",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18220\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18220 (1, 2)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18220 (1, 2)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18220\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-021",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18221\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18221 (1, 3)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18221 (1, 3)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18221\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-022",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18222\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18222 (1, 4)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18222 (1, 4)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18222\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-023",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18223\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18223 (1, 5)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18223 (1, 5)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18223\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-024",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "继承的类变量：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18224\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18224 (1, 6)\n",
+      "hints": "子类同名类属性不会改变父类属性",
+      "test_cases": [
+        "assert captured_output == '18224 (1, 6)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18224\nclass Parent:\n    count = 1\nclass Child(Parent):\n    count = n\nresult = (Parent.count, Child.count)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-025",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18225\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18225 python:16\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18225 python:16\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18225\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-026",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18226\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18226 coding:19\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18226 coding:19\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18226\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-027",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18227\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18227 vector:22\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18227 vector:22\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18227\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-028",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18228\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18228 lambda:25\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18228 lambda:25\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18228\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-029",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18229\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18229 alpha:28\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18229 alpha:28\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18229\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-M-030",
+      "topic": "继承、组合与多态",
+      "difficulty": "简单",
+      "stars": "⭐⭐",
+      "description": "多态转换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18230\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return ___\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)",
+      "expected_output": "18230 beta:31\n",
+      "hints": "复用父类转换逻辑",
+      "test_cases": [
+        "assert captured_output == '18230 beta:31\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18230\nclass Formatter:\n    def format(self, value): return str(value)\nclass PrefixFormatter(Formatter):\n    def format(self, value):\n        return word + ':' + super().format(value)\nresult = PrefixFormatter().format(a)\nprint(case_tag, result)"
+    }
+  ]
+}

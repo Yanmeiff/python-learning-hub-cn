@@ -1,0 +1,427 @@
+{
+  "chapter": "CH20",
+  "title": "魔术方法与容器协议",
+  "difficulty": "较难",
+  "questions": [
+    {
+      "id": "CH20-X-001",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20401\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20401 Vector(20, 5)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20401 Vector(20, 5)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 20401\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-002",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20402\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20402 Vector(24, 7)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20402 Vector(24, 7)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 20402\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-003",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20403\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20403 Vector(28, 9)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20403 Vector(28, 9)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 20403\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-004",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20404\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20404 Vector(32, 11)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20404 Vector(32, 11)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 20404\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-005",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20405\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20405 Vector(36, 13)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20405 Vector(36, 13)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 20405\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-006",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "自定义向量运算：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20406\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return ___\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)",
+      "expected_output": "20406 Vector(40, 15)\n",
+      "hints": "矢量相加需要逐项相加并返回新实例",
+      "test_cases": [
+        "assert captured_output == '20406 Vector(40, 15)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 20406\nclass Vector:\n    def __init__(self, x, y): self.x, self.y = x, y\n    def __add__(self, other): return Vector(self.x + other.x, self.y + other.y)\n    def __repr__(self): return f'Vector({self.x}, {self.y})'\nresult = Vector(a,b) + Vector(b,n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-007",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20407\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20407 [4, 17, 6]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20407 [4, 17, 6]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 20407\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-008",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20408\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20408 [5, 20, 7]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20408 [5, 20, 7]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 20408\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-009",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20409\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20409 [6, 23, 8]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20409 [6, 23, 8]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 20409\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-010",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20410\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20410 [7, 26, 9]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20410 [7, 26, 9]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 20410\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-011",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20411\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20411 [8, 29, 10]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20411 [8, 29, 10]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 20411\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-012",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "带切片的容器协议：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20412\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return ___\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)",
+      "expected_output": "20412 [9, 32, 11]\n",
+      "hints": "列表原本支持整数和切片两种索引",
+      "test_cases": [
+        "assert captured_output == '20412 [9, 32, 11]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 20412\nclass Sequence:\n    def __init__(self, data): self.data = data\n    def __getitem__(self, key): return self.data[key]\nresult = Sequence(nums)[1:4]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-013",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20413\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20413 [17, 5, 18, 7, 16]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20413 [17, 5, 18, 7, 16]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 20413\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-014",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20414\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20414 [21, 7, 22, 9, 20]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20414 [21, 7, 22, 9, 20]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 20414\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-015",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20415\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20415 [25, 9, 26, 11, 24]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20415 [25, 9, 26, 11, 24]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 20415\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-016",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20416\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20416 [29, 11, 30, 13, 28]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20416 [29, 11, 30, 13, 28]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 20416\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-017",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20417\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20417 [33, 13, 34, 15, 32]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20417 [33, 13, 34, 15, 32]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 20417\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-018",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "可调用的数据变换器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20418\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return ___\nresult = Transformer(n)(nums)\nprint(case_tag, result)",
+      "expected_output": "20418 [37, 15, 38, 17, 36]\n",
+      "hints": "实现 __call__ 来执行批量映射",
+      "test_cases": [
+        "assert captured_output == '20418 [37, 15, 38, 17, 36]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 20418\nclass Transformer:\n    def __init__(self, offset): self.offset = offset\n    def __call__(self, sequence): return [x + self.offset for x in sequence]\nresult = Transformer(n)(nums)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-019",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20419\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20419 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20419 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 20419\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-020",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20420\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20420 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20420 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 20420\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-021",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20421\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20421 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20421 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 20421\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-022",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20422\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20422 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20422 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 20422\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-023",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20423\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20423 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20423 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 20423\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-024",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "比较协议排序：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20424\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return ___\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)",
+      "expected_output": "20424 ['C', 'B', 'A']\n",
+      "hints": "sorted 可调用对象的 __lt__",
+      "test_cases": [
+        "assert captured_output == \"20424 ['C', 'B', 'A']\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 20424\nclass Ranked:\n    def __init__(self, rank, name): self.rank, self.name = rank, name\n    def __lt__(self, other): return self.rank < other.rank\nitems = [Ranked(a,'A'), Ranked(b,'B'), Ranked(n,'C')]\nresult = [item.name for item in sorted(items)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-025",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20425\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20425 272\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20425 272\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'vector'\ncase_tag = 20425\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-026",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20426\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20426 386\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20426 386\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'lambda'\ncase_tag = 20426\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-027",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20427\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20427 520\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20427 520\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'alpha'\ncase_tag = 20427\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-028",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20428\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20428 674\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20428 674\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'beta'\ncase_tag = 20428\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-029",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20429\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20429 848\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20429 848\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'gamma'\ncase_tag = 20429\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH20-X-030",
+      "topic": "魔术方法与容器协议",
+      "difficulty": "较难",
+      "stars": "⭐⭐⭐⭐",
+      "description": "__slots__ 控制实例字段：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20430\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return ___\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)",
+      "expected_output": "20430 1042\n",
+      "hints": "slots 列出允许的实例属性",
+      "test_cases": [
+        "assert captured_output == '20430 1042\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'delta'\ncase_tag = 20430\nclass Coordinate:\n    __slots__ = ('x', 'y')\n    def __init__(self, x, y): self.x, self.y = x, y\n    def distance_squared(self): return self.x ** 2 + self.y ** 2\nresult = Coordinate(a,b).distance_squared()\nprint(case_tag, result)"
+    }
+  ]
+}

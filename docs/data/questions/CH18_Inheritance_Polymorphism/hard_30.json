@@ -1,0 +1,427 @@
+{
+  "chapter": "CH18",
+  "title": "继承、组合与多态",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH18-H-001",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18301\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18301 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18301 [0, 0]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'beta'\ncase_tag = 18301\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-002",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18302\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18302 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18302 [0, 0]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'gamma'\ncase_tag = 18302\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-003",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18303\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18303 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18303 [0, 0]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'delta'\ncase_tag = 18303\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-004",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18304\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18304 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18304 [0, 0]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'omega'\ncase_tag = 18304\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-005",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18305\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18305 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18305 [0, 0]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'python'\ncase_tag = 18305\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-006",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承与运算覆盖：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18306\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return ___\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)",
+      "expected_output": "18306 [0, 0]\n",
+      "hints": "子类限制取出金额而不改变基类实现",
+      "test_cases": [
+        "assert captured_output == '18306 [0, 0]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'coding'\ncase_tag = 18306\nclass Account:\n    def __init__(self, balance): self.balance = balance\n    def withdraw(self, amount):\n        self.balance -= amount\n        return self.balance\nclass LimitedAccount(Account):\n    def withdraw(self, amount):\n        return super().withdraw(min(amount, self.balance))\nx = LimitedAccount(a)\nresult = [x.withdraw(a + n), x.withdraw(b)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-007",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18307\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18307 20\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18307 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 18307\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-008",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18308\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18308 29\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18308 29\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 18308\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-009",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18309\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18309 40\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18309 40\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 18309\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-010",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18310\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18310 53\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18310 53\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 18310\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-011",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18311\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18311 68\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18311 68\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 18311\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-012",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "抽象概念的多态累计：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18312\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18312 85\n",
+      "hints": "不同对象实现相同接口",
+      "test_cases": [
+        "assert captured_output == '18312 85\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 18312\nclass FlatFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value\nclass UnitFee:\n    def __init__(self, value): self.value = value\n    def cost(self, qty): return self.value * qty\nfees = [FlatFee(a), UnitFee(b)]\nresult = sum(fee.cost(n) for fee in fees)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-013",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18313\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18313 [4]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18313 [4]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 18313\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-014",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18314\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18314 [5, 10]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18314 [5, 10]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 18314\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-015",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18315\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18315 [6, 12, 18]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18315 [6, 12, 18]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 18315\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-016",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18316\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18316 [7, 14, 21, 28]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18316 [7, 14, 21, 28]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 18316\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-017",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18317\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18317 [8, 16, 24, 32, 40]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18317 [8, 16, 24, 32, 40]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 18317\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-018",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "组合封装计量器：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18318\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return ___\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)",
+      "expected_output": "18318 [9, 18, 27, 36, 45, 54]\n",
+      "hints": "组合对象可复用内部对象功能",
+      "test_cases": [
+        "assert captured_output == '18318 [9, 18, 27, 36, 45, 54]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 18318\nclass Counter:\n    def __init__(self): self.count = 0\n    def step(self):\n        self.count += 1\n        return self.count\nclass Meter:\n    def __init__(self): self.counter = Counter()\n    def read(self):\n        return self.counter.step() * b\nmeter = Meter()\nresult = [meter.read() for _ in range(n)]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-019",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18319\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18319 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18319 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 18319\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-020",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18320\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18320 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18320 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 18320\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-021",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18321\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18321 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18321 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 18321\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-022",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18322\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18322 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18322 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 18322\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-023",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18323\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18323 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18323 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 18323\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-024",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "继承链中的 MRO：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18324\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "18324 ('B', ['C', 'B', 'A', 'object'])\n",
+      "hints": "方法解析顺序从实际子类开始",
+      "test_cases": [
+        "assert captured_output == \"18324 ('B', ['C', 'B', 'A', 'object'])\\n\""
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 18324\nclass A:\n    def tag(self): return 'A'\nclass B(A):\n    def tag(self): return 'B'\nclass C(B): pass\nobj = C()\nresult = (obj.tag(), [cls.__name__ for cls in C.__mro__])\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-025",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18325\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18325 20\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18325 20\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 18325\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-026",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18326\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18326 24\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18326 24\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 18326\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-027",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18327\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18327 28\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18327 28\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 18327\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-028",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18328\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18328 32\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18328 32\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 18328\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-029",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18329\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18329 36\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18329 36\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 18329\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH18-H-030",
+      "topic": "继承、组合与多态",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "子类带额外属性：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18330\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return ___\nresult = Taxed(a, b).total()\nprint(case_tag, result)",
+      "expected_output": "18330 40\n",
+      "hints": "子类通过 super 复用价格",
+      "test_cases": [
+        "assert captured_output == '18330 40\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 18330\nclass Product:\n    def __init__(self, price): self.price = price\n    def total(self): return self.price\nclass Taxed(Product):\n    def __init__(self, price, tax):\n        super().__init__(price)\n        self.tax = tax\n    def total(self):\n        return super().total() + self.tax\nresult = Taxed(a, b).total()\nprint(case_tag, result)"
+    }
+  ]
+}

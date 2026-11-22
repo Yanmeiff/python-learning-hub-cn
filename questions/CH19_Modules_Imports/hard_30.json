@@ -1,0 +1,427 @@
+{
+  "chapter": "CH19",
+  "title": "模块、包与导入",
+  "difficulty": "中等",
+  "questions": [
+    {
+      "id": "CH19-H-001",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19301\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19301 64\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19301 64\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'gamma'\ncase_tag = 19301\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-002",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19302\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19302 95\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19302 95\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'delta'\ncase_tag = 19302\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-003",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19303\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19303 132\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19303 132\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'omega'\ncase_tag = 19303\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-004",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19304\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19304 175\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19304 175\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'python'\ncase_tag = 19304\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-005",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19305\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19305 224\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19305 224\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'coding'\ncase_tag = 19305\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-006",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "动态创建模块对象：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19306\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19306 279\n",
+      "hints": "ModuleType 能表示模块对象",
+      "test_cases": [
+        "assert captured_output == '19306 279\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'vector'\ncase_tag = 19306\nimport types\nmod = types.ModuleType('sample')\nmod.factor = b\nresult = mod.factor * a\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-007",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19307\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19307 1\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19307 1\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'delta'\ncase_tag = 19307\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-008",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19308\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19308 2\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19308 2\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'omega'\ncase_tag = 19308\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-009",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19309\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19309 6\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19309 6\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'python'\ncase_tag = 19309\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-010",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19310\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19310 24\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19310 24\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'coding'\ncase_tag = 19310\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-011",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19311\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19311 120\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19311 120\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'vector'\ncase_tag = 19311\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-012",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "importlib 导入标准模块：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19312\nfrom importlib import import_module\nm = import_module('math')\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19312 720\n",
+      "hints": "import_module 按字符串加载模块",
+      "test_cases": [
+        "assert captured_output == '19312 720\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'lambda'\ncase_tag = 19312\nfrom importlib import import_module\nm = import_module('math')\nresult = m.factorial(n)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-013",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19313\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19313 [64, 16, 68, 24, 60]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19313 [64, 16, 68, 24, 60]\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'omega'\ncase_tag = 19313\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-014",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19314\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19314 [95, 25, 100, 35, 90]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19314 [95, 25, 100, 35, 90]\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'python'\ncase_tag = 19314\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-015",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19315\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19315 [132, 36, 138, 48, 126]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19315 [132, 36, 138, 48, 126]\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'coding'\ncase_tag = 19315\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-016",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19316\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19316 [175, 49, 182, 63, 168]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19316 [175, 49, 182, 63, 168]\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'vector'\ncase_tag = 19316\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-017",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19317\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19317 [224, 64, 232, 80, 216]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19317 [224, 64, 232, 80, 216]\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'lambda'\ncase_tag = 19317\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-018",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "functools partial 预置参数：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19318\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19318 [279, 81, 288, 99, 270]\n",
+      "hints": "partial 可以固定函数的部分参数",
+      "test_cases": [
+        "assert captured_output == '19318 [279, 81, 288, 99, 270]\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'alpha'\ncase_tag = 19318\nfrom functools import partial\nfrom operator import mul\nscale = partial(mul, b)\nresult = [scale(x) for x in nums]\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-019",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19319\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19319 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19319 True\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'python'\ncase_tag = 19319\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-020",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19320\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19320 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19320 True\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'coding'\ncase_tag = 19320\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-021",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19321\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19321 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19321 True\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'vector'\ncase_tag = 19321\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-022",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19322\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19322 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19322 True\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'lambda'\ncase_tag = 19322\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-023",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19323\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19323 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19323 True\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'alpha'\ncase_tag = 19323\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-024",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "模块命名空间字典：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19324\nimport math\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19324 True\n",
+      "hints": "vars(module) 返回模块的属性命名空间",
+      "test_cases": [
+        "assert captured_output == '19324 True\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'beta'\ncase_tag = 19324\nimport math\nresult = 'sqrt' in vars(math)\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-025",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19325\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19325 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19325 (x, y=1)\\n'"
+      ],
+      "solution": "n = 1\na = 16\nb = 4\nnums = [16, 4, 17, 6, 15]\nword = 'coding'\ncase_tag = 19325\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-026",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19326\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19326 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19326 (x, y=1)\\n'"
+      ],
+      "solution": "n = 2\na = 19\nb = 5\nnums = [19, 5, 20, 7, 18]\nword = 'vector'\ncase_tag = 19326\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-027",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19327\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19327 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19327 (x, y=1)\\n'"
+      ],
+      "solution": "n = 3\na = 22\nb = 6\nnums = [22, 6, 23, 8, 21]\nword = 'lambda'\ncase_tag = 19327\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-028",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19328\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19328 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19328 (x, y=1)\\n'"
+      ],
+      "solution": "n = 4\na = 25\nb = 7\nnums = [25, 7, 26, 9, 24]\nword = 'alpha'\ncase_tag = 19328\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-029",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19329\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19329 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19329 (x, y=1)\\n'"
+      ],
+      "solution": "n = 5\na = 28\nb = 8\nnums = [28, 8, 29, 10, 27]\nword = 'beta'\ncase_tag = 19329\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    },
+    {
+      "id": "CH19-H-030",
+      "topic": "模块、包与导入",
+      "difficulty": "中等",
+      "stars": "⭐⭐⭐",
+      "description": "inspect 签名分析：请根据代码注释及变量，补全 ___ 处的关键表达式或语句，使程序输出正确的计算结果。",
+      "code_template": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19330\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = ___\nprint(case_tag, result)",
+      "expected_output": "19330 (x, y=1)\n",
+      "hints": "inspect.signature 显示函数参数",
+      "test_cases": [
+        "assert captured_output == '19330 (x, y=1)\\n'"
+      ],
+      "solution": "n = 6\na = 31\nb = 9\nnums = [31, 9, 32, 11, 30]\nword = 'gamma'\ncase_tag = 19330\nimport inspect\nfrom functools import partial\ndef combine(x, y=1): return x + y\nresult = str(inspect.signature(combine))\nprint(case_tag, result)"
+    }
+  ]
+}
