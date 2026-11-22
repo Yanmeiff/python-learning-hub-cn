@@ -106,8 +106,9 @@ async function run() {
     await page.screenshot({path:"hub-dashboard-mobile.png",fullPage:true});
 
     // New chapter must be navigable and judged by real Pyodide.
-    await page.locator('.chapter-head').last().click();
-    await page.locator('.qlink[data-id="CH16-E-001"]').click();
+    // CH16 is no longer the final sidebar chapter after adding CH17–CH29.
+    // Select it by ID rather than assuming the last expanded chapter.
+    await page.evaluate(async () => window.openQuestion("CH16-E-001"));
     await page.waitForFunction(() => document.getElementById("q-id").textContent === "CH16-E-001");
     const ch16 = await page.evaluate(() => ({
       code: document.querySelector("#editor").value,
