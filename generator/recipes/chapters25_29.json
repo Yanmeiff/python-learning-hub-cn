@@ -350,7 +350,7 @@
         },
         {
           "title": "同步调度器处理多个任务",
-          "body": "def task(name, count):\n    for index in range(count):\n        yield (name, index)\na_task, b_task = task('a', n), task('b', b)\nresult = ___",
+          "body": "def task(name, count):\n    for index in range(count):\n        yield (name, index)\na_task, b_task = task('a', n + 2), task('b', b)\nresult = ___",
           "answer": "[next(a_task), next(b_task), next(a_task)]",
           "hint": "保存各任务的迭代状态"
         },
