@@ -150,6 +150,7 @@ async function openQuestion(id) {
 
   $("hub-dashboard").classList.add("hidden");
   $("mistake-panel").classList.add("hidden");
+  document.querySelectorAll(".nav-button").forEach((button) => button.classList.remove("active"));
   $("welcome").classList.add("hidden");
   $("quiz").classList.remove("hidden");
   $("q-id").textContent = q.id;
@@ -345,7 +346,15 @@ window.startPractice = startPractice;
 $("btn-start").addEventListener("click", startPractice);
 $("btn-clear-progress").addEventListener("click", () => {
   if (!confirm("确定清空已完成标记与保存的代码？作答历史、错题本和热力图会保留。")) return;
-  try { localStorage.removeItem(KEY_PROGRESS); } catch (e) {}
+  try {
+    localStorage.removeItem(KEY_PROGRESS);
+    const codeKeys = [];
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (key && key.indexOf(KEY_CODE) === 0) codeKeys.push(key);
+    }
+    codeKeys.forEach((key) => localStorage.removeItem(key));
+  } catch (e) {}
   state.progress = {};
   refreshProgressBar();
   document.querySelectorAll(".qlink").forEach((b) => b.classList.remove("done"));
