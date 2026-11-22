@@ -38,7 +38,7 @@ async function run() {
     await page.locator("#btn-tutorial").click();
     await page.waitForFunction(() =>
       document.querySelectorAll("#tutorial-chapters .tutorial-lesson").length === 94, {timeout:20000});
-    await page.waitForFunction(() => document.querySelector("#tutorial-article h1"), {timeout:20000});
+    await page.waitForFunction(() => document.querySelector("#tutorial-article h3"), {timeout:20000});
     assert.equal(await page.locator("#tutorial-progress-label").textContent(), "已读 0 / 94 节");
     assert.match(await page.locator("#tutorial-article").textContent(), /Python/);
     assert.match(await page.locator("#tutorial-source-link").getAttribute("href"), /walter201230/);
