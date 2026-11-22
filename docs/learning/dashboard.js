@@ -4,7 +4,7 @@
   let topicMap = null;
   let appState = null;
   function setPanel(activeId) {
-    ["hub-dashboard", "mistake-panel", "tutorial-panel", "welcome", "quiz"].forEach((id) => {
+    ["hub-dashboard", "mistake-panel", "welcome", "quiz"].forEach((id) => {
       const node = $(id);
       if (node) node.classList.toggle("hidden", id !== activeId);
     });
@@ -237,7 +237,6 @@
     renderMistakePreview(store);
     renderMistakes(store);
   }
-  window.showAppPanel = setPanel;
   window.renderLearningHub = render;
   window.showHubDashboard = () => setPanel("hub-dashboard");
   window.showMistakePanel = () => { setPanel("mistake-panel"); renderMistakes(window.learningStore); };

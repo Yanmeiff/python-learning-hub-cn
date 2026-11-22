@@ -33,27 +33,16 @@ async function run() {
     assert.equal(style.hubStyleLoaded, true, "versioned hub.css must be loaded");
     await page.screenshot({path:"hub-dashboard-desktop.png",fullPage:true});
 
-    // Integrated licensed Chinese tutorials: chapter navigation, real Markdown
-    // rendering, reading progress, attribution and a link to PyQuest practice.
-    await page.locator("#btn-tutorial").click();
-    await page.waitForFunction(() =>
-      document.querySelectorAll("#tutorial-chapters .tutorial-lesson").length === 94, {timeout:20000});
-    await page.waitForFunction(() => document.querySelector("#tutorial-article h3"), {timeout:20000});
-    assert.equal(await page.locator("#tutorial-progress-label").textContent(), "已读 0 / 94 节");
-    assert.match(await page.locator("#tutorial-article").textContent(), /Python/);
-    assert.match(await page.locator("#tutorial-source-link").getAttribute("href"), /walter201230/);
-    await page.locator("#btn-mark-tutorial-read").click();
-    assert.equal(await page.locator("#tutorial-progress-label").textContent(), "已读 1 / 94 节");
-    const storedReading = await page.evaluate(() =>
-      JSON.parse(localStorage.getItem("pyquest-tutorial-progress-v1")));
-    assert.equal(storedReading.read.length, 1);
-    await page.locator("#btn-tutorial-next").click();
-    await page.waitForFunction(() =>
-      document.getElementById("tutorial-current-title").textContent.includes("第一个"));
-    await page.waitForFunction(() => document.querySelector("#tutorial-article h1"), {timeout:10000});
-    await page.locator("#btn-tutorial-practice").click();
-    await page.waitForFunction(() => document.getElementById("q-id").textContent === "CH01-E-001");
-    await page.locator("#btn-dashboard").click();
+    // Use the original interactive course instead of duplicating its reader.
+    const originalCourse = page.locator("a.tutorial-external-link");
+    assert.equal(await originalCourse.getAttribute("href"), "https://learn-py.org/");
+    assert.equal(await originalCourse.getAttribute("target"), "_blank");
+    assert.match(await originalCourse.getAttribute("rel"), /noopener/);
+    const learningLink = page.locator("#btn-learn-python");
+    assert.equal(await learningLink.getAttribute("href"), "https://learn-py.org/");
+    assert.equal(await page.locator("#tutorial-panel").count(), 0);
+    assert.equal(await page.locator("script[src*='tutorials.js']").count(), 0);
+
 
     await page.waitForFunction(() => document.getElementById("engine-status").textContent.includes("就绪"), {timeout:120000});
     await page.locator("#btn-hub-start").click();

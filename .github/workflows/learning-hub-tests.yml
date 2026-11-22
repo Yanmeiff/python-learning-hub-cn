@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 22
       - name: Check JavaScript syntax
-        run: node --check docs/app.js && node --check docs/learning/learning-store.js && node --check docs/learning/pyodide-judge.js && node --check docs/learning/dashboard.js && node --check docs/learning/tutorials.js
+        run: node --check docs/app.js && node --check docs/learning/learning-store.js && node --check docs/learning/pyodide-judge.js && node --check docs/learning/dashboard.js
       - name: Run learning data tests
         run: node --test tests/*.test.js
 
