@@ -150,6 +150,7 @@ async function openQuestion(id) {
 
   $("hub-dashboard").classList.add("hidden");
   $("mistake-panel").classList.add("hidden");
+  $("tutorial-panel").classList.add("hidden");
   document.querySelectorAll(".nav-button").forEach((button) => button.classList.remove("active"));
   $("welcome").classList.add("hidden");
   $("quiz").classList.remove("hidden");

@@ -7,6 +7,7 @@
   const STORAGE_KEY = "pyquest-learning-hub-v1";
   const PROGRESS_KEY = "pyquest-progress-v1";
   const CODE_PREFIX = "pyquest-code-";
+  const TUTORIAL_PROGRESS_KEY = "pyquest-tutorial-progress-v1";
   const REVIEW_INTERVALS = [1, 3, 7, 14, 30];
   const MAX_ATTEMPTS = 10000;
   function memoryStorage() {
@@ -255,7 +256,8 @@
     function exportBackup() {
       return {
         format: "pyquest-learning-hub", version: 1, exportedAt: nowDate().toISOString(),
-        learning: JSON.parse(JSON.stringify(data)), progress: readProgress(), codes: readCodes()
+        learning: JSON.parse(JSON.stringify(data)), progress: readProgress(), codes: readCodes(),
+        tutorialProgress: safeJson(target.getItem(TUTORIAL_PROGRESS_KEY), { read: [], last: null })
       };
     }
     function importBackup(bundle) {
@@ -270,6 +272,15 @@
       };
       persist();
       if (bundle.progress && typeof bundle.progress === "object") target.setItem(PROGRESS_KEY, JSON.stringify(bundle.progress));
+      // Optional: older V1 backups do not carry tutorial progress. Keep existing
+      // reading records when importing one of those backups.
+      if (bundle.tutorialProgress && typeof bundle.tutorialProgress === "object" &&
+          Array.isArray(bundle.tutorialProgress.read)) {
+        target.setItem(TUTORIAL_PROGRESS_KEY, JSON.stringify({
+          read: bundle.tutorialProgress.read.filter((id) => typeof id === "string"),
+          last: typeof bundle.tutorialProgress.last === "string" ? bundle.tutorialProgress.last : null
+        }));
+      }
       if (typeof target.key === "function") {
         const oldKeys = [];
         for (let index = 0; index < target.length; index += 1) {

@@ -1,0 +1,840 @@
+{
+  "version": 1,
+  "source": {
+    "author": "walter201230",
+    "repository": "walter201230/Python",
+    "revision": "2cde4c0fe0b05eabba27591fea9d4985d74985b9",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "repositoryUrl": "https://github.com/walter201230/Python"
+  },
+  "chapters": [
+    {
+      "id": "python0",
+      "title": "为什么学Python?",
+      "file": "tutorial/python0.json",
+      "practiceChapters": [
+        "CH01"
+      ],
+      "lessons": [
+        {
+          "id": "python0-whystudypython",
+          "title": "为什么学Python?",
+          "path": "Article/PythonBasis/python0/WhyStudyPython.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python0/WhyStudyPython.md"
+        }
+      ]
+    },
+    {
+      "id": "python1",
+      "title": "第一个Python程序",
+      "file": "tutorial/python1.json",
+      "practiceChapters": [
+        "CH01"
+      ],
+      "lessons": [
+        {
+          "id": "python1-preface",
+          "title": "第一个Python程序",
+          "path": "Article/PythonBasis/python1/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python1/Preface.md"
+        },
+        {
+          "id": "python1-introduction",
+          "title": "Python 简介",
+          "path": "Article/PythonBasis/python1/Introduction.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python1/Introduction.md"
+        },
+        {
+          "id": "python1-installation",
+          "title": "Python 的安装",
+          "path": "Article/PythonBasis/python1/Installation.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python1/Installation.md"
+        },
+        {
+          "id": "python1-the_first_procedure",
+          "title": "第一个 Python 程序",
+          "path": "Article/PythonBasis/python1/The_first_procedure.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python1/The_first_procedure.md"
+        },
+        {
+          "id": "python1-ide",
+          "title": "集成开发环境（IDE）: PyCharm",
+          "path": "Article/PythonBasis/python1/IDE.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python1/IDE.md"
+        }
+      ]
+    },
+    {
+      "id": "python2",
+      "title": "基本数据类型和变量",
+      "file": "tutorial/python2.json",
+      "practiceChapters": [
+        "CH02",
+        "CH04",
+        "CH05"
+      ],
+      "lessons": [
+        {
+          "id": "python2-preface",
+          "title": "基本数据类型和变量",
+          "path": "Article/PythonBasis/python2/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/Preface.md"
+        },
+        {
+          "id": "python2-grammar",
+          "title": "Python 语法的简要说明",
+          "path": "Article/PythonBasis/python2/Grammar.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/Grammar.md"
+        },
+        {
+          "id": "python2-print",
+          "title": "print() 函数",
+          "path": "Article/PythonBasis/python2/print.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/print.md"
+        },
+        {
+          "id": "python2-type_of_data",
+          "title": "Python 的基本数据类型",
+          "path": "Article/PythonBasis/python2/Type_of_data.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/Type_of_data.md"
+        },
+        {
+          "id": "python2-stringcoding",
+          "title": "字符串的编码问题",
+          "path": "Article/PythonBasis/python2/StringCoding.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/StringCoding.md"
+        },
+        {
+          "id": "python2-type_conversion",
+          "title": "基本数据类型转换",
+          "path": "Article/PythonBasis/python2/Type_conversion.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/Type_conversion.md"
+        },
+        {
+          "id": "python2-variable",
+          "title": "Python 中的变量",
+          "path": "Article/PythonBasis/python2/Variable.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python2/Variable.md"
+        }
+      ]
+    },
+    {
+      "id": "python3",
+      "title": "List 和 Tuple",
+      "file": "tutorial/python3.json",
+      "practiceChapters": [
+        "CH03",
+        "CH13"
+      ],
+      "lessons": [
+        {
+          "id": "python3-preface",
+          "title": "List 和 Tuple",
+          "path": "Article/PythonBasis/python3/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python3/Preface.md"
+        },
+        {
+          "id": "python3-list",
+          "title": "List（列表）",
+          "path": "Article/PythonBasis/python3/List.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python3/List.md"
+        },
+        {
+          "id": "python3-tuple",
+          "title": "tuple（元组）",
+          "path": "Article/PythonBasis/python3/tuple.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python3/tuple.md"
+        }
+      ]
+    },
+    {
+      "id": "python4",
+      "title": "Dict 和 Set",
+      "file": "tutorial/python4.json",
+      "practiceChapters": [
+        "CH14",
+        "CH15"
+      ],
+      "lessons": [
+        {
+          "id": "python4-preface",
+          "title": "Dict 和 Set",
+          "path": "Article/PythonBasis/python4/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python4/Preface.md"
+        },
+        {
+          "id": "python4-dict",
+          "title": "字典(Dictionary)",
+          "path": "Article/PythonBasis/python4/Dict.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python4/Dict.md"
+        },
+        {
+          "id": "python4-set",
+          "title": "set",
+          "path": "Article/PythonBasis/python4/Set.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python4/Set.md"
+        }
+      ]
+    },
+    {
+      "id": "python5",
+      "title": "条件语句和循环语句",
+      "file": "tutorial/python5.json",
+      "practiceChapters": [
+        "CH06",
+        "CH07",
+        "CH08"
+      ],
+      "lessons": [
+        {
+          "id": "python5-preface",
+          "title": "条件语句和循环语句",
+          "path": "Article/PythonBasis/python5/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python5/Preface.md"
+        },
+        {
+          "id": "python5-if",
+          "title": "条件语句",
+          "path": "Article/PythonBasis/python5/If.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python5/If.md"
+        },
+        {
+          "id": "python5-cycle",
+          "title": "循环语句",
+          "path": "Article/PythonBasis/python5/Cycle.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python5/Cycle.md"
+        },
+        {
+          "id": "python5-example",
+          "title": "条件语句和循环语句综合实例",
+          "path": "Article/PythonBasis/python5/Example.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python5/Example.md"
+        }
+      ]
+    },
+    {
+      "id": "python6",
+      "title": "函数",
+      "file": "tutorial/python6.json",
+      "practiceChapters": [
+        "CH09",
+        "CH10",
+        "CH11",
+        "CH12"
+      ],
+      "lessons": [
+        {
+          "id": "python6-preface",
+          "title": "函数",
+          "path": "Article/PythonBasis/python6/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/Preface.md"
+        },
+        {
+          "id": "python6-1",
+          "title": "Python 自定义函数的基本步骤",
+          "path": "Article/PythonBasis/python6/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/1.md"
+        },
+        {
+          "id": "python6-2",
+          "title": "函数返回值",
+          "path": "Article/PythonBasis/python6/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/2.md"
+        },
+        {
+          "id": "python6-3",
+          "title": "函数的参数",
+          "path": "Article/PythonBasis/python6/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/3.md"
+        },
+        {
+          "id": "python6-4",
+          "title": "函数传值问题",
+          "path": "Article/PythonBasis/python6/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/4.md"
+        },
+        {
+          "id": "python6-5",
+          "title": "匿名函数",
+          "path": "Article/PythonBasis/python6/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python6/5.md"
+        }
+      ]
+    },
+    {
+      "id": "python7",
+      "title": "迭代器和生成器",
+      "file": null,
+      "practiceChapters": [
+        "CH07"
+      ],
+      "lessons": [
+        {
+          "id": "python7-preface",
+          "title": "迭代器和生成器",
+          "path": "Article/PythonBasis/python7/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/Preface.md"
+        },
+        {
+          "id": "python7-1",
+          "title": "迭代",
+          "path": "Article/PythonBasis/python7/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/1.md"
+        },
+        {
+          "id": "python7-2",
+          "title": "Python 迭代器",
+          "path": "Article/PythonBasis/python7/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/2.md"
+        },
+        {
+          "id": "python7-3",
+          "title": "list 生成式（列表生成式）",
+          "path": "Article/PythonBasis/python7/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/3.md"
+        },
+        {
+          "id": "python7-4",
+          "title": "生成器",
+          "path": "Article/PythonBasis/python7/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/4.md"
+        },
+        {
+          "id": "python7-5",
+          "title": "迭代器和生成器综合例子",
+          "path": "Article/PythonBasis/python7/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python7/5.md"
+        }
+      ]
+    },
+    {
+      "id": "python8",
+      "title": "面向对象",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python8-preface",
+          "title": "面向对象",
+          "path": "Article/PythonBasis/python8/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/Preface.md"
+        },
+        {
+          "id": "python8-1",
+          "title": "面向对象的概念",
+          "path": "Article/PythonBasis/python8/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/1.md"
+        },
+        {
+          "id": "python8-2",
+          "title": "类的定义和调用",
+          "path": "Article/PythonBasis/python8/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/2.md"
+        },
+        {
+          "id": "python8-3",
+          "title": "类方法",
+          "path": "Article/PythonBasis/python8/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/3.md"
+        },
+        {
+          "id": "python8-4",
+          "title": "修改和增加类属性",
+          "path": "Article/PythonBasis/python8/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/4.md"
+        },
+        {
+          "id": "python8-5",
+          "title": "类和对象",
+          "path": "Article/PythonBasis/python8/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/5.md"
+        },
+        {
+          "id": "python8-6",
+          "title": "初始化函数",
+          "path": "Article/PythonBasis/python8/6.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/6.md"
+        },
+        {
+          "id": "python8-7",
+          "title": "类的继承",
+          "path": "Article/PythonBasis/python8/7.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/7.md"
+        },
+        {
+          "id": "python8-8",
+          "title": "类的多态",
+          "path": "Article/PythonBasis/python8/8.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/8.md"
+        },
+        {
+          "id": "python8-9",
+          "title": "类的访问控制",
+          "path": "Article/PythonBasis/python8/9.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python8/9.md"
+        }
+      ]
+    },
+    {
+      "id": "python9",
+      "title": "模块与包",
+      "file": null,
+      "practiceChapters": [
+        "CH12"
+      ],
+      "lessons": [
+        {
+          "id": "python9-preface",
+          "title": "模块与包",
+          "path": "Article/PythonBasis/python9/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/Preface.md"
+        },
+        {
+          "id": "python9-1",
+          "title": "Python 模块简介",
+          "path": "Article/PythonBasis/python9/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/1.md"
+        },
+        {
+          "id": "python9-2",
+          "title": "模块的使用",
+          "path": "Article/PythonBasis/python9/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/2.md"
+        },
+        {
+          "id": "python9-3",
+          "title": "主模块和非主模块",
+          "path": "Article/PythonBasis/python9/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/3.md"
+        },
+        {
+          "id": "python9-4",
+          "title": "包",
+          "path": "Article/PythonBasis/python9/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/4.md"
+        },
+        {
+          "id": "python9-5",
+          "title": "作用域",
+          "path": "Article/PythonBasis/python9/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python9/5.md"
+        }
+      ]
+    },
+    {
+      "id": "python10",
+      "title": "Python 的 Magic Method",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python10-preface",
+          "title": "Python 的 Magic Method",
+          "path": "Article/PythonBasis/python10/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/Preface.md"
+        },
+        {
+          "id": "python10-1",
+          "title": "Python 的 Magic Method",
+          "path": "Article/PythonBasis/python10/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/1.md"
+        },
+        {
+          "id": "python10-2",
+          "title": "构造(`__new__`)和初始化(`__init__`)",
+          "path": "Article/PythonBasis/python10/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/2.md"
+        },
+        {
+          "id": "python10-3",
+          "title": "属性的访问控制",
+          "path": "Article/PythonBasis/python10/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/3.md"
+        },
+        {
+          "id": "python10-4",
+          "title": "对象的描述器",
+          "path": "Article/PythonBasis/python10/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/4.md"
+        },
+        {
+          "id": "python10-5",
+          "title": "自定义容器（Container）",
+          "path": "Article/PythonBasis/python10/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/5.md"
+        },
+        {
+          "id": "python10-6",
+          "title": "运算符相关的魔术方法",
+          "path": "Article/PythonBasis/python10/6.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python10/6.md"
+        }
+      ]
+    },
+    {
+      "id": "python11",
+      "title": "枚举类",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python11-preface",
+          "title": "枚举类",
+          "path": "Article/PythonBasis/python11/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python11/Preface.md"
+        },
+        {
+          "id": "python11-1",
+          "title": "枚举类的使用",
+          "path": "Article/PythonBasis/python11/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python11/1.md"
+        },
+        {
+          "id": "python11-2",
+          "title": "Enum 的源码",
+          "path": "Article/PythonBasis/python11/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python11/2.md"
+        },
+        {
+          "id": "python11-3",
+          "title": "自定义类型的枚举",
+          "path": "Article/PythonBasis/python11/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python11/3.md"
+        },
+        {
+          "id": "python11-4",
+          "title": "枚举的比较",
+          "path": "Article/PythonBasis/python11/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python11/4.md"
+        }
+      ]
+    },
+    {
+      "id": "python12",
+      "title": "元类",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python12-preface",
+          "title": "元类",
+          "path": "Article/PythonBasis/python12/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/Preface.md"
+        },
+        {
+          "id": "python12-1",
+          "title": "Python 中类也是对象",
+          "path": "Article/PythonBasis/python12/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/1.md"
+        },
+        {
+          "id": "python12-2",
+          "title": "使用 `type()` 动态创建类",
+          "path": "Article/PythonBasis/python12/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/2.md"
+        },
+        {
+          "id": "python12-3",
+          "title": "什么是元类",
+          "path": "Article/PythonBasis/python12/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/3.md"
+        },
+        {
+          "id": "python12-4",
+          "title": "自定义元类",
+          "path": "Article/PythonBasis/python12/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/4.md"
+        },
+        {
+          "id": "python12-5",
+          "title": "使用元类",
+          "path": "Article/PythonBasis/python12/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python12/5.md"
+        }
+      ]
+    },
+    {
+      "id": "python13",
+      "title": "线程与进程",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python13-preface",
+          "title": "线程与进程",
+          "path": "Article/PythonBasis/python13/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python13/Preface.md"
+        },
+        {
+          "id": "python13-1",
+          "title": "线程与进程",
+          "path": "Article/PythonBasis/python13/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python13/1.md"
+        },
+        {
+          "id": "python13-2",
+          "title": "多线程编程",
+          "path": "Article/PythonBasis/python13/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python13/2.md"
+        },
+        {
+          "id": "python13-3",
+          "title": "进程",
+          "path": "Article/PythonBasis/python13/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python13/3.md"
+        }
+      ]
+    },
+    {
+      "id": "python14",
+      "title": "一步一步了解正则表达式",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python14-preface",
+          "title": "一步一步了解正则表达式",
+          "path": "Article/PythonBasis/python14/Preface.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/Preface.md"
+        },
+        {
+          "id": "python14-1",
+          "title": "初识 Python 正则表达式",
+          "path": "Article/PythonBasis/python14/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/1.md"
+        },
+        {
+          "id": "python14-2",
+          "title": "字符集",
+          "path": "Article/PythonBasis/python14/2.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/2.md"
+        },
+        {
+          "id": "python14-3",
+          "title": "数量词",
+          "path": "Article/PythonBasis/python14/3.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/3.md"
+        },
+        {
+          "id": "python14-4",
+          "title": "边界匹配符和组",
+          "path": "Article/PythonBasis/python14/4.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/4.md"
+        },
+        {
+          "id": "python14-5",
+          "title": "re.sub",
+          "path": "Article/PythonBasis/python14/5.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/5.md"
+        },
+        {
+          "id": "python14-6",
+          "title": "re.match 和 re.search",
+          "path": "Article/PythonBasis/python14/6.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python14/6.md"
+        }
+      ]
+    },
+    {
+      "id": "python15",
+      "title": "闭包",
+      "file": null,
+      "practiceChapters": [
+        "CH09"
+      ],
+      "lessons": [
+        {
+          "id": "python15-1",
+          "title": "闭包",
+          "path": "Article/PythonBasis/python15/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python15/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python16",
+      "title": "装饰器",
+      "file": null,
+      "practiceChapters": [
+        "CH09"
+      ],
+      "lessons": [
+        {
+          "id": "python16-1",
+          "title": "装饰器",
+          "path": "Article/PythonBasis/python16/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python16/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python17",
+      "title": "类型注解",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python17-1",
+          "title": "类型注解",
+          "path": "Article/PythonBasis/python17/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python17/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python18",
+      "title": "pathlib 路径处理",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python18-1",
+          "title": "pathlib 路径处理",
+          "path": "Article/PythonBasis/python18/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python18/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python19",
+      "title": "异常处理与异常组",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python19-1",
+          "title": "异常处理与异常组",
+          "path": "Article/PythonBasis/python19/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python19/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python20",
+      "title": "dataclass 与 Pydantic",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python20-1",
+          "title": "dataclass 与 Pydantic",
+          "path": "Article/PythonBasis/python20/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python20/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python21",
+      "title": "上下文管理器",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python21-1",
+          "title": "上下文管理器",
+          "path": "Article/PythonBasis/python21/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python21/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python22",
+      "title": "async/await 与并发",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python22-1",
+          "title": "async/await 与并发",
+          "path": "Article/PythonBasis/python22/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python22/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python23",
+      "title": "工程基线 pyproject 与 uv",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python23-1",
+          "title": "工程基线 pyproject 与 uv",
+          "path": "Article/PythonBasis/python23/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python23/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python24",
+      "title": "代码风格 ruff",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python24-1",
+          "title": "代码风格 ruff",
+          "path": "Article/PythonBasis/python24/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python24/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python25",
+      "title": "单元测试 pytest",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python25-1",
+          "title": "单元测试 pytest",
+          "path": "Article/PythonBasis/python25/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python25/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python26",
+      "title": "标准日志 logging",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python26-1",
+          "title": "标准日志 logging",
+          "path": "Article/PythonBasis/python26/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python26/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python27",
+      "title": "打包发布与 typer",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python27-1",
+          "title": "打包发布与 typer",
+          "path": "Article/PythonBasis/python27/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python27/1.md"
+        }
+      ]
+    },
+    {
+      "id": "python28",
+      "title": "学完之后做什么",
+      "file": null,
+      "practiceChapters": [],
+      "lessons": [
+        {
+          "id": "python28-1",
+          "title": "学完之后做什么",
+          "path": "Article/PythonBasis/python28/1.md",
+          "sourceUrl": "https://github.com/walter201230/Python/blob/2cde4c0fe0b05eabba27591fea9d4985d74985b9/Article/PythonBasis/python28/1.md"
+        }
+      ]
+    }
+  ]
+}
