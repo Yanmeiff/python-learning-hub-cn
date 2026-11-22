@@ -68,8 +68,24 @@ async function run() {
     const note = await page.evaluate(() => window.learningStore.getMistakes()[0].note);
     assert.equal(note, "检查 print 的 end 参数");
 
-    await page.setViewportSize({width:390,height:844});
+    // Regression: after an incorrect answer is corrected, it must remain
+    // visible in the review plan with a future due date.
+    await page.locator('button[data-action="review"]').first().click();
+    await page.waitForFunction(() => document.querySelector("#q-id").textContent === "CH01-E-013");
+    await submit("CH01-E-013", 'print("Hi", end="!")', true, "Hi!");
+    await page.locator("#btn-mistakes").click();
+    await page.waitForFunction(() => document.querySelector('.mistake-card[data-review-status="scheduled"]'));
+    assert.equal(await page.locator("#total-review-count").textContent(), "1");
+    assert.equal(await page.locator("#mistake-count").textContent(), "0");
+    assert.equal(await page.locator("#planned-review-count").textContent(), "1");
+    assert.equal(await page.locator("#nav-mistake-count").textContent(), "1");
+    assert.equal(await page.locator(".mistake-card .review-schedule").count(), 1);
+    assert.match(await page.locator(".mistake-card .review-schedule").textContent(), /下次复习：/);
+    assert.equal(await page.locator(".mistake-card .mistake-note").inputValue(), "检查 print 的 end 参数");
     await page.locator("#btn-back-dashboard").click();
+    assert.equal(await page.locator("#hub-planned-total").textContent(), "1");
+
+    await page.setViewportSize({width:390,height:844});
     const layout = await page.evaluate(() => {
       const sidebar = document.querySelector(".sidebar").getBoundingClientRect();
       const main = document.querySelector(".workspace").getBoundingClientRect();
