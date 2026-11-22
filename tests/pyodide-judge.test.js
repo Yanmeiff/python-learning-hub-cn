@@ -112,3 +112,48 @@ test("empty output remains distinguishable from a newline", () => {
   assert.equal(captureRun(empty, "pass"), "");
   assert.equal(captureRun(newline, "print()"), "\n");
 });
+
+
+test("flushes a buffered partial line before detaching the stdout writer", () => {
+  const bytes = new TextEncoder().encode("Hi!");
+  let writer = null;
+  let flushed = false;
+  const pyodide = {
+    setStdout(handler) { writer = handler || null; },
+    runPython(code) {
+      if (code === "print('Hi', end='!')") {
+        // Simulate CPython line buffering: no write until stdout.flush().
+        return;
+      }
+      if (code === "import sys; sys.stdout.flush()") {
+        flushed = true;
+        assert.ok(writer && typeof writer.write === "function");
+        writer.write(bytes);
+        return;
+      }
+      throw new Error("Unexpected Python call: " + code);
+    }
+  };
+  assert.equal(captureRun(pyodide, "print('Hi', end='!')"), "Hi!");
+  assert.equal(flushed, true);
+  assert.equal(writer, null);
+});
+
+test("still flushes and restores stdout after a Python exception", () => {
+  let writer = null;
+  let flushed = false;
+  const pyodide = {
+    setStdout(handler) { writer = handler || null; },
+    runPython(code) {
+      if (code === "raise ValueError('oops')") throw new Error("ValueError: oops");
+      if (code === "import sys; sys.stdout.flush()") {
+        flushed = true;
+        return;
+      }
+      throw new Error("Unexpected Python call");
+    }
+  };
+  assert.throws(() => captureRun(pyodide, "raise ValueError('oops')"), /ValueError/);
+  assert.equal(flushed, true);
+  assert.equal(writer, null);
+});

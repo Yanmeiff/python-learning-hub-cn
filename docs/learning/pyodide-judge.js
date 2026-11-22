@@ -31,9 +31,15 @@
     try {
       pyodide.runPython(code);
     } finally {
-      output += decoder.decode();
-      // Restore Pyodide's default browser stdout handler after each run.
-      pyodide.setStdout();
+      try {
+        // Python stdout may buffer a partial line when print(..., end="") is used.
+        // Flush *before* restoring the handler so the final bytes are captured.
+        pyodide.runPython("import sys; sys.stdout.flush()");
+      } finally {
+        output += decoder.decode();
+        // Restore the browser's normal stdout handler, even if user code raises.
+        pyodide.setStdout();
+      }
     }
 
     return output;
