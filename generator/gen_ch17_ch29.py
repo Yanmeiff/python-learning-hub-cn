@@ -75,7 +75,10 @@ def build_question(ch_id, title, level, index, variant, recipe):
     assert answer and "___" not in answer, (ch_id, level, number, "answer")
     code_template = prefix + "\n" + body + "\nprint(case_tag, result)"
     solution = prefix + "\n" + body.replace("___", answer) + "\nprint(case_tag, result)"
-    output = run(solution)
+    try:
+        output = run(solution)
+    except Exception as exc:
+        raise RuntimeError('Invalid solution for {}-{}-{:03d} ({})'.format(ch_id, level, number, recipe['title'])) from exc
     assert output.startswith(str(tag) + " "), (ch_id, level, number, output)
     assertion = "assert captured_output == " + repr(output)
     exec(assertion, {"captured_output": output})
